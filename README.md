@@ -37,3 +37,6 @@ This is a static GitHub Pages site. Keep `index.html` at the repository root and
 ## Image sourcing
 
 Project visuals are added only after verifying the corresponding project repository or LinkedIn project material. The first verified visual is the Airport Operations Intelligence Platform Executive Dashboard from the project repository.
+
+
+V15 updates: stable same-page navigation without hash changes, common project card dimensions, removed project-page insight metrics, and added the verified Healthcare Operations Intelligence cover image.
