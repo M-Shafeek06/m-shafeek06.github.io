@@ -40,3 +40,6 @@ Project visuals are added only after verifying the corresponding project reposit
 
 
 V15 updates: stable same-page navigation without hash changes, common project card dimensions, removed project-page insight metrics, and added the verified Healthcare Operations Intelligence cover image.
+
+
+V16 navigation note: homepage navigation and case-study return links use the canonical GitHub Pages root, not index.html. The homepage normalizes /index.html to /. The healthcare case study intentionally does not expose the supplied Power BI App URL because it redirects to Microsoft sign-in and is not publicly viewable without authentication. Healthcare dashboard screenshots are discovered from the public repository at runtime.
