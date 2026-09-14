@@ -27,3 +27,17 @@ Live portfolio: https://m-shafeek06.github.io/
 
 
 V20 updates: USA dashboard flow, Sales SDA_1–SDA_5 gallery (SDA_5 is shown automatically when publicly available), and Road Accident RDA_porfolio_main.png with RDA1–RDA5 gallery.
+
+
+## V21 update
+
+- Preserves the working homepage, featured projects and canonical navigation from V20.
+- Updates the Uber Trip Analysis case study with the verified `UTA_portfolio_main.png` cover and the actual `UTA_1.png`, `UTA_2.png` and `UTA_3.png` dashboard views.
+- Updates the Heart Disease Analysis case study with the verified `HDA_portfolio_main.png` cover and the actual `HDA_1.png`, `HDA_2.png` and `HDA_3.png` dashboard views.
+- Keeps the same case-study flow used for the other projects: cover → dashboard views → problem → workflow → analytical scope → skills → repository evidence.
+- Does not change the homepage navigation architecture or featured project cards.
+
+## V21 project repositories
+
+- Uber Trip Analysis: https://github.com/M-Shafeek06/Uber-Trip-Analysis
+- Heart Disease Analysis: https://github.com/M-Shafeek06/Heart-Disease-Analysis
