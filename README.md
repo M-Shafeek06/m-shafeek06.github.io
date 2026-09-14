@@ -2,13 +2,15 @@
 
 Live portfolio: https://m-shafeek06.github.io/
 
-## V17 update
+## V18 update
 
 - Preserves the working canonical navigation and URL behavior from V16.
 - Preserves the two featured project cards (Airport Operations Intelligence Platform and Healthcare Operations Intelligence) unchanged.
 - Adds subtle continuous homepage-only background motion using transform-based CSS animation with `prefers-reduced-motion` support.
-- Upgrades the USA Airline Service Analysis and Sales Data Analysis case-study pages with consistent project snapshot hero panels and evidence-focused structure.
-- Does not invent dashboard images or numerical findings where the public repositories do not expose them.
+- Preserves the V17 homepage, featured projects, continuous motion and canonical navigation unchanged.
+- Adds the verified USA Airlines repository image as the USA case-study cover and dashboard evidence.
+- Adds the verified Sales Data Analysis repository cover image plus SDA_2, SDA_3 and SDA_4 work-sample images to the Sales case study.
+- Uses only images currently exposed by the public repositories; no unrelated or fabricated visuals are introduced.
 
 ## Project repositories
 
