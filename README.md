@@ -1,45 +1,18 @@
 # M Shafeek — Data Analyst Portfolio
 
-Live portfolio: **https://m-shafeek06.github.io**
+Live portfolio: https://m-shafeek06.github.io/
 
-Open the deployed portfolio: https://m-shafeek06.github.io
+## V17 update
 
-## What this version does
+- Preserves the working canonical navigation and URL behavior from V16.
+- Preserves the two featured project cards (Airport Operations Intelligence Platform and Healthcare Operations Intelligence) unchanged.
+- Adds subtle continuous homepage-only background motion using transform-based CSS animation with `prefers-reduced-motion` support.
+- Upgrades the USA Airline Service Analysis and Sales Data Analysis case-study pages with consistent project snapshot hero panels and evidence-focused structure.
+- Does not invent dashboard images or numerical findings where the public repositories do not expose them.
 
-- Text-first portfolio with no project, skill, logo, OpenGraph, CDN, or external image assets.
-- Uses a solid dark background with minimal CSS line/curve decoration only.
-- Uses one consistent project-card structure for every project.
-- Uses one consistent case-study hero structure across all project pages.
-- Keeps the `← Projects` navigation in the case-study header.
-- Keeps the resume at the repository root as `resume.pdf`.
-- Links LinkedIn using the canonical profile URL: https://www.linkedin.com/in/m-shafeek/
-- Certification links point to the LinkedIn profile's Licenses & Certifications section context rather than an invented credential URL.
+## Project repositories
 
-## Files
-
-- `index.html` — main portfolio
-- `style.css` — shared styling
-- `resume.pdf` — resume
-- `airport-operations.html` — Airport Operations Intelligence case study
-- `healthcare-operations.html` — Healthcare Operations Intelligence case study
-- `usa-airline-service.html` — USA Airline Service Analysis case study
-- `sales-data-analysis.html` — Sales Data Analysis case study
-- `road-accident-analysis.html` — Road Accident Analysis case study
-- `uber-trip-analysis.html` — Uber Trip Analysis case study
-- `heart-disease-analysis.html` — Heart Disease Analysis case study
-- `agrichaintrust.html` — AgriChainTrust technical project case study
-
-## Deployment
-
-This is a static GitHub Pages site. Keep `index.html` at the repository root and publish the repository from the branch/folder configured in GitHub Pages.
-
-
-## Image sourcing
-
-Project visuals are added only after verifying the corresponding project repository or LinkedIn project material. The first verified visual is the Airport Operations Intelligence Platform Executive Dashboard from the project repository.
-
-
-V15 updates: stable same-page navigation without hash changes, common project card dimensions, removed project-page insight metrics, and added the verified Healthcare Operations Intelligence cover image.
-
-
-V16 navigation note: homepage navigation and case-study return links use the canonical GitHub Pages root, not index.html. The homepage normalizes /index.html to /. The healthcare case study intentionally does not expose the supplied Power BI App URL because it redirects to Microsoft sign-in and is not publicly viewable without authentication. Healthcare dashboard screenshots are discovered from the public repository at runtime.
+- Airport: https://github.com/M-Shafeek06/Airport-Operations-Intelligence-Platform
+- Healthcare: https://github.com/M-Shafeek06/Healthcare-Operations-Intelligence
+- USA Airline: https://github.com/M-Shafeek06/Usa_Airline_Service_Analysis
+- Sales SQL: https://github.com/M-Shafeek06/Sales-Data-Analysis
