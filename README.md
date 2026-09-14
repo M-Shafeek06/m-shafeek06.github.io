@@ -2,7 +2,7 @@
 
 Live portfolio: https://m-shafeek06.github.io/
 
-## V19 update
+## V20 update
 
 - Preserves the working canonical navigation and URL behavior from V16.
 - Preserves the two featured project cards (Airport Operations Intelligence Platform and Healthcare Operations Intelligence) unchanged.
@@ -20,7 +20,10 @@ Live portfolio: https://m-shafeek06.github.io/
 - Sales SQL: https://github.com/M-Shafeek06/Sales-Data-Analysis
 
 
-## V19 image updates
+## V20 image updates
 - USA Airline case study uses the verified `usa_portfolio_main.png` cover.
 - Sales Data Analysis case study uses the verified `sda_portfolio_main.png` cover and retains SDA_2–SDA_4 work samples.
 - Road Accident Analysis uses a safe candidate resolver for the repository's `*_portfolio_main.png` cover naming; no unverified image is fabricated.
+
+
+V20 updates: USA dashboard flow, Sales SDA_1–SDA_5 gallery (SDA_5 is shown automatically when publicly available), and Road Accident RDA_porfolio_main.png with RDA1–RDA5 gallery.
