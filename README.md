@@ -32,3 +32,8 @@ Open the deployed portfolio: https://m-shafeek06.github.io
 ## Deployment
 
 This is a static GitHub Pages site. Keep `index.html` at the repository root and publish the repository from the branch/folder configured in GitHub Pages.
+
+
+## Image sourcing
+
+Project visuals are added only after verifying the corresponding project repository or LinkedIn project material. The first verified visual is the Airport Operations Intelligence Platform Executive Dashboard from the project repository.
