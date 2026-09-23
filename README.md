@@ -1,88 +1,43 @@
 # M Shafeek — Data Analyst Portfolio
 
-A professional portfolio showcasing data analytics projects, business intelligence solutions, and practical experience across Python, SQL, Power BI, and data visualization.
+Live portfolio: https://m-shafeek06.github.io/
 
-## Portfolio
+## V20 update
 
-**Live Website:**  
-https://m-shafeek06.github.io/
+- Preserves the working canonical navigation and URL behavior from V16.
+- Preserves the two featured project cards (Airport Operations Intelligence Platform and Healthcare Operations Intelligence) unchanged.
+- Adds subtle continuous homepage-only background motion using transform-based CSS animation with `prefers-reduced-motion` support.
+- Preserves the V17 homepage, featured projects, continuous motion and canonical navigation unchanged.
+- Adds the verified USA Airlines repository image as the USA case-study cover and dashboard evidence.
+- Adds the verified Sales Data Analysis repository cover image plus SDA_2, SDA_3 and SDA_4 work-sample images to the Sales case study.
+- Uses only images currently exposed by the public repositories; no unrelated or fabricated visuals are introduced.
 
-## Featured Projects
+## Project repositories
 
-- **Airport Operations Intelligence Platform** — End-to-end analytics solution using Python ETL, MySQL, dimensional modeling, Power Query, DAX, and Power BI.
-- **Healthcare Operations Intelligence** — Business intelligence platform focused on healthcare operations, KPI reporting, dimensional modeling, and interactive Power BI dashboards.
-- **USA Airline Service Analysis** — Airline service analysis and dashboard-based exploration of operational performance.
-- **Sales Data Analysis** — SQL-based sales analysis covering products, regions, categories, and time-based performance.
-- **Road Accident Analysis** — Data analysis and dashboard-driven exploration of road accident patterns and trends.
-- **Uber Trip Analysis** — Trip-level analysis covering operational patterns, time-based trends, and detailed trip insights.
-- **Heart Disease Analysis** — Exploratory and dashboard-based analysis of health-related dataset patterns and indicators.
-- **AgriChainTrust** — A data and technology project combining blockchain concepts, off-chain storage, tamper detection, trust scoring, and QR-based verification.
+- Airport: https://github.com/M-Shafeek06/Airport-Operations-Intelligence-Platform
+- Healthcare: https://github.com/M-Shafeek06/Healthcare-Operations-Intelligence
+- USA Airline: https://github.com/M-Shafeek06/Usa_Airline_Service_Analysis
+- Sales SQL: https://github.com/M-Shafeek06/Sales-Data-Analysis
 
-## Technical Skills
 
-**Analytics & Programming**
-- Python
-- Pandas
-- NumPy
-- SQL
-- MySQL
-- Microsoft SQL Server
+## V20 image updates
+- USA Airline case study uses the verified `usa_portfolio_main.png` cover.
+- Sales Data Analysis case study uses the verified `sda_portfolio_main.png` cover and retains SDA_2–SDA_4 work samples.
+- Road Accident Analysis uses a safe candidate resolver for the repository's `*_portfolio_main.png` cover naming; no unverified image is fabricated.
 
-**Business Intelligence**
-- Power BI
-- DAX
-- Power Query
-- Power BI Service
-- Data Modeling
-- KPI Development
 
-**Data Preparation & Visualization**
-- Data Cleaning
-- ETL
-- Exploratory Data Analysis
-- Matplotlib
-- Seaborn
-- Excel
-- Jupyter Notebook
+V20 updates: USA dashboard flow, Sales SDA_1–SDA_5 gallery (SDA_5 is shown automatically when publicly available), and Road Accident RDA_porfolio_main.png with RDA1–RDA5 gallery.
 
-**Tools**
-- VS Code
-- Git
-- GitHub
 
-## Project Repositories
+## V21 update
 
-- [Airport Operations Intelligence Platform](https://github.com/M-Shafeek06/Airport-Operations-Intelligence-Platform)
-- [Healthcare Operations Intelligence](https://github.com/M-Shafeek06/Healthcare-Operations-Intelligence)
-- [USA Airline Service Analysis](https://github.com/M-Shafeek06/Usa_Airline_Service_Analysis)
-- [Sales Data Analysis](https://github.com/M-Shafeek06/Sales-Data-Analysis)
-- [Road Accident Analysis](https://github.com/M-Shafeek06/Road-Accident-Analysis)
-- [Uber Trip Analysis](https://github.com/M-Shafeek06/Uber-Trip-Analysis)
-- [Heart Disease Analysis](https://github.com/M-Shafeek06/Heart-Disease-Analysis)
-- [AgriChainTrust — Frontend](https://github.com/M-Shafeek06/agrichain-frontend)
-- [AgriChainTrust — Backend](https://github.com/M-Shafeek06/agrichain-backend)
+- Preserves the working homepage, featured projects and canonical navigation from V20.
+- Updates the Uber Trip Analysis case study with the verified `UTA_portfolio_main.png` cover and the actual `UTA_1.png`, `UTA_2.png` and `UTA_3.png` dashboard views.
+- Updates the Heart Disease Analysis case study with the verified `HDA_portfolio_main.png` cover and the actual `HDA_1.png`, `HDA_2.png` and `HDA_3.png` dashboard views.
+- Keeps the same case-study flow used for the other projects: cover → dashboard views → problem → workflow → analytical scope → skills → repository evidence.
+- Does not change the homepage navigation architecture or featured project cards.
 
-## Experience
+## V21 project repositories
 
-**Data Analyst Intern — REVAMP**  
-May 2025 – September 2025
-
-**Data Analyst Intern — Edu Tantr**  
-June 2025 – August 2025
-
-## Education
-
-**B.Tech (Honours) — Artificial Intelligence and Data Science**  
-Dhaanish Ahmed Institute of Technology, Coimbatore  
-2022 – 2026
-
-## Certifications
-
-- Data Science and Data Analytics — REVAMP
-- Data Analytics — Edu Tantr
-- Data Analytics — MarcelloTech Trichy
-
-## Connect
-
-- [LinkedIn](https://www.linkedin.com/in/m-shafeek/)
-- [GitHub](https://github.com/M-Shafeek06)
+- Uber Trip Analysis: https://github.com/M-Shafeek06/Uber-Trip-Analysis
+- Heart Disease Analysis: https://github.com/M-Shafeek06/Heart-Disease-Analysis
