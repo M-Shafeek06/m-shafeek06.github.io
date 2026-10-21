@@ -124,27 +124,44 @@ sections.forEach(s=>observer.observe(s));
 <script>
 (() => {
   const panel = document.getElementById('opportunity-carousel');
-  const roleNode = document.getElementById('role-rotator');
-  if (!panel || !roleNode) return;
+  if (!panel) return;
+  const cards = [...panel.querySelectorAll('.opportunity-card')];
+  if (cards.length !== 3) return;
   const roles = ['Junior Data Analyst', 'BI Analyst', 'Business Analyst', 'Reporting Analyst'];
-  const previous = panel.querySelector('.role-prev');
-  const next = panel.querySelector('.role-next');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let index = 0;
-  const render = () => {
-    roleNode.textContent = roles[index];
-    previous.textContent = roles[(index - 1 + roles.length) % roles.length];
-    next.textContent = roles[(index + 1) % roles.length];
+  const assignRoles = () => {
+    cards.forEach(card => {
+      const role = card.querySelector('strong');
+      if (card.classList.contains('active-card')) role.textContent = roles[index];
+      else if (card.classList.contains('prev-card')) role.textContent = roles[(index - 1 + roles.length) % roles.length];
+      else role.textContent = roles[(index + 1) % roles.length];
+    });
   };
-  render();
+  const setPositions = (animate = true) => {
+    cards.forEach(card => {
+      card.classList.remove('active-card', 'prev-card', 'next-card', 'side-card');
+      card.style.transition = animate && !reduceMotion ? '' : 'none';
+    });
+    cards[0].classList.add('prev-card', 'side-card');
+    cards[1].classList.add('active-card');
+    cards[2].classList.add('next-card', 'side-card');
+    assignRoles();
+  };
+  // Start with the center card active; each cycle moves the card positions rightward.
+  cards[0].classList.add('prev-card', 'side-card');
+  cards[1].classList.add('active-card');
+  cards[2].classList.add('next-card', 'side-card');
+  assignRoles();
   if (reduceMotion) return;
   window.setInterval(() => {
     index = (index + 1) % roles.length;
     panel.classList.add('is-rotating');
-    window.setTimeout(() => {
-      render();
-      panel.classList.remove('is-rotating');
-    }, 220);
+    // Move the previous card into the center and shift the current card to the right.
+    const previous = cards.shift();
+    cards.push(previous);
+    setPositions(true);
+    window.setTimeout(() => panel.classList.remove('is-rotating'), 480);
   }, 5000);
 })();
 </script>

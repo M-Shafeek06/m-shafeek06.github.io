@@ -226,20 +226,24 @@ footer{max-width:var(--max);margin:auto;padding:25px 24px 40px;border-top:1px so
 @media(prefers-reduced-motion:reduce){.role-rotator{transition:none}.role-rotator.is-changing{opacity:1;transform:none}}
 
 
-/* Opportunity role carousel — positioned above the analytics toolkit */
+/* Opportunity role carousel — three cards with a rightward rotating motion */
 .hero-visual-stack{width:100%;max-width:610px;display:flex;flex-direction:column;gap:18px}
 .opportunity-panel{width:100%;overflow:hidden}
 .opportunity-heading{display:flex;align-items:center;gap:10px;margin:0 0 10px 2px;color:var(--accent);font-size:.72rem;font-weight:800;letter-spacing:.16em}
 .opportunity-status{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px rgba(82,220,239,.45);flex:none}
-.opportunity-carousel{position:relative;height:96px;display:flex;align-items:center;justify-content:center;isolation:isolate}
-.opportunity-card{position:absolute;top:50%;width:64%;min-height:72px;box-sizing:border-box;padding:13px 18px;border:1px solid #31516e;border-radius:13px;background:#0c1c2d;display:flex;flex-direction:column;justify-content:center;gap:5px;transition:transform .45s ease,opacity .45s ease,filter .45s ease;box-shadow:0 12px 30px rgba(0,0,0,.12)}
+.opportunity-carousel{position:relative;height:96px;display:flex;align-items:center;justify-content:center;isolation:isolate;overflow:hidden}
+.opportunity-card{position:absolute;top:50%;width:64%;min-height:72px;box-sizing:border-box;padding:13px 18px;border:1px solid #31516e;border-radius:13px;background:#0c1c2d;display:flex;flex-direction:column;justify-content:center;gap:5px;transition:left .48s ease,right .48s ease,transform .48s ease,opacity .48s ease,filter .48s ease;box-shadow:0 12px 30px rgba(0,0,0,.12)}
 .opportunity-card strong{font-size:1rem;color:var(--text);white-space:nowrap}
 .opportunity-card-label{font-size:.58rem;font-weight:800;letter-spacing:.15em;color:#7892ac}
-.active-card{z-index:3;left:18%;transform:translateY(-50%);border-color:#34728a;background:#10263a;box-shadow:0 12px 34px rgba(0,0,0,.22),inset 0 2px var(--accent)}
-.side-card{z-index:1;filter:blur(1.1px);opacity:.42}
-.side-card:first-child{left:-7%;transform:translate(0,-50%) scale(.88)}
-.side-card:last-child{right:-7%;transform:translate(0,-50%) scale(.88)}
-.opportunity-carousel.is-rotating .active-card{opacity:.65;filter:blur(1px);transform:translateY(-50%) scale(.97)}
+.opportunity-card.active-card{z-index:3;left:18%;right:auto;transform:translateY(-50%) scale(1);border-color:#34728a;background:#10263a;opacity:1;filter:none;box-shadow:0 12px 34px rgba(0,0,0,.22),inset 0 2px var(--accent)}
+.opportunity-card.prev-card,.opportunity-card.next-card{z-index:1;opacity:.42;filter:blur(1.1px)}
+.opportunity-card.prev-card{left:-7%;right:auto;transform:translateY(-50%) scale(.88)}
+.opportunity-card.next-card{right:-7%;left:auto;transform:translateY(-50%) scale(.88)}
+.opportunity-carousel.is-rotating .opportunity-card{transition:left .48s ease,right .48s ease,transform .48s ease,opacity .48s ease,filter .48s ease}
+@media(prefers-reduced-motion:reduce){.opportunity-card{transition:none!important}}
+@media(max-width:900px){.hero-visual-stack{max-width:560px}.opportunity-card{width:68%}.opportunity-card.active-card{left:16%}.opportunity-card.prev-card{left:-5%}.opportunity-card.next-card{right:-5%}}
+@media(max-width:640px){.hero-visual-stack{gap:14px}.opportunity-carousel{height:88px}.opportunity-card{width:72%;padding:11px 13px;min-height:68px}.opportunity-card strong{font-size:.88rem}.opportunity-card.active-card{left:14%}.opportunity-card.prev-card{left:-11%;transform:translateY(-50%) scale(.82)}.opportunity-card.next-card{right:-11%;transform:translateY(-50%) scale(.82)}}
+
 @media (prefers-reduced-motion:reduce){.opportunity-card{transition:none}}
 
 @media(max-width:900px){
