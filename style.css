@@ -215,3 +215,12 @@ footer{max-width:var(--max);margin:auto;padding:25px 24px 40px;border-top:1px so
 .road-cover-placeholder span{font-size:clamp(24px,3vw,44px);font-weight:800;letter-spacing:.02em;color:#edf4ff}
 .road-cover-placeholder small{color:#8fa8c3;font-size:14px;letter-spacing:.12em;text-transform:uppercase}
 .road-cover img{width:100%;height:auto;max-height:480px;object-fit:cover;border-radius:18px;border:1px solid rgba(104,221,255,.22)}
+
+
+/* Compact rotating job-role label in the homepage hero. */
+.role-eyebrow{margin-bottom:8px}
+.role-rotator-wrap{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:0 0 22px;min-height:44px}
+.role-prefix{font-size:.68rem;letter-spacing:.16em;color:#607b96;font-weight:700}
+.role-rotator{display:inline-flex;align-items:center;min-height:38px;padding:5px 13px;border:1px solid rgba(93,225,244,.32);border-radius:999px;background:rgba(11,26,44,.9);color:var(--accent);font-family:'Space Grotesk',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.01em;transition:opacity .18s ease,transform .18s ease}
+.role-rotator.is-changing{opacity:0;transform:translateY(4px)}
+@media(prefers-reduced-motion:reduce){.role-rotator{transition:none}.role-rotator.is-changing{opacity:1;transform:none}}
