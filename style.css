@@ -323,3 +323,8 @@ footer{max-width:var(--max);margin:auto;padding:25px 24px 40px;border-top:1px so
 .role-table td{font-size:.9rem;color:var(--muted)}.role-table td:nth-child(2){color:var(--text);font-weight:600}.role-table td:first-child{width:64px;color:var(--accent);font-weight:700;font-variant-numeric:tabular-nums}.role-table td:last-child{font-size:.84rem}
 .role-table tbody tr:last-child td{border-bottom:0}.role-table tbody tr:hover{background:rgba(93,225,244,.035)}
 @media(max-width:640px){.permanent-role{gap:7px;margin-bottom:18px;padding:9px 11px}.permanent-role-label{font-size:.58rem}.permanent-role strong{font-size:.88rem}.profile-photo-wrap{padding:12px;gap:12px}.profile-photo,.profile-initials{width:72px;height:72px}.profile-caption span{font-size:.72rem}.target-roles-section{padding-top:48px;padding-bottom:48px}.role-table th,.role-table td{padding:12px 14px}}
+
+/* Professional location line in the profile card */
+.profile-caption .profile-location{display:flex;flex-wrap:wrap;align-items:center;gap:5px 7px;margin-top:5px;font-size:.72rem;line-height:1.5;color:var(--muted)}
+.profile-caption .location-separator{color:var(--accent);font-weight:800}
+@media(max-width:640px){.profile-caption .profile-location{font-size:.66rem;gap:3px 5px}}

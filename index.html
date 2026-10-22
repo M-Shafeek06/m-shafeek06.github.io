@@ -19,15 +19,7 @@
 <p class="lead">Aspiring Data Analyst focused on SQL, Power BI, Excel, and Python, with experience in data preparation, analytical modeling, KPI development, and dashboard design.</p>
 <div class="actions"><a class="button primary" href="#projects">View Projects</a><a class="button secondary" href="resume.pdf" target="_blank">View Resume</a><a class="button secondary" href="https://github.com/M-Shafeek06" target="_blank" rel="noopener">GitHub</a><a class="button secondary" href="https://www.linkedin.com/in/m-shafeek/" target="_blank" rel="noopener">LinkedIn</a></div></div>
 <div class="hero-visual"><div class="hero-visual-stack">
-<div class="profile-photo-wrap"><img id="profile-photo" class="profile-photo" src="" alt="M Shafeek portrait" loading="eager"><span class="profile-initials" aria-hidden="true">MS</span><div class="profile-caption"><strong>M Shafeek</strong><span>Data Analytics · Business Intelligence</span></div></div><div class="opportunity-panel" aria-label="Open to opportunities: 15 target roles rotating in a three-card carousel">
-  <div class="opportunity-heading"><span class="opportunity-status" aria-hidden="true"></span><span>OPEN TO OPPORTUNITIES</span></div>
-  <div class="opportunity-carousel" id="opportunity-carousel" aria-live="polite" aria-atomic="true">
-    <div class="opportunity-card side-card" aria-hidden="true"><span class="opportunity-card-label">TARGET ROLE</span><strong class="role-prev">Reporting Analyst</strong></div>
-    <div class="opportunity-card active-card"><span class="opportunity-card-label">TARGET ROLE</span><strong id="role-rotator">Junior Data Analyst</strong></div>
-    <div class="opportunity-card side-card" aria-hidden="true"><span class="opportunity-card-label">TARGET ROLE</span><strong class="role-next">BI Analyst</strong></div>
-  </div>
-</div>
-<div class="hero-card toolkit-card"><div class="toolkit-top"><div><p class="card-label">ANALYTICS TOOLKIT</p><p class="toolkit-subtitle">CORE STACK</p></div></div><div class="tool-grid"><div><strong>SQL</strong></div><div><strong>Power BI</strong></div><div><strong>Python</strong></div><div><strong>Excel</strong></div><div><strong>DAX</strong></div><div><strong>Pandas</strong></div><div><strong>MySQL</strong></div><div><strong>ETL</strong></div></div></div></div></div>
+<div class="profile-photo-wrap"><img id="profile-photo" class="profile-photo" src="" alt="M Shafeek portrait" loading="eager"><span class="profile-initials" aria-hidden="true">MS</span><div class="profile-caption"><strong>M Shafeek</strong><span>Data Analytics · Business Intelligence</span><span class="profile-location"><span>Native: Palakkad, Kerala</span><span class="location-separator" aria-hidden="true">·</span><span>Currently based in Bengaluru, Karnataka</span></span></div></div><div class="hero-card toolkit-card"><div class="toolkit-top"><div><p class="card-label">ANALYTICS TOOLKIT</p><p class="toolkit-subtitle">CORE STACK</p></div></div><div class="tool-grid"><div><strong>SQL</strong></div><div><strong>Power BI</strong></div><div><strong>Python</strong></div><div><strong>Excel</strong></div><div><strong>DAX</strong></div><div><strong>Pandas</strong></div><div><strong>MySQL</strong></div><div><strong>ETL</strong></div></div></div></div></div>
 </section>
 
 
@@ -159,64 +151,4 @@ const observer=new IntersectionObserver(entries=>entries.forEach(e=>{
 sections.forEach(s=>observer.observe(s));
 </script>
 
-<script>
-(() => {
-  const panel = document.getElementById('opportunity-carousel');
-  if (!panel) return;
-  const cards = [...panel.querySelectorAll('.opportunity-card')];
-  if (cards.length !== 3) return;
-  const roles = [
-    'Data Analyst – Fresher / Junior Data Analyst',
-    'MIS Analyst / MIS Executive',
-    'Reporting Analyst',
-    'Power BI Developer – Junior',
-    'Business Analyst – Fresher / Junior Business Analyst',
-    'Business Intelligence (BI) Analyst',
-    'Product Analyst – Junior / Associate Product Analyst',
-    'SQL Analyst / Junior SQL Analyst',
-    'Analytics Associate / Data Analytics Associate',
-    'Product Operations Analyst',
-    'Operations Analyst',
-    'Growth Analyst – Junior',
-    'Data Quality Analyst',
-    'Data Operations Analyst',
-    'Graduate Analyst / Graduate Trainee – Analytics'
-  ];
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let index = 0;
-  const assignRoles = () => {
-    cards.forEach(card => {
-      const role = card.querySelector('strong');
-      if (card.classList.contains('active-card')) role.textContent = roles[index];
-      else if (card.classList.contains('prev-card')) role.textContent = roles[(index - 1 + roles.length) % roles.length];
-      else role.textContent = roles[(index + 1) % roles.length];
-    });
-  };
-  const setPositions = (animate = true) => {
-    cards.forEach(card => {
-      card.classList.remove('active-card', 'prev-card', 'next-card', 'side-card');
-      card.style.transition = animate && !reduceMotion ? '' : 'none';
-    });
-    cards[0].classList.add('prev-card', 'side-card');
-    cards[1].classList.add('active-card');
-    cards[2].classList.add('next-card', 'side-card');
-    assignRoles();
-  };
-  // Start with the center card active; each cycle moves the card positions rightward.
-  cards[0].classList.add('prev-card', 'side-card');
-  cards[1].classList.add('active-card');
-  cards[2].classList.add('next-card', 'side-card');
-  assignRoles();
-  if (reduceMotion) return;
-  window.setInterval(() => {
-    index = (index + 1) % roles.length;
-    panel.classList.add('is-rotating');
-    // Move the previous card into the center and shift the current card to the right.
-    const previous = cards.shift();
-    cards.push(previous);
-    setPositions(true);
-    window.setTimeout(() => panel.classList.remove('is-rotating'), 480);
-  }, 5000);
-})();
-</script>
 </body></html>
