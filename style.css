@@ -750,3 +750,205 @@ body.light-only .tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(prefers-reduced-motion:reduce){
   body.light-only .profile-socials a{transition:none}
 }
+
+
+/* ==========================================================
+   FINAL REPAIR OVERRIDES — portfolio layout and readability
+   Keep all existing markup, links, and JavaScript intact.
+   ========================================================== */
+
+/* Profile photo: a modest zoom while preserving the square crop. */
+body.light-only .profile-photo-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 14px !important;
+  padding: 22px 20px !important;
+  min-height: 0 !important;
+  text-align: center !important;
+  overflow: hidden !important;
+}
+body.light-only .profile-photo-wrap > .profile-photo,
+body.light-only .profile-photo-wrap > .profile-initials {
+  display: block;
+  width: 184px !important;
+  height: 184px !important;
+  min-width: 184px !important;
+  min-height: 184px !important;
+  max-width: 100%;
+  object-fit: cover !important;
+  object-position: center 24% !important;
+  border-radius: 20px !important;
+  border: 2px solid #b8dce6 !important;
+  background: #f2f7fb !important;
+  flex: none !important;
+  transform: scale(1.035);
+  transform-origin: center;
+}
+body.light-only .profile-caption {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 10px !important;
+  width: 100%;
+  min-width: 0;
+  padding: 0 !important;
+  text-align: center !important;
+}
+body.light-only .profile-socials {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 9px !important;
+  margin-top: 2px !important;
+}
+body.light-only .profile-socials a {
+  width: 42px !important;
+  height: 42px !important;
+}
+
+/* Certifications: exactly two columns on desktop, then natural rows. */
+body.light-only .certification-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+  width: 100%;
+}
+body.light-only .certification-grid .development-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+  min-width: 0 !important;
+  min-height: 205px !important;
+  height: 100%;
+  padding: 22px !important;
+  box-sizing: border-box !important;
+}
+body.light-only .certification-grid .development-card > div { width: 100%; }
+body.light-only .certification-grid .development-card h3 {
+  font-size: 1rem !important;
+  line-height: 1.45 !important;
+  overflow-wrap: anywhere;
+}
+body.light-only .certification-grid .development-card .button {
+  width: 100% !important;
+  min-height: 44px;
+  margin-top: auto !important;
+  white-space: normal !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+
+/* Project cards: give each project's tool/metric rail a consistent layout. */
+body.light-only .project-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  align-items: stretch !important;
+  gap: 20px !important;
+}
+body.light-only .project {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 112px !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+  min-width: 0 !important;
+  min-height: 300px !important;
+  height: auto !important;
+  padding: 22px !important;
+  box-sizing: border-box !important;
+}
+body.light-only .project-main { min-width: 0 !important; }
+body.light-only .project .tag {
+  display: inline-block;
+  max-width: 100%;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  line-height: 1.45;
+}
+body.light-only .project-side {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-self: stretch !important;
+  min-width: 0 !important;
+  gap: 9px !important;
+  padding: 0 0 0 14px !important;
+  border-left: 1px solid #d5dfeb !important;
+  border-top: 0 !important;
+  background: #f1f5fa !important;
+  box-sizing: border-box !important;
+}
+body.light-only .project-side span {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  min-height: 56px !important;
+  padding: 9px 6px !important;
+  border: 1px solid #d5dfeb !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  color: #52677f !important;
+  text-align: center !important;
+  font-size: .66rem !important;
+  line-height: 1.35 !important;
+  letter-spacing: .045em !important;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+body.light-only .project-side span:first-child {
+  color: #087f9e !important;
+  border-color: #a9d4df !important;
+}
+
+/* InsightForge case-study feature panel: match the site's light theme. */
+body.light-only .project-snapshot {
+  color: #17263b !important;
+  background: #ffffff !important;
+  border: 1px solid #d5dfeb !important;
+  border-radius: 18px !important;
+  box-shadow: 0 16px 38px rgba(27, 48, 74, .07) !important;
+}
+body.light-only .project-snapshot::before,
+body.light-only .project-snapshot::after {
+  border-color: rgba(8, 127, 158, .10) !important;
+}
+body.light-only .project-snapshot .snapshot-kicker,
+body.light-only .project-snapshot .snapshot-grid strong {
+  color: #087f9e !important;
+}
+body.light-only .project-snapshot .snapshot-title,
+body.light-only .project-snapshot .snapshot-title span {
+  color: #17263b !important;
+}
+body.light-only .project-snapshot .snapshot-grid > div {
+  background: #f7fafd !important;
+  border: 1px solid #d5dfeb !important;
+  border-radius: 12px !important;
+}
+body.light-only .project-snapshot .snapshot-grid small { color: #53677f !important; }
+
+/* Responsive layout: keep content readable on tablet and mobile. */
+@media (max-width: 900px) {
+  body.light-only .project-grid { grid-template-columns: 1fr !important; }
+  body.light-only .project { min-height: 0 !important; }
+}
+@media (max-width: 640px) {
+  body.light-only .profile-photo-wrap { padding: 18px 14px !important; }
+  body.light-only .profile-photo-wrap > .profile-photo,
+  body.light-only .profile-photo-wrap > .profile-initials {
+    width: 156px !important;
+    height: 156px !important;
+    min-width: 156px !important;
+    min-height: 156px !important;
+  }
+  body.light-only .certification-grid { grid-template-columns: 1fr !important; }
+  body.light-only .certification-grid .development-card { min-height: 0 !important; }
+  body.light-only .project { grid-template-columns: minmax(0, 1fr) 88px !important; gap: 10px !important; padding: 15px !important; }
+  body.light-only .project-side { padding-left: 9px !important; gap: 7px !important; }
+  body.light-only .project-side span { min-height: 48px !important; padding: 7px 4px !important; font-size: .58rem !important; }
+}
