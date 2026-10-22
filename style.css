@@ -50,8 +50,8 @@ body::selection{background:var(--accent);color:var(--bg)}
   .home-page .background-lines span{animation:none;}
 }
 
-.background-lines{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:.72}
-.background-lines::before,.background-lines::after{content:"";position:absolute;border:1px solid rgba(93,225,244,.11);border-radius:50%}
+.background-lines{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:1}
+.background-lines::before,.background-lines::after{content:"";position:absolute;border:1px solid rgba(93,225,244,.30);border-radius:50%}
 .background-lines::before{width:920px;height:520px;left:-310px;top:14%;transform:rotate(-18deg)}
 .background-lines::after{width:1050px;height:590px;right:-390px;bottom:2%;transform:rotate(17deg)}
 .background-lines span{position:absolute;display:block;height:1px;background:rgba(159,180,204,.10);transform-origin:left center}
@@ -479,7 +479,7 @@ body.light-only .timeline{gap:14px}body.light-only .timeline-item{padding:24px;b
 body.light-only .experience-development{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}body.light-only .certifications-block>.section-heading{grid-column:1/-1}body.light-only .certifications-block{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}body.light-only .certifications-block .section-heading{grid-column:1/-1;margin-bottom:4px}body.light-only .development-card{min-width:0;min-height:180px;padding:22px;justify-content:space-between}body.light-only .development-card h3{overflow-wrap:anywhere}body.light-only .development-card .button{white-space:normal}
 body.light-only .project-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}body.light-only .project{height:auto;min-height:330px;grid-template-columns:minmax(0,1fr) 98px;gap:16px;padding:22px}body.light-only .project-main h3{line-height:1.18}body.light-only .project p{line-height:1.7}body.light-only .project-actions{gap:14px;flex-wrap:wrap}
 body.light-only .contact .actions .button{background:#fff!important;color:#17263b!important;border:1px solid #d5dfeb!important;box-shadow:none!important}body.light-only .contact .actions .button:hover{border-color:#087f9e!important;color:#087f9e!important}
-body.light-only .background-lines{opacity:.42}body.light-only .background-lines::before,body.light-only .background-lines::after{border-color:rgba(8,127,158,.09)}body.light-only .background-lines span{background:rgba(83,103,127,.10)}
+body.light-only .background-lines{opacity:.42}body.light-only .background-lines::before,body.light-only .background-lines::after{border-color:rgba(8,127,158,.09)}body.light-only .background-lines span{background:rgba(83,103,127,.25)}
 /* Subtle decorative dot field; purely decorative and low contrast. */
 body.light-only .background-lines{background-image:radial-gradient(circle,rgba(8,127,158,.13) 1px,transparent 1.4px);background-size:28px 28px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.55),transparent 72%)}
 /* The profile/social panel is intentionally square and vertically composed. */
