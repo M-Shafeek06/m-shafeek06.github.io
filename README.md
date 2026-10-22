@@ -104,3 +104,6 @@ Open to suitable opportunities as a Junior Data Analyst, BI Analyst, Business An
 
 - [LinkedIn](https://www.linkedin.com/in/m-shafeek/)
 - [GitHub](https://github.com/M-Shafeek06)
+
+
+The homepage identifies Junior Data Analyst as the primary target role and lists 14 additional entry-level role preferences with relevant skills. The role list communicates job preferences, not claimed specialist experience in each role.

@@ -13,10 +13,13 @@
 </nav></header>
 <main>
 <section id="home" class="hero">
-<div class="hero-copy"><h1>Turning structured data into <span>actionable insights.</span></h1>
+<div class="hero-copy">
+<div class="permanent-role"><span class="role-live-dot" aria-hidden="true"></span><span class="permanent-role-label">PRIMARY TARGET ROLE</span><strong>Junior Data Analyst</strong></div>
+<h1>Turning structured data into <span>actionable insights.</span></h1>
 <p class="lead">Aspiring Data Analyst focused on SQL, Power BI, Excel, and Python, with experience in data preparation, analytical modeling, KPI development, and dashboard design.</p>
 <div class="actions"><a class="button primary" href="#projects">View Projects</a><a class="button secondary" href="resume.pdf" target="_blank">View Resume</a><a class="button secondary" href="https://github.com/M-Shafeek06" target="_blank" rel="noopener">GitHub</a><a class="button secondary" href="https://www.linkedin.com/in/m-shafeek/" target="_blank" rel="noopener">LinkedIn</a></div></div>
-<div class="hero-visual"><div class="hero-visual-stack"><div class="opportunity-panel" aria-label="Open to opportunities: 15 target roles rotating in a three-card carousel">
+<div class="hero-visual"><div class="hero-visual-stack">
+<div class="profile-photo-wrap"><img id="profile-photo" class="profile-photo" src="https://raw.githubusercontent.com/M-Shafeek06/m-shafeek06.github.io/main/M_Shafeek.png" alt="M Shafeek portrait" loading="eager"><span class="profile-initials" aria-hidden="true">MS</span><div class="profile-caption"><strong>M Shafeek</strong><span>Data Analytics · Business Intelligence</span></div></div><div class="opportunity-panel" aria-label="Open to opportunities: 15 target roles rotating in a three-card carousel">
   <div class="opportunity-heading"><span class="opportunity-status" aria-hidden="true"></span><span>OPEN TO OPPORTUNITIES</span></div>
   <div class="opportunity-carousel" id="opportunity-carousel" aria-live="polite" aria-atomic="true">
     <div class="opportunity-card side-card" aria-hidden="true"><span class="opportunity-card-label">TARGET ROLE</span><strong class="role-prev">Reporting Analyst</strong></div>
@@ -26,6 +29,24 @@
 </div>
 <div class="hero-card toolkit-card"><div class="toolkit-top"><div><p class="card-label">ANALYTICS TOOLKIT</p><p class="toolkit-subtitle">CORE STACK</p></div></div><div class="tool-grid"><div><strong>SQL</strong></div><div><strong>Power BI</strong></div><div><strong>Python</strong></div><div><strong>Excel</strong></div><div><strong>DAX</strong></div><div><strong>Pandas</strong></div><div><strong>MySQL</strong></div><div><strong>ETL</strong></div></div></div></div></div>
 </section>
+
+<section id="target-roles" class="section target-roles-section"><div class="section-heading"><p class="eyebrow">OPEN TO OPPORTUNITIES</p><h2>Analytical toolkit for 14 additional roles.</h2><p class="muted section-note">Junior Data Analyst is my primary target role. I am also open to the related entry-level roles listed below; this is a job-preference list, not a claim of specialist experience in every role.</p></div>
+<div class="role-table-wrap"><table class="role-table"><thead><tr><th scope="col">#</th><th scope="col">Additional target role</th><th scope="col">Relevant toolkit / focus</th></tr></thead><tbody>
+<tr><td>01</td><td>MIS Analyst / MIS Executive</td><td>Excel · KPI reporting · data validation</td></tr>
+<tr><td>02</td><td>Reporting Analyst</td><td>SQL · Excel · Power BI reports</td></tr>
+<tr><td>03</td><td>Power BI Developer – Junior</td><td>Power BI · DAX · Power Query · data modeling</td></tr>
+<tr><td>04</td><td>Business Analyst – Fresher / Junior Business Analyst</td><td>Business metrics · requirements thinking · reporting</td></tr>
+<tr><td>05</td><td>Business Intelligence (BI) Analyst</td><td>SQL · star schema · Power BI · KPI design</td></tr>
+<tr><td>06</td><td>Product Analyst – Junior / Associate Product Analyst</td><td>SQL · Excel · exploratory analysis · metrics</td></tr>
+<tr><td>07</td><td>SQL Analyst / Junior SQL Analyst</td><td>SQL · joins · CTEs · aggregations</td></tr>
+<tr><td>08</td><td>Analytics Associate / Data Analytics Associate</td><td>Python · Pandas · SQL · data cleaning</td></tr>
+<tr><td>09</td><td>Product Operations Analyst</td><td>Operational metrics · reporting · data quality</td></tr>
+<tr><td>10</td><td>Operations Analyst</td><td>Excel · SQL · process and performance reporting</td></tr>
+<tr><td>11</td><td>Growth Analyst – Junior</td><td>SQL · trend analysis · KPI tracking</td></tr>
+<tr><td>12</td><td>Data Quality Analyst</td><td>Validation · missing values · duplicates · profiling</td></tr>
+<tr><td>13</td><td>Data Operations Analyst</td><td>ETL concepts · data preparation · quality checks</td></tr>
+<tr><td>14</td><td>Graduate Analyst / Graduate Trainee – Analytics</td><td>SQL · Excel · Power BI · Python fundamentals</td></tr>
+</tbody></table></div></section>
 
 <section id="about" class="section"><div class="section-heading"><p class="eyebrow">01 — ABOUT</p><h2>Analytical thinking, business context, measurable reporting.</h2></div><div class="two-column"><p>I am an aspiring Data Analyst focused on SQL, Power BI, Excel, and Python, with experience turning structured data into actionable business insights. My work spans data preparation, analytical modeling, KPI development, exploratory analysis, and dashboard design.</p><p>I have developed end-to-end business intelligence solutions across healthcare and airport operations using Python ETL, relational databases, star-schema modeling, DAX, and Power BI Service.</p></div></section>
 
@@ -77,6 +98,19 @@
     const hash = window.location.hash;
     history.replaceState(null, '', '/' + hash);
   }
+})();
+
+// Resolve the repository-hosted M_Shafeek portrait across common image extensions and known repository locations.
+(function loadProfilePhoto(){
+  const img = document.getElementById('profile-photo');
+  if (!img) return;
+  const candidates = [];
+  for (const repo of ['m-shafeek06.github.io', 'insightforge-ai']) {
+    for (const ext of ['png','jpg','jpeg','webp']) candidates.push(`https://raw.githubusercontent.com/M-Shafeek06/${repo}/main/M_Shafeek.${ext}`);
+  }
+  let i = 0;
+  img.onerror = () => { i += 1; if (i < candidates.length) img.src = candidates[i]; else { img.style.display='none'; const fallback=img.parentElement.querySelector('.profile-initials'); if(fallback) fallback.style.display='grid'; } };
+  img.src = candidates[0];
 })();
 
 const sections=[...document.querySelectorAll('main section[id]')];
