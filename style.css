@@ -953,179 +953,254 @@ body.light-only .project-snapshot .snapshot-grid small { color: #53677f !importa
   body.light-only .project-side span { min-height: 48px !important; padding: 7px 4px !important; font-size: .58rem !important; }
 }
 
-/* FINAL PROJECT CARD FIX — full-width content with readable tool/metric chips. */
-body.light-only .project-grid {
+/* =========================================================
+   FINAL STABILITY OVERRIDES — 22 Oct 2026
+   These rules intentionally come last to neutralize conflicting
+   legacy selectors without changing existing HTML or JavaScript.
+   ========================================================= */
+body.light-only .profile-photo-wrap {
+  width: 100% !important;
+  max-width: 460px !important;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
+  padding: 28px 24px 26px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0 !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+body.light-only .profile-photo-wrap > #profile-photo.profile-photo {
+  display: block !important;
+  flex: 0 0 154px !important;
+  width: 154px !important;
+  height: 154px !important;
+  min-width: 154px !important;
+  min-height: 154px !important;
+  max-width: 100% !important;
+  margin: 0 auto 16px !important;
+  padding: 0 !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  transform: none !important;
+  border: 2px solid #ffffff !important;
+  border-radius: 18px !important;
+  background: #f1f6fb !important;
+  box-shadow: 0 0 0 1.5px rgba(8,126,155,.28), 0 8px 22px rgba(28,48,75,.10) !important;
+  box-sizing: border-box !important;
+}
+body.light-only .profile-caption {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  gap: 10px !important;
+  text-align: center !important;
+}
+body.light-only .profile-caption > strong { font-size: 1.3rem !important; line-height: 1.25 !important; }
+body.light-only .profile-caption .profile-phone { display: inline-block !important; color: #425a74 !important; font-weight: 650 !important; }
+body.light-only .profile-socials { display: flex !important; justify-content: center !important; align-items: center !important; gap: 10px !important; margin-top: 4px !important; }
+body.light-only .profile-socials a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  color: #344e6b !important;
+  background: #f5f8fc !important;
+  border: 1px solid #c7d5e5 !important;
+  opacity: 1 !important;
+}
+body.light-only .profile-socials svg { width: 19px !important; height: 19px !important; opacity: 1 !important; fill: currentColor !important; }
+body.light-only .profile-socials a:hover { color: #087f9e !important; border-color: #087f9e !important; background: #edf8fb !important; }
+
+/* Certificates: two equal columns on desktop, one column on narrow phones. */
+body.light-only .certifications-block {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin-top: 42px !important;
+}
+body.light-only .certifications-block > .section-heading { display: block !important; width: 100% !important; margin-bottom: 20px !important; }
+body.light-only .certification-grid {
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   align-items: stretch !important;
-  gap: 22px !important;
+  gap: 16px !important;
+  width: 100% !important;
+  min-width: 0 !important;
 }
-body.light-only .project {
+body.light-only .certification-grid > .development-card {
   display: flex !important;
   flex-direction: column !important;
   align-items: stretch !important;
+  justify-content: space-between !important;
   gap: 18px !important;
+  width: auto !important;
   min-width: 0 !important;
-  min-height: 0 !important;
-  height: auto !important;
-  padding: 24px !important;
-  overflow: hidden !important;
-}
-body.light-only .project-main {
-  display: flex !important;
-  flex: 1 1 auto !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  width: 100% !important;
-  min-width: 0 !important;
-}
-body.light-only .project-main .tag {
-  max-width: 100% !important;
-  white-space: normal !important;
-  overflow-wrap: anywhere !important;
-  line-height: 1.5 !important;
-}
-body.light-only .project-main h3 {
-  max-width: 100% !important;
-  margin: 12px 0 !important;
-  font-size: clamp(1.12rem, 1.5vw, 1.35rem) !important;
-  line-height: 1.3 !important;
-  overflow-wrap: break-word !important;
-}
-body.light-only .project-main > p:not(.project-number) {
-  width: 100% !important;
-  margin: 6px 0 16px !important;
-  font-size: .96rem !important;
-  line-height: 1.75 !important;
-  overflow-wrap: break-word !important;
-}
-body.light-only .project-actions {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  align-items: center !important;
-  gap: 12px 18px !important;
-  width: 100% !important;
-  margin-top: auto !important;
-  padding-top: 12px !important;
-}
-body.light-only .project-side {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  align-content: stretch !important;
-  align-items: stretch !important;
-  justify-content: stretch !important;
-  gap: 9px !important;
-  width: 100% !important;
-  min-width: 0 !important;
-  padding: 16px 0 0 !important;
-  border: 0 !important;
-  border-top: 1px solid #d5dfeb !important;
-  background: transparent !important;
+  min-height: 205px !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 22px !important;
   box-sizing: border-box !important;
 }
+body.light-only .certification-grid > .development-card > div { width: 100% !important; min-width: 0 !important; }
+body.light-only .certification-grid .development-card h3 { font-size: 1rem !important; line-height: 1.45 !important; overflow-wrap: anywhere !important; }
+body.light-only .certification-grid .development-card .button { display: flex !important; align-items: center !important; justify-content: center !important; width: 100% !important; min-height: 44px !important; margin-top: auto !important; white-space: normal !important; text-align: center !important; box-sizing: border-box !important; }
+
+/* Project cards: remove the filled side-rail panel on every project card. */
+body.light-only .project { min-width: 0 !important; }
+body.light-only .project-side {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-left: 1px solid #d5dfeb !important;
+  border-radius: 0 !important;
+}
 body.light-only .project-side span {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #405a74 !important;
+  border: 1px solid #cbd9e8 !important;
+  opacity: 1 !important;
+}
+body.light-only .project-side span:first-child { color: #087f9e !important; border-color: #9ccbd7 !important; }
+
+@media (max-width: 760px) {
+  body.light-only .profile-photo-wrap { width: 100% !important; max-width: 460px !important; padding: 24px 18px !important; }
+  body.light-only .profile-photo-wrap > #profile-photo.profile-photo { flex-basis: 138px !important; width: 138px !important; height: 138px !important; min-width: 138px !important; min-height: 138px !important; }
+  body.light-only .certification-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  body.light-only .certification-grid > .development-card { min-height: 190px !important; padding: 17px !important; }
+  body.light-only .project-side { border-left: 1px solid #d5dfeb !important; border-top: 0 !important; padding: 0 0 0 10px !important; display: flex !important; }
+}
+@media (max-width: 480px) {
+  body.light-only .certification-grid { grid-template-columns: 1fr !important; }
+  body.light-only .certification-grid > .development-card { min-height: 0 !important; }
+  body.light-only .project-side { border-left: 0 !important; border-top: 1px solid #d5dfeb !important; padding: 12px 0 0 !important; display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+
+
+/* =========================================================
+   DEFINITIVE OVERRIDES — 22 OCT 2026
+   These selectors target the actual <body class="home-page light-only">.
+   Keep this block last so legacy theme rules cannot override it.
+   ========================================================= */
+body.home-page.light-only .hero-visual,
+body.home-page.light-only .hero-visual-stack {
+  min-width: 0 !important;
+  width: 100% !important;
+}
+body.home-page.light-only .profile-photo-wrap {
   display: flex !important;
+  flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  min-width: 0 !important;
-  min-height: 46px !important;
-  height: 100% !important;
-  padding: 9px 10px !important;
-  border: 1px solid #d5dfeb !important;
-  border-radius: 10px !important;
-  background: #f7fafd !important;
-  color: #52677f !important;
-  text-align: center !important;
-  font-size: .72rem !important;
-  font-weight: 700 !important;
-  line-height: 1.4 !important;
-  letter-spacing: .025em !important;
-  white-space: normal !important;
-  overflow-wrap: anywhere !important;
-  word-break: normal !important;
+  width: 100% !important;
+  max-width: 480px !important;
+  min-height: 0 !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  gap: 12px !important;
+  padding: 28px 24px !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+  background: #fff !important;
 }
-body.light-only .project-side span:first-child {
-  color: #087f9e !important;
-  border-color: #a9d4df !important;
-  background: #f0fbfd !important;
-}
-body.light-only .project::after { background: #d9e7ee !important; }
-
-@media (max-width: 900px) {
-  body.light-only .project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 16px !important;
-  }
-  body.light-only .project { padding: 19px !important; }
-  body.light-only .project-side { gap: 7px !important; }
-  body.light-only .project-side span { padding: 8px 6px !important; font-size: .68rem !important; }
-}
-@media (max-width: 640px) {
-  body.light-only .project-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
-  body.light-only .project { padding: 20px !important; }
-  body.light-only .project-side { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
-  body.light-only .project-side span { min-height: 44px !important; font-size: .68rem !important; }
-}
-@media (prefers-reduced-motion: reduce) {
-  body.light-only .project, body.light-only .project * { scroll-behavior: auto !important; }
-}
-
-/* FINAL REQUESTED FIXES — profile photo, project tool rail, and profile icons */
-body.light-only .profile-photo-wrap > .profile-photo,
-body.light-only .profile-photo-wrap > .profile-initials {
-  width: 148px !important;
-  height: 148px !important;
-  min-width: 148px !important;
-  min-height: 148px !important;
+body.home-page.light-only .profile-photo-wrap > img#profile-photo {
+  display: block !important;
+  width: 164px !important;
+  height: 164px !important;
+  min-width: 164px !important;
+  min-height: 164px !important;
   max-width: 100% !important;
-  object-fit: cover !important;
-  object-position: center 24% !important;
-  transform: none !important;
+  flex: 0 0 164px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  object-fit: contain !important;
+  object-position: center !important;
   border-radius: 18px !important;
+  border: 2px solid #c7e6ef !important;
+  background: #fff !important;
+  box-shadow: 0 8px 22px rgba(28,48,75,.10) !important;
+  transform: none !important;
+  box-sizing: border-box !important;
+}
+body.home-page.light-only .profile-photo-wrap .profile-initials { display: none !important; }
+body.home-page.light-only .profile-caption {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  gap: 9px !important;
+  text-align: center !important;
+}
+body.home-page.light-only .profile-caption strong { font-size: 1.3rem !important; line-height: 1.25 !important; }
+body.home-page.light-only .profile-caption .profile-phone { color: #405a74 !important; opacity: 1 !important; }
+body.home-page.light-only .profile-socials { display:flex !important; align-items:center !important; justify-content:center !important; gap:10px !important; margin-top:4px !important; opacity:1 !important; }
+body.home-page.light-only .profile-socials a {
+  display:inline-flex !important; align-items:center !important; justify-content:center !important;
+  width:44px !important; height:44px !important; flex:0 0 44px !important;
+  color:#263f5c !important; background:#f4f8fc !important;
+  border:1px solid #b9cde1 !important; opacity:1 !important;
+}
+body.home-page.light-only .profile-socials svg { width:20px !important; height:20px !important; fill:currentColor !important; opacity:1 !important; }
+
+/* Certificate cards: aligned 2-column by N-row grid, equal card widths. */
+body.home-page.light-only .certifications-block { display:block !important; width:100% !important; max-width:none !important; }
+body.home-page.light-only .certification-grid {
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  align-items:stretch !important;
+  gap:16px !important;
+  width:100% !important;
+}
+body.home-page.light-only .certification-grid > .development-card {
+  display:flex !important; flex-direction:column !important; align-items:stretch !important;
+  justify-content:space-between !important; gap:18px !important;
+  width:100% !important; min-width:0 !important; min-height:205px !important;
+  height:100% !important; margin:0 !important; padding:22px !important;
+  box-sizing:border-box !important; background:#fff !important;
+}
+body.home-page.light-only .certification-grid > .development-card > div { width:100% !important; min-width:0 !important; }
+body.home-page.light-only .certification-grid .development-card h3 { font-size:1rem !important; line-height:1.45 !important; overflow-wrap:anywhere !important; }
+body.home-page.light-only .certification-grid .development-card .button {
+  display:flex !important; align-items:center !important; justify-content:center !important;
+  width:100% !important; min-height:44px !important; margin-top:auto !important;
+  white-space:normal !important; text-align:center !important; box-sizing:border-box !important;
 }
 
-/* Keep the project metrics/tools, but remove the shaded panel behind them. */
-body.light-only .project-side,
-body.light-only .insightforge-featured .project-side {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
+/* Project tool rails: remove the shaded rail and keep readable outlined labels. */
+body.home-page.light-only .project-grid .project-side,
+body.home-page.light-only .project .project-side {
+  background:transparent !important; background-color:transparent !important;
+  background-image:none !important; box-shadow:none !important;
+  border-left:1px solid #d5dfeb !important; border-radius:0 !important;
 }
-body.light-only .project-side span {
-  background: transparent !important;
-  color: #405773 !important;
-  border-color: #d5dfeb !important;
+body.home-page.light-only .project-grid .project-side::before,
+body.home-page.light-only .project-grid .project-side::after,
+body.home-page.light-only .project .project-side::before,
+body.home-page.light-only .project .project-side::after { content:none !important; display:none !important; }
+body.home-page.light-only .project .project-side span {
+  background:transparent !important; background-color:transparent !important;
+  background-image:none !important; color:#405a74 !important;
+  border:1px solid #c3d3e5 !important; opacity:1 !important; box-shadow:none !important;
 }
-body.light-only .project-side span:first-child {
-  background: transparent !important;
-  color: #087f9e !important;
-  border-color: #a9d4df !important;
+body.home-page.light-only .project .project-side span:first-child { color:#087f9e !important; border-color:#9ccbd7 !important; }
+@media (max-width:760px) {
+  body.home-page.light-only .profile-photo-wrap { max-width:100% !important; padding:22px 16px !important; }
+  body.home-page.light-only .profile-photo-wrap > img#profile-photo { width:146px !important; height:146px !important; min-width:146px !important; min-height:146px !important; flex-basis:146px !important; }
+  body.home-page.light-only .certification-grid { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+  body.home-page.light-only .certification-grid > .development-card { min-height:190px !important; padding:17px !important; }
+  body.home-page.light-only .project .project-side { border-left:1px solid #d5dfeb !important; border-top:0 !important; padding:0 0 0 10px !important; }
 }
-
-/* Make the social/profile symbols darker and fully visible. */
-body.light-only .profile-socials a {
-  color: #314760 !important;
-  opacity: 1 !important;
-  background: #f7f9fc !important;
-  border-color: #cbd9e8 !important;
-}
-body.light-only .profile-socials svg {
-  width: 19px !important;
-  height: 19px !important;
-  fill: currentColor !important;
-  opacity: 1 !important;
-}
-body.light-only .profile-socials a:hover {
-  color: #087f9e !important;
-  border-color: #087f9e !important;
-}
-
-@media (max-width: 640px) {
-  body.light-only .profile-photo-wrap > .profile-photo,
-  body.light-only .profile-photo-wrap > .profile-initials {
-    width: 136px !important;
-    height: 136px !important;
-    min-width: 136px !important;
-    min-height: 136px !important;
-  }
+@media (max-width:480px) {
+  body.home-page.light-only .certification-grid { grid-template-columns:1fr !important; }
+  body.home-page.light-only .certification-grid > .development-card { min-height:0 !important; }
+  body.home-page.light-only .project .project-side { border-left:0 !important; border-top:1px solid #d5dfeb !important; padding:12px 0 0 !important; }
 }
