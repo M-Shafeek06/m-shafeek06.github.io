@@ -107,3 +107,12 @@ Open to suitable opportunities as a Junior Data Analyst, BI Analyst, Business An
 
 
 The homepage identifies Junior Data Analyst as the primary target role and lists 14 additional entry-level role preferences with relevant skills. The role list communicates job preferences, not claimed specialist experience in each role.
+
+
+## Publishing these updates to GitHub Pages
+
+These files are a prepared local build; downloading the ZIP does not update the live website automatically. Extract the ZIP and upload/commit the contents to the root of `M-Shafeek06/m-shafeek06.github.io`, replacing the existing `index.html` and `style.css` and retaining the project pages and `resume.pdf`. Wait for GitHub Pages to redeploy, then hard-refresh the site (Ctrl+F5).
+
+### Profile image
+
+The homepage checks for `M_Shafeek.png`, `.jpg`, `.jpeg`, or `.webp` in the site root first, then checks the same filenames in the `main` and `master` branches of the portfolio and InsightForge repositories. For the most reliable result, place the actual portrait image in this repository root and name it `M_Shafeek.png` (or update the filename in `index.html`). If the image is not found, the initials fallback is shown.
