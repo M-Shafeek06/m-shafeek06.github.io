@@ -635,3 +635,230 @@ body:not(.home-page) .case-hero .eyebrow{margin-top:0}
  body.light-only .profile-photo{width:126px;height:126px}
  body:not(.home-page) .case-hero{padding-top:24px!important;padding-bottom:36px!important}
 }
+
+/* =========================================================
+   PROFILE CARD — CLEAN PORTRAIT + SUBTLE PATTERN
+   ========================================================= */
+
+body.light-only .profile-photo-wrap {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 390px;
+    aspect-ratio: 1 / 1;
+    min-height: 0;
+
+    margin: 0 auto;
+    padding: 30px 24px;
+    gap: 14px;
+
+    background:
+        radial-gradient(
+            circle at 12% 15%,
+            rgba(8, 136, 164, 0.09) 0,
+            rgba(8, 136, 164, 0.09) 2px,
+            transparent 3px
+        ),
+        radial-gradient(
+            circle at 88% 82%,
+            rgba(8, 136, 164, 0.08) 0,
+            rgba(8, 136, 164, 0.08) 2px,
+            transparent 3px
+        ),
+        repeating-linear-gradient(
+            135deg,
+            transparent 0,
+            transparent 32px,
+            rgba(8, 136, 164, 0.035) 33px,
+            transparent 34px
+        ),
+        #ffffff;
+
+    background-size:
+        24px 24px,
+        24px 24px,
+        auto,
+        auto;
+
+    border: 1px solid #d5e2ef;
+    border-radius: 24px;
+    box-shadow: 0 18px 48px rgba(28, 48, 75, 0.07);
+}
+
+/* Decorative corner circles */
+body.light-only .profile-photo-wrap::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    width: 210px;
+    height: 210px;
+    top: -120px;
+    right: -95px;
+
+    border: 1px solid rgba(8, 136, 164, 0.16);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 18px rgba(8, 136, 164, 0.025),
+        0 0 0 38px rgba(8, 136, 164, 0.02);
+
+    pointer-events: none;
+}
+
+body.light-only .profile-photo-wrap::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    width: 150px;
+    height: 150px;
+    bottom: -100px;
+    left: -65px;
+
+    border: 1px solid rgba(8, 136, 164, 0.15);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 16px rgba(8, 136, 164, 0.025),
+        0 0 0 34px rgba(8, 136, 164, 0.02);
+
+    pointer-events: none;
+}
+
+/* Portrait: square corners, zoomed crop to hide the baked-in circle */
+body.light-only .profile-photo {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+    width: 148px;
+    height: 148px;
+    flex: 0 0 148px;
+
+    object-fit: cover;
+    object-position: center 42%;
+
+    /* Crop the circular border embedded in the original image */
+    clip-path: inset(13% 13% 13% 13% round 14px);
+    transform: scale(1.18);
+
+    border: 0 !important;
+    border-radius: 14px !important;
+    background: #f3f7fb;
+
+    box-shadow: 0 5px 18px rgba(24, 48, 72, 0.10);
+}
+
+/* Name and phone number */
+body.light-only .profile-caption {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+
+    text-align: center;
+}
+
+body.light-only .profile-caption > strong {
+    color: #17263c;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+body.light-only .profile-phone {
+    color: #52657b;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+body.light-only .profile-phone:hover {
+    color: #087f9e;
+}
+
+/* Social and resume buttons */
+body.light-only .profile-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+body.light-only .profile-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    color: #53677f;
+    background: rgba(247, 249, 252, 0.95);
+    border: 1px solid #d5dfeb;
+    border-radius: 11px;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+body.light-only .profile-socials a:hover {
+    transform: translateY(-3px);
+    color: #087f9e;
+    border-color: #087f9e;
+}
+
+body.light-only .profile-socials svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+/* Responsive layout */
+@media (max-width: 760px) {
+    body.light-only .profile-photo-wrap {
+        width: 100%;
+        max-width: 340px;
+        padding: 24px 18px;
+        gap: 12px;
+    }
+
+    body.light-only .profile-photo {
+        width: 132px;
+        height: 132px;
+        flex-basis: 132px;
+    }
+
+    body.light-only .profile-caption > strong {
+        font-size: 1.15rem;
+    }
+
+    body.light-only .profile-socials {
+        gap: 8px;
+    }
+
+    body.light-only .profile-socials a {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.light-only .profile-socials a {
+        transition: none;
+    }
+}
