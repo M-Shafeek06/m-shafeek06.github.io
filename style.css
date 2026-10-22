@@ -1204,3 +1204,12 @@ body.home-page.light-only .project .project-side span:first-child { color:#087f9
   body.home-page.light-only .certification-grid > .development-card { min-height:0 !important; }
   body.home-page.light-only .project .project-side { border-left:0 !important; border-top:1px solid #d5dfeb !important; padding:12px 0 0 !important; }
 }
+
+/* Final requested change: circular profile photo with a neutral grey border. */
+body.home-page.light-only .profile-photo-wrap > img#profile-photo {
+  border-radius: 50% !important;
+  border: 2px solid #666666 !important;
+  object-fit: cover !important;
+  object-position: center 25% !important;
+  overflow: hidden !important;
+}
