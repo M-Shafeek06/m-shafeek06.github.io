@@ -1264,3 +1264,70 @@ body.light-only .background-lines span:nth-child(4)::before {
     animation: none !important;
   }
 }
+
+/* =========================================================
+   FINAL BACKGROUND VISIBILITY FIX
+   Stronger geometric patterns, grid lines, and teal accents
+   ========================================================= */
+
+/* Make the decorative background visible */
+.background-lines {
+    opacity: 0.85 !important;
+    pointer-events: none !important;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(8, 127, 158, 0.32) 1.2px,
+            transparent 1.6px
+        ),
+        linear-gradient(
+            rgba(8, 127, 158, 0.09) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(8, 127, 158, 0.09) 1px,
+            transparent 1px
+        ) !important;
+
+    background-size:
+        26px 26px,
+        65px 65px,
+        65px 65px !important;
+
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+}
+
+/* Make the large curved outlines more visible */
+.background-lines::before,
+.background-lines::after {
+    border-color: rgba(8, 127, 158, 0.32) !important;
+
+    box-shadow:
+        0 0 0 24px rgba(8, 127, 158, 0.045),
+        0 0 0 48px rgba(8, 127, 158, 0.025) !important;
+}
+
+/* Strengthen the decorative horizontal lines */
+.background-lines span {
+    height: 1px !important;
+    background: rgba(83, 103, 127, 0.38) !important;
+}
+
+/* Ensure the background is visible in the light theme */
+body.light-only .background-lines {
+    opacity: 0.85 !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+}
+
+body.light-only .background-lines::before,
+body.light-only .background-lines::after {
+    border-color: rgba(8, 127, 158, 0.32) !important;
+}
+
+body.light-only .background-lines span {
+    background: rgba(83, 103, 127, 0.38) !important;
+}
