@@ -570,3 +570,68 @@ body.light-only .hero-open-roles{max-width:100%;margin-top:30px}body.light-only 
 @media(max-width:420px){
   .hero-open-roles>div{grid-template-columns:1fr}
 }
+
+
+/* Final requested refinements — 22 October 2026 */
+body.light-only .profile-photo-wrap{
+  width:100%;max-width:390px;aspect-ratio:1/1;min-height:0;
+  margin:0 auto;padding:26px;flex-direction:column;justify-content:center;
+  align-items:center;gap:12px;background:#fff;border:1px solid var(--line);
+  border-radius:24px;box-shadow:0 18px 50px rgba(28,48,75,.07)
+}
+body.light-only .profile-photo{
+  width:148px;height:148px;object-fit:cover;object-position:center center;
+  border-radius:14px!important;border:0!important;background:#f4f8fc
+}
+body.light-only .profile-caption{display:flex;flex-direction:column;align-items:center;text-align:center;gap:7px}
+body.light-only .profile-phone{font-size:.92rem;font-weight:600;color:#52657b;letter-spacing:.01em}
+body.light-only .profile-socials{margin-top:3px}
+body.light-only .profile-socials a{border-radius:10px}
+body.light-only .hero{padding-top:34px;row-gap:24px}
+body.light-only .hero-visual{padding-top:0;align-self:start}
+body.light-only .hero-visual-stack{gap:16px}
+body.light-only .hero-open-roles{width:100%;grid-column:1/-1;margin-top:0}
+body.light-only .certifications-block{display:block;width:100%;max-width:none;grid-column:1/-1}
+body.light-only .certifications-block .section-heading{max-width:none;width:100%}
+body.light-only .certification-grid{width:100%;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+body.light-only .certification-grid .development-card{min-width:0;min-height:160px;align-items:stretch;flex-direction:column;justify-content:space-between;gap:18px}
+body.light-only .certification-grid .development-card .button{width:100%;text-align:center}
+body.light-only .timeline-item .experience-link{display:none!important}
+/* Keep the InsightForge feature panel light and legible instead of dark navy. */
+body.light-only .project-snapshot{
+  background:linear-gradient(135deg,#ffffff 0%,#f1f8fc 100%)!important;
+  border:1px solid #d4e2ee!important;
+  box-shadow:0 20px 55px rgba(28,48,75,.08)
+}
+body.light-only .project-snapshot::before,
+body.light-only .project-snapshot::after{
+  border-color:rgba(8,126,155,.10)!important
+}
+body.light-only .snapshot-kicker{color:#087e9b!important}
+body.light-only .snapshot-title{color:#17263c!important}
+body.light-only .snapshot-title span{color:#087e9b!important}
+body.light-only .snapshot-grid div{
+  background:#fff!important;border-color:#d4e2ee!important;
+  box-shadow:0 4px 14px rgba(28,48,75,.035)
+}
+body.light-only .snapshot-grid strong{color:#17263c!important}
+body.light-only .snapshot-grid small{color:#52657b!important}
+/* Make the decorative background pattern visible but subtle. */
+body.light-only .background-lines{opacity:1!important}
+body.light-only .background-lines::before,
+body.light-only .background-lines::after{
+  border-color:rgba(8,126,155,.095)!important
+}
+body.light-only .background-lines span{
+  background:linear-gradient(90deg,transparent,rgba(8,126,155,.075),transparent)!important
+}
+/* Reduce the dead space below the sticky navbar on dedicated project pages. */
+body:not(.home-page) .case-hero{padding-top:32px!important;padding-bottom:52px!important}
+body:not(.home-page) .case-hero-grid{gap:42px}
+body:not(.home-page) .case-hero .eyebrow{margin-top:0}
+@media(max-width:760px){
+ body.light-only .certification-grid{grid-template-columns:1fr}
+ body.light-only .certification-grid .development-card{min-height:0}
+ body.light-only .profile-photo{width:126px;height:126px}
+ body:not(.home-page) .case-hero{padding-top:24px!important;padding-bottom:36px!important}
+}
