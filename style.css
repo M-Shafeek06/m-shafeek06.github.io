@@ -1031,3 +1031,190 @@ body.light-only .hero-open-roles span {
 @media (prefers-reduced-motion: reduce) {
   body.light-only .profile-socials a { transition: none !important; }
 }
+
+
+/* =========================================
+PROFILE CARD — PROFESSIONAL IMAGE FIX
+========================================= */
+
+.profile-photo-wrap {
+position: relative;
+box-sizing: border-box;
+width: 100%;
+min-height: 460px;
+padding: 30px 24px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+gap: 16px;
+overflow: hidden;
+isolation: isolate;
+
+background-color: #ffffff;
+background-image:
+radial-gradient(circle at 1px 1px, rgba(8, 133, 164, 0.09) 1px, transparent 1.5px),
+linear-gradient(145deg, rgba(8, 133, 164, 0.035), transparent 55%);
+background-size: 20px 20px, 100% 100%;
+
+border: 1px solid #d9e4ef;
+border-radius: 28px;
+box-shadow: 0 18px 45px rgba(20, 43, 70, 0.07);
+}
+
+.profile-image-frame {
+position: relative;
+z-index: 1;
+width: 176px;
+height: 176px;
+flex: 0 0 176px;
+overflow: hidden;
+
+display: grid;
+place-items: center;
+
+background: #edf5f9;
+border: 4px solid #ffffff;
+border-radius: 24px;
+box-shadow:
+0 0 0 1px rgba(8, 133, 164, 0.25),
+0 8px 24px rgba(20, 43, 70, 0.12);
+}
+
+.profile-photo {
+position: absolute;
+inset: 0;
+display: block;
+width: 100%;
+height: 100%;
+max-width: none;
+
+object-fit: cover;
+object-position: center 35%;
+
+opacity: 1;
+visibility: visible;
+border: 0;
+border-radius: 0;
+}
+
+/* Display initials only when the actual image cannot load. */
+.profile-initials {
+position: absolute;
+inset: 0;
+z-index: 0;
+display: none;
+place-items: center;
+
+color: #087f9e;
+background: #e8f5f9;
+font-size: 42px;
+font-weight: 800;
+letter-spacing: 2px;
+}
+
+.profile-caption {
+position: relative;
+z-index: 1;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 12px;
+text-align: center;
+}
+
+.profile-caption > strong {
+color: #17283f;
+font-size: 25px;
+line-height: 1.25;
+font-weight: 750;
+}
+
+.profile-phone {
+color: #536b87;
+font-size: 16px;
+font-weight: 600;
+text-decoration: none;
+}
+
+.profile-phone:hover {
+color: #087f9e;
+}
+
+.profile-socials {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+gap: 12px;
+margin-top: 3px;
+}
+
+.profile-socials a {
+width: 48px;
+height: 48px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+
+color: #526a85;
+background: rgba(255, 255, 255, 0.92);
+border: 1px solid #d6e2ef;
+border-radius: 13px;
+
+transition:
+color 180ms ease,
+background-color 180ms ease,
+border-color 180ms ease,
+transform 180ms ease;
+}
+
+.profile-socials a:hover {
+color: #087f9e;
+background: #edf9fc;
+border-color: #9ed7e4;
+transform: translateY(-2px);
+}
+
+.profile-socials svg {
+display: block;
+width: 19px;
+height: 19px;
+fill: currentColor;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+.profile-photo-wrap {
+min-height: 0;
+padding: 26px 18px;
+border-radius: 22px;
+}
+
+.profile-image-frame {
+width: 150px;
+height: 150px;
+flex-basis: 150px;
+border-radius: 21px;
+}
+
+.profile-caption > strong {
+font-size: 22px;
+}
+
+.profile-socials {
+gap: 9px;
+}
+
+.profile-socials a {
+width: 44px;
+height: 44px;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+.profile-socials a {
+transition: none;
+}
+}
