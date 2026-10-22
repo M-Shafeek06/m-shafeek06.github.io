@@ -399,3 +399,66 @@ body[data-theme="light"] .background-lines{opacity:.3}
 body[data-theme="light"] .role-table tbody tr:hover{background:rgba(8,126,155,.05)}
 body[data-theme="light"] .hero-opportunities{display:none!important}
 @media(prefers-reduced-motion:reduce){.profile-socials a,.theme-toggle{transition:none}}
+
+
+/* FINAL REWORK — consistent light-only design across the homepage and all case studies */
+body.light-only, body.light-only[data-theme="dark"], body.light-only[data-theme="light"]{
+ --bg:#f4f7fb; --surface:#ffffff; --surface-2:#eaf0f7; --text:#17263b; --muted:#53677f; --accent:#087f9e; --line:#d5dfeb;
+ background:#f4f7fb !important; color:#17263b !important; color-scheme:light;
+}
+body.light-only .nav{background:rgba(248,250,253,.96)!important;border-bottom:1px solid #d5dfeb!important;color:#17263b!important;box-shadow:0 4px 18px rgba(20,40,65,.035)}
+body.light-only .nav a, body.light-only .brand, body.light-only h1, body.light-only h2, body.light-only h3, body.light-only h4, body.light-only strong{color:#17263b}
+body.light-only p, body.light-only li, body.light-only .muted, body.light-only .lead{color:#53677f}
+body.light-only .alt, body.light-only .section.alt, body.light-only .case-section.alt{background:#edf2f8!important}
+body.light-only .section, body.light-only main, body.light-only .hero, body.light-only .case-section, body.light-only .case-hero{background:transparent}
+body.light-only .hero-card, body.light-only .profile-photo-wrap, body.light-only .skill-grid article, body.light-only .project, body.light-only .info-card, body.light-only .case-card, body.light-only .development-card, body.light-only .timeline-item, body.light-only .contact, body.light-only .case-visual, body.light-only .dashboard-gallery figure, body.light-only .ifai-shot, body.light-only .ifai-architecture-figure{background:#fff!important;border-color:#d5dfeb!important;color:#17263b!important;box-shadow:0 12px 34px rgba(27,48,74,.055)}
+body.light-only .toolkit-top{border-bottom-color:#d5dfeb!important}
+body.light-only .toolkit-subtitle, body.light-only .eyebrow, body.light-only .project-number, body.light-only .date{color:#087f9e!important}
+body.light-only .tool-grid{border-color:#d5dfeb!important;background:#fff!important}
+body.light-only .tool-grid div, body.light-only .tool-grid div:nth-child(odd){background:#f8fafd!important;border-color:#d5dfeb!important}
+body.light-only .tool-grid strong{color:#17263b!important}
+body.light-only .tool-grid div::after{border-color:#087f9e!important}
+body.light-only .skill-pill, body.light-only .tag, body.light-only .case-meta span{background:#f5f8fc!important;border-color:#d5dfeb!important;color:#425a74!important}
+body.light-only .project-side{background:#f1f5fa!important;border-color:#d5dfeb!important}
+body.light-only .project-side span{background:#fff!important;border-color:#d5dfeb!important;color:#52677f!important}
+body.light-only .project-side span:first-child{color:#087f9e!important;border-color:#9ccbd7!important}
+body.light-only .project-rule{background:#d5dfeb!important}
+body.light-only .button.secondary{background:#fff!important;color:#17263b!important;border-color:#d5dfeb!important}
+body.light-only .button.primary{background:#087f9e!important;color:#fff!important;border-color:#087f9e!important}
+body.light-only .profile-socials a{background:#f6f9fc!important;border-color:#d5dfeb!important;color:#53677f!important}
+body.light-only .profile-socials a:hover{color:#087f9e!important;border-color:#087f9e!important}
+body.light-only .hero-open-roles{margin-top:24px;max-width:760px}
+body.light-only .hero-open-roles>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+body.light-only .hero-open-roles span{display:flex;align-items:center;min-height:42px;padding:9px 12px;background:#fff!important;border:1px solid #d5dfeb!important;border-radius:10px;color:#314760!important;font-size:.78rem;font-weight:600;line-height:1.35;overflow-wrap:anywhere}
+body.light-only .hero-open-roles span:hover{border-color:#087f9e!important;background:#f0f9fb!important}
+/* Requested square portrait + name + four icon links */
+body.light-only .profile-photo-wrap{display:flex;align-items:center;gap:16px;padding:18px;width:100%;min-height:0;border-radius:16px}
+body.light-only .profile-photo, body.light-only .profile-initials{width:88px;height:88px;min-width:88px;border-radius:12px;object-fit:cover;object-position:center 25%;border:1.5px solid #087f9e}
+body.light-only .profile-caption{display:flex;flex-direction:column;gap:8px;min-width:0;padding:0}
+body.light-only .profile-caption strong{font-size:1.18rem}
+body.light-only .profile-socials{display:flex;flex-wrap:wrap;gap:8px;margin-top:0}
+body.light-only .profile-socials a{width:36px;height:36px;border-radius:9px}
+/* Balanced project cards: natural height, readable contrast, consistent links */
+body.light-only .project-grid{align-items:stretch;gap:20px}
+body.light-only .project{height:auto;min-height:310px;grid-template-columns:minmax(0,1fr) 100px;gap:16px;padding:22px;align-content:stretch}
+body.light-only .project-main{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+body.light-only .project h3{font-size:1.2rem;line-height:1.35;margin:12px 0}
+body.light-only .project-main>p:not(.project-number){font-size:.94rem;line-height:1.75;margin:8px 0 18px}
+body.light-only .project-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:auto;padding-top:14px}
+body.light-only .project-actions a{color:#087f9e;font-weight:700}
+body.light-only .project-actions .text-link{color:#53677f}
+body.light-only .project::after{background:#d9e7ee}
+body.light-only .timeline-item{border-top-color:#d5dfeb}
+body.light-only .development-card{min-height:175px;gap:16px}
+body.light-only .certifications-block{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px;align-items:stretch}
+body.light-only .certifications-block>.section-heading{grid-column:1/-1;margin-bottom:2px}
+body.light-only .certifications-block>.development-card{margin:0;width:100%;min-height:190px}
+body.light-only .background-lines{opacity:.12!important;pointer-events:none}
+body.light-only footer{background:#edf2f8!important;border-top:1px solid #d5dfeb!important;color:#53677f!important}
+body.light-only .role-table-wrap, body.light-only .role-table th, body.light-only .role-table td{background:#fff!important;color:#17263b!important}
+body.light-only .case-visual, body.light-only .dashboard-gallery figure{background:#fff!important}
+body.light-only pre, body.light-only code{background:#f0f4f9!important;color:#243c56!important;border-color:#d5dfeb!important;overflow-wrap:anywhere}
+body.light-only .ifai-shot figcaption, body.light-only .ifai-architecture-figure figcaption, body.light-only .dashboard-gallery figcaption{color:#53677f!important;border-color:#d5dfeb!important}
+@media(max-width:900px){body.light-only .hero-open-roles>div{grid-template-columns:repeat(2,minmax(0,1fr))}body.light-only .project{min-height:300px}}
+@media(max-width:640px){body.light-only .hero-open-roles>div{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}body.light-only .hero-open-roles span{font-size:.7rem;padding:8px;min-height:40px}body.light-only .profile-photo-wrap{align-items:center;padding:14px;gap:12px}body.light-only .profile-photo,body.light-only .profile-initials{width:72px;height:72px;min-width:72px;border-radius:10px}body.light-only .profile-caption strong{font-size:1.05rem}body.light-only .profile-socials a{width:32px;height:32px}body.light-only .project{grid-template-columns:minmax(0,1fr) 76px;gap:10px;padding:14px;min-height:0}body.light-only .project-side{padding-left:8px}body.light-only .project-side span{font-size:.54rem;min-height:45px;padding:5px 3px}body.light-only .project h3{font-size:1.03rem}body.light-only .project-main>p:not(.project-number){font-size:.85rem}body.light-only .certifications-block{grid-template-columns:1fr}body.light-only .certifications-block>.section-heading{grid-column:auto}body.light-only .development-card{min-height:0}}
+@media(prefers-reduced-motion:reduce){body.light-only *,body.light-only *::before,body.light-only *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
