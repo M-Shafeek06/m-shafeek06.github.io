@@ -328,3 +328,28 @@ footer{max-width:var(--max);margin:auto;padding:25px 24px 40px;border-top:1px so
 .profile-caption .profile-location{display:flex;flex-wrap:wrap;align-items:center;gap:5px 7px;margin-top:5px;font-size:.72rem;line-height:1.5;color:var(--muted)}
 .profile-caption .location-separator{color:var(--accent);font-weight:800}
 @media(max-width:640px){.profile-caption .profile-location{font-size:.66rem;gap:3px 5px}}
+
+/* Final portfolio adjustments — Oct 2026 */
+.permanent-role{margin-top:-14px;margin-bottom:20px;padding:8px 13px;gap:9px}
+.permanent-role .permanent-role-label{display:none}
+.permanent-role strong{font-size:1.08rem;letter-spacing:-.01em}
+.profile-photo-wrap{align-items:flex-start;gap:14px}
+.profile-photo{width:82px;height:82px;object-position:center 25%}
+.profile-caption{flex:1;padding-top:2px}
+.hero-opportunities{margin-top:8px}
+.hero-opportunities-title{margin:0 0 7px;color:var(--accent);font-size:.62rem;font-weight:800;letter-spacing:.13em;line-height:1.4}
+.hero-role-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+.hero-role-grid span{display:block;min-width:0;padding:6px 8px;border:1px solid rgba(49,81,110,.72);border-radius:7px;background:rgba(6,17,31,.45);color:var(--text);font-size:.7rem;font-weight:600;line-height:1.35;overflow-wrap:anywhere}
+.certifications-block{margin-top:42px}
+.certifications-block .section-heading{margin-bottom:20px}
+.certifications-block .section-heading h3{font-size:1.55rem}
+@media(max-width:900px){.hero{gap:36px}.permanent-role{margin-top:0}}
+@media(max-width:640px){
+ .permanent-role{margin-top:0;margin-bottom:16px;padding:8px 11px}
+ .permanent-role strong{font-size:.95rem}
+ .profile-photo-wrap{padding:12px;gap:10px}
+ .profile-photo,.profile-initials{width:68px;height:68px}
+ .profile-caption strong{font-size:1rem}
+ .hero-role-grid{gap:5px}
+ .hero-role-grid span{font-size:.65rem;padding:6px}
+}
