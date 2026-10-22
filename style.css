@@ -862,3 +862,172 @@ body.light-only .profile-socials svg {
         transition: none;
     }
 }
+
+/* =========================================================
+   FINAL OVERRIDES — PROFILE CARD / RESPONSIVE STABILITY
+   Keep this block at the very end of style.css.
+   ========================================================= */
+
+/* The portrait source includes a circular photo baked into the image.
+   Crop further into its centre so the circular rim is mostly outside the
+   visible rounded-square viewport. For a truly clean result, use a portrait
+   image file without the baked-in circle. */
+body.light-only .profile-photo-wrap {
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 390px !important;
+  min-height: 390px !important;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto !important;
+  padding: 28px 24px !important;
+  gap: 13px !important;
+  background:
+    radial-gradient(circle at 15% 18%, rgba(8,126,155,.10) 0 2px, transparent 2.8px),
+    radial-gradient(circle at 85% 78%, rgba(8,126,155,.08) 0 2px, transparent 2.8px),
+    repeating-linear-gradient(135deg, transparent 0 30px, rgba(8,126,155,.035) 31px 32px, transparent 33px 58px),
+    #fff !important;
+  background-size: 24px 24px, 24px 24px, auto, auto;
+  border: 1px solid #d5dfeb !important;
+  border-radius: 24px !important;
+  box-shadow: 0 18px 48px rgba(28,48,75,.07) !important;
+}
+
+body.light-only .profile-photo-wrap::before,
+body.light-only .profile-photo-wrap::after {
+  content: "" !important;
+  position: absolute;
+  z-index: -1;
+  display: block;
+  border: 1px solid rgba(8,126,155,.15);
+  border-radius: 50%;
+  pointer-events: none;
+}
+body.light-only .profile-photo-wrap::before {
+  width: 210px; height: 210px; top: -120px; right: -95px;
+  box-shadow: 0 0 0 18px rgba(8,126,155,.025), 0 0 0 38px rgba(8,126,155,.02);
+}
+body.light-only .profile-photo-wrap::after {
+  width: 150px; height: 150px; bottom: -100px; left: -65px;
+  box-shadow: 0 0 0 16px rgba(8,126,155,.025), 0 0 0 34px rgba(8,126,155,.02);
+}
+
+/* Rounded-square portrait crop — no CSS circle, border or dark frame. */
+body.light-only .profile-photo {
+  display: block !important;
+  width: 148px !important;
+  height: 148px !important;
+  flex: 0 0 148px !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center 42% !important;
+  clip-path: inset(23% 23% 23% 23% round 14px) !important;
+  transform: scale(1.65) !important;
+  border: 0 !important;
+  border-radius: 14px !important;
+  outline: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.light-only .profile-caption {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 7px !important;
+  text-align: center !important;
+  position: relative;
+  z-index: 1;
+}
+body.light-only .profile-caption > strong {
+  color: #17263c !important;
+  font-size: 1.3rem !important;
+  font-weight: 750 !important;
+}
+body.light-only .profile-phone {
+  display: inline-block !important;
+  color: #52657b !important;
+  font-size: .95rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+body.light-only .profile-phone:hover { color: #087f9e !important; }
+body.light-only .profile-socials {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin-top: 4px !important;
+}
+body.light-only .profile-socials a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 42px !important;
+  height: 42px !important;
+  color: #53677f !important;
+  background: #f7f9fc !important;
+  border: 1px solid #d5dfeb !important;
+  border-radius: 11px !important;
+  transition: transform .2s ease, color .2s ease, border-color .2s ease;
+}
+body.light-only .profile-socials a:hover {
+  transform: translateY(-3px);
+  color: #087f9e !important;
+  border-color: #087f9e !important;
+}
+body.light-only .profile-socials svg { width: 18px; height: 18px; fill: currentColor; }
+
+/* Avoid the role and toolkit cards forcing horizontal overflow. */
+body.light-only .hero { align-items: start; }
+body.light-only .hero-copy,
+body.light-only .hero-visual,
+body.light-only .hero-visual-stack { min-width: 0; }
+body.light-only .hero-visual-stack { width: 100%; }
+body.light-only .hero-open-roles { width: 100% !important; max-width: none !important; }
+body.light-only .hero-open-roles > div {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+}
+body.light-only .hero-open-roles span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+@media (max-width: 1050px) {
+  body.light-only .hero-open-roles > div { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 760px) {
+  body.light-only .profile-photo-wrap {
+    max-width: 340px !important;
+    min-height: 340px !important;
+    padding: 24px 18px !important;
+    gap: 12px !important;
+  }
+  body.light-only .profile-photo {
+    width: 132px !important;
+    height: 132px !important;
+    flex-basis: 132px !important;
+    clip-path: inset(23% 23% 23% 23% round 12px) !important;
+    transform: scale(1.65) !important;
+  }
+  body.light-only .profile-caption > strong { font-size: 1.15rem !important; }
+  body.light-only .profile-socials { gap: 8px !important; }
+  body.light-only .profile-socials a { width: 38px !important; height: 38px !important; }
+  body.light-only .hero-open-roles > div { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 420px) {
+  body.light-only .hero-open-roles > div { grid-template-columns: 1fr !important; }
+  body.light-only .profile-photo-wrap { min-height: 310px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.light-only .profile-socials a { transition: none !important; }
+}
