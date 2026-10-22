@@ -353,3 +353,49 @@ footer{max-width:var(--max);margin:auto;padding:25px 24px 40px;border-top:1px so
  .hero-role-grid{gap:5px}
  .hero-role-grid span{font-size:.65rem;padding:6px}
 }
+
+
+/* Final profile-card simplification, icon navigation, and persistent whole-site theme switch */
+.profile-photo-wrap{align-items:center;gap:18px;padding:18px 20px;min-height:116px}
+.profile-photo{width:78px;height:78px}
+.profile-caption{gap:8px}
+.profile-caption strong{font-size:1.2rem}
+.profile-caption>span,.profile-caption .hero-opportunities{display:none!important}
+.profile-socials{display:flex;align-items:center;gap:9px;margin-top:2px}
+.profile-socials a{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--muted);transition:transform .18s ease,color .18s ease,border-color .18s ease,background .18s ease}
+.profile-socials a:hover{transform:translateY(-2px);color:var(--accent);border-color:var(--accent)}
+.profile-socials svg{width:17px;height:17px;fill:currentColor}
+.hero-open-roles{margin-top:26px;max-width:680px}
+.hero-open-roles>p{margin:0 0 9px;color:var(--accent);font-size:.7rem;font-weight:800;letter-spacing:.15em}
+.hero-open-roles>div{display:flex;flex-wrap:wrap;gap:7px}
+.hero-open-roles span{padding:6px 10px;border:1px solid var(--line);border-radius:8px;color:var(--muted);font-size:.78rem;font-weight:600;background:var(--surface)}
+.nav{gap:18px}
+.theme-toggle{width:42px;height:42px;display:inline-flex;align-items:center;justify-content:center;flex:none;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--text);cursor:pointer;transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}
+.theme-toggle:hover{color:var(--accent);border-color:var(--accent);transform:translateY(-1px)}
+.theme-toggle svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.theme-icon-sun{display:none}
+body[data-theme="light"] .theme-icon-moon{display:none}
+body[data-theme="light"] .theme-icon-sun{display:block}
+@media(max-width:850px){.nav{gap:12px}.nav nav{gap:15px}.theme-toggle{width:38px;height:38px}}
+@media(max-width:640px){.nav{height:auto;min-height:70px;padding:12px 16px;gap:10px;flex-wrap:wrap}.nav nav{order:3;width:100%;justify-content:center;gap:13px}.nav nav a{font-size:.78rem;padding:4px 0}.theme-toggle{margin-left:auto}.profile-photo-wrap{align-items:center}.profile-socials{gap:7px}.profile-socials a{width:31px;height:31px}.hero-open-roles{margin-top:20px}.hero-open-roles span{font-size:.7rem;padding:5px 8px}}
+
+/* Light palette applies to the entire portfolio and all case-study pages. */
+body[data-theme="light"]{--bg:#f4f7fb;--surface:#ffffff;--surface-2:#eaf0f7;--text:#142338;--muted:#52657b;--accent:#087e9b;--line:#d4deea;background:var(--bg);color:var(--text)}
+body[data-theme="light"] .nav{background:rgba(244,247,251,.94);border-bottom-color:var(--line)}
+body[data-theme="light"] .hero-card,body[data-theme="light"] .profile-photo-wrap,body[data-theme="light"] .case-card,body[data-theme="light"] .skill-grid article,body[data-theme="light"] .timeline-item,body[data-theme="light"] .development-card,body[data-theme="light"] .role-table-wrap,body[data-theme="light"] .case-visual,body[data-theme="light"] .project,body[data-theme="light"] .contact{background:var(--surface);border-color:var(--line);color:var(--text)}
+body[data-theme="light"] .permanent-role{background:#eaf6fa;border-color:#b8dce6}
+body[data-theme="light"] .role-table th{background:#eaf0f7;color:var(--accent)}
+body[data-theme="light"] .role-table td{color:var(--muted)}
+body[data-theme="light"] .role-table td:nth-child(2){color:var(--text)}
+body[data-theme="light"] .profile-socials a,body[data-theme="light"] .hero-open-roles span{background:#f7f9fc}
+body[data-theme="light"] .tool-grid>div,body[data-theme="light"] .skill-grid article,body[data-theme="light"] .project,body[data-theme="light"] .case-card,body[data-theme="light"] .development-card{border-color:var(--line)}
+body[data-theme="light"] .toolkit-top{border-bottom-color:var(--line)}
+body[data-theme="light"] .toolkit-subtitle{color:#6c8095}
+body[data-theme="light"] .project-side{background:#eaf0f7;color:#3f566f}
+body[data-theme="light"] .tag,body[data-theme="light"] .case-meta span{background:#eaf0f7;border-color:var(--line);color:#37516c}
+body[data-theme="light"] .button.secondary{background:#fff;color:var(--text)}
+body[data-theme="light"] .button.primary{background:var(--text);color:#fff;border-color:var(--text)}
+body[data-theme="light"] .background-lines{opacity:.3}
+body[data-theme="light"] .role-table tbody tr:hover{background:rgba(8,126,155,.05)}
+body[data-theme="light"] .hero-opportunities{display:none!important}
+@media(prefers-reduced-motion:reduce){.profile-socials a,.theme-toggle{transition:none}}
