@@ -572,383 +572,462 @@ body.light-only .hero-open-roles{max-width:100%;margin-top:30px}body.light-only 
 }
 
 
+/* Final requested refinements — 22 October 2026 */
+body.light-only .profile-photo-wrap{
+  width:100%;max-width:390px;aspect-ratio:1/1;min-height:0;
+  margin:0 auto;padding:26px;flex-direction:column;justify-content:center;
+  align-items:center;gap:12px;background:#fff;border:1px solid var(--line);
+  border-radius:24px;box-shadow:0 18px 50px rgba(28,48,75,.07)
+}
+body.light-only .profile-photo{
+  width:148px;height:148px;object-fit:cover;object-position:center center;
+  border-radius:14px!important;border:0!important;background:#f4f8fc
+}
+body.light-only .profile-caption{display:flex;flex-direction:column;align-items:center;text-align:center;gap:7px}
+body.light-only .profile-phone{font-size:.92rem;font-weight:600;color:#52657b;letter-spacing:.01em}
+body.light-only .profile-socials{margin-top:3px}
+body.light-only .profile-socials a{border-radius:10px}
+body.light-only .hero{padding-top:34px;row-gap:24px}
+body.light-only .hero-visual{padding-top:0;align-self:start}
+body.light-only .hero-visual-stack{gap:16px}
+body.light-only .hero-open-roles{width:100%;grid-column:1/-1;margin-top:0}
+body.light-only .certifications-block{display:block;width:100%;max-width:none;grid-column:1/-1}
+body.light-only .certifications-block .section-heading{max-width:none;width:100%}
+body.light-only .certification-grid{width:100%;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+body.light-only .certification-grid .development-card{min-width:0;min-height:160px;align-items:stretch;flex-direction:column;justify-content:space-between;gap:18px}
+body.light-only .certification-grid .development-card .button{width:100%;text-align:center}
+body.light-only .timeline-item .experience-link{display:none!important}
+/* Keep the InsightForge feature panel light and legible instead of dark navy. */
+body.light-only .project-snapshot{
+  background:linear-gradient(135deg,#ffffff 0%,#f1f8fc 100%)!important;
+  border:1px solid #d4e2ee!important;
+  box-shadow:0 20px 55px rgba(28,48,75,.08)
+}
+body.light-only .project-snapshot::before,
+body.light-only .project-snapshot::after{
+  border-color:rgba(8,126,155,.10)!important
+}
+body.light-only .snapshot-kicker{color:#087e9b!important}
+body.light-only .snapshot-title{color:#17263c!important}
+body.light-only .snapshot-title span{color:#087e9b!important}
+body.light-only .snapshot-grid div{
+  background:#fff!important;border-color:#d4e2ee!important;
+  box-shadow:0 4px 14px rgba(28,48,75,.035)
+}
+body.light-only .snapshot-grid strong{color:#17263c!important}
+body.light-only .snapshot-grid small{color:#52657b!important}
+/* Make the decorative background pattern visible but subtle. */
+body.light-only .background-lines{opacity:1!important}
+body.light-only .background-lines::before,
+body.light-only .background-lines::after{
+  border-color:rgba(8,126,155,.095)!important
+}
+body.light-only .background-lines span{
+  background:linear-gradient(90deg,transparent,rgba(8,126,155,.075),transparent)!important
+}
+/* Reduce the dead space below the sticky navbar on dedicated project pages. */
+body:not(.home-page) .case-hero{padding-top:32px!important;padding-bottom:52px!important}
+body:not(.home-page) .case-hero-grid{gap:42px}
+body:not(.home-page) .case-hero .eyebrow{margin-top:0}
+@media(max-width:760px){
+ body.light-only .certification-grid{grid-template-columns:1fr}
+ body.light-only .certification-grid .development-card{min-height:0}
+ body.light-only .profile-photo{width:126px;height:126px}
+ body:not(.home-page) .case-hero{padding-top:24px!important;padding-bottom:36px!important}
+}
+
 /* =========================================================
-   FINAL STABILITY FIX — 22 OCTOBER 2026
-   Preserve existing components; correct portrait and role cards.
+   PROFILE CARD — CLEAN PORTRAIT + SUBTLE PATTERN
    ========================================================= */
 
-/* Profile card: fixed portrait size, natural proportions, tidy spacing */
-body.light-only .hero-visual-stack{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:18px;
-  width:100%;
-}
-body.light-only .profile-photo-wrap{
-  width:100%;
-  max-width:460px;
-  min-height:0;
-  aspect-ratio:auto;
-  padding:28px 24px 26px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
-  gap:0;
-  overflow:hidden;
-  background-color:#fff;
-  background-image:
-    radial-gradient(circle at 16% 18%, rgba(8,126,155,.10) 0 2px, transparent 3px),
-    radial-gradient(circle at 84% 78%, rgba(8,126,155,.08) 0 2px, transparent 3px),
-    repeating-linear-gradient(135deg, transparent 0 48px, rgba(8,126,155,.035) 49px 51px, transparent 52px 96px);
-  border:1px solid #d7e3ef;
-  border-radius:26px;
-  box-shadow:0 18px 45px rgba(28,48,75,.07);
-}
-body.light-only .profile-photo-wrap > .profile-photo{
-  display:block;
-  flex:0 0 auto;
-  width:154px;
-  height:154px;
-  max-width:100%;
-  margin:0 auto 16px;
-  padding:0;
-  object-fit:contain;
-  object-position:center;
-  border:2px solid #fff;
-  border-radius:20px;
-  background:#f1f6fb;
-  box-shadow:0 0 0 1.5px rgba(8,126,155,.25), 0 8px 22px rgba(28,48,75,.10);
-}
-body.light-only .profile-initials{
-  display:none;
-  flex:0 0 auto;
-  width:154px;
-  height:154px;
-  margin:0 auto 16px;
-  place-items:center;
-  border-radius:20px;
-  background:#eaf7fb;
-  color:#087e9b;
-  font-size:42px;
-  font-weight:800;
-}
-body.light-only .profile-caption{
-  width:100%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-start;
-  gap:0;
-  text-align:center;
-}
-body.light-only .profile-caption > strong{
-  display:block;
-  margin:0 0 8px;
-  color:#17263c;
-  font-size:24px;
-  line-height:1.3;
-  font-weight:750;
-}
-body.light-only .profile-phone{
-  display:inline-block;
-  margin:0 0 14px;
-  color:#526985;
-  font-size:16px;
-  font-weight:600;
-  line-height:1.5;
-}
-body.light-only .profile-socials{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  align-items:center;
-  gap:10px;
-  margin:0;
-}
-body.light-only .profile-socials a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:46px;
-  height:46px;
-  border:1px solid #d7e3ef;
-  border-radius:12px;
-  background:#f7f9fc;
-  color:#526985;
-  transition:transform .2s ease, background-color .2s ease, color .2s ease;
-}
-body.light-only .profile-socials a:hover{
-  transform:translateY(-2px);
-  background:#eaf7fb;
-  color:#087e9b;
-}
-body.light-only .profile-socials svg{width:19px;height:19px;fill:currentColor}
-
-/* Opportunity cards: three readable columns on desktop, responsive on smaller screens */
-body.light-only .hero-open-roles{
-  grid-column:1/-1;
-  width:100%;
-  max-width:none;
-  margin:4px 0 0;
-  padding:22px 24px 24px;
-  border:1px solid #d7e3ef;
-  border-radius:20px;
-  background:rgba(255,255,255,.82);
-}
-body.light-only .hero-open-roles > p{
-  margin:0 0 14px;
-  color:#087e9b;
-  font-size:.76rem;
-  font-weight:800;
-  letter-spacing:.16em;
-}
-body.light-only .hero-open-roles > div{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:10px;
-}
-body.light-only .hero-open-roles span{
-  display:flex;
-  align-items:center;
-  min-width:0;
-  min-height:58px;
-  padding:12px 14px;
-  overflow-wrap:anywhere;
-  border:1px solid #d7e3ef;
-  border-radius:12px;
-  background:#fff;
-  color:#405a78;
-  font-size:.9rem;
-  font-weight:600;
-  line-height:1.4;
-}
-body.light-only .hero-open-roles span:hover{
-  border-color:#9edce9;
-  background:#f2fbfd;
-}
-body.light-only .toolkit-card{width:100%;max-width:480px}
-body.light-only .tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-@media(max-width:1100px){
-  body.light-only .hero-open-roles > div{grid-template-columns:repeat(3,minmax(0,1fr))}
-}
-@media(max-width:760px){
-  body.light-only .hero-visual-stack{gap:16px}
-  body.light-only .profile-photo-wrap{max-width:460px;padding:24px 18px}
-  body.light-only .profile-photo-wrap > .profile-photo,
-  body.light-only .profile-initials{width:140px;height:140px}
-  body.light-only .hero-open-roles{padding:18px}
-  body.light-only .hero-open-roles > div{grid-template-columns:repeat(2,minmax(0,1fr))}
-  body.light-only .hero-open-roles span{min-height:54px;padding:10px;font-size:.85rem}
-}
-@media(max-width:420px){
-  body.light-only .hero-open-roles > div{grid-template-columns:1fr}
-  body.light-only .profile-photo-wrap > .profile-photo,
-  body.light-only .profile-initials{width:128px;height:128px}
-}
-@media(prefers-reduced-motion:reduce){
-  body.light-only .profile-socials a{transition:none}
-}
-
-
-/* ==========================================================
-   FINAL REPAIR OVERRIDES — portfolio layout and readability
-   Keep all existing markup, links, and JavaScript intact.
-   ========================================================== */
-
-/* Profile photo: a modest zoom while preserving the square crop. */
 body.light-only .profile-photo-wrap {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 390px;
+    aspect-ratio: 1 / 1;
+    min-height: 0;
+
+    margin: 0 auto;
+    padding: 30px 24px;
+    gap: 14px;
+
+    background:
+        radial-gradient(
+            circle at 12% 15%,
+            rgba(8, 136, 164, 0.09) 0,
+            rgba(8, 136, 164, 0.09) 2px,
+            transparent 3px
+        ),
+        radial-gradient(
+            circle at 88% 82%,
+            rgba(8, 136, 164, 0.08) 0,
+            rgba(8, 136, 164, 0.08) 2px,
+            transparent 3px
+        ),
+        repeating-linear-gradient(
+            135deg,
+            transparent 0,
+            transparent 32px,
+            rgba(8, 136, 164, 0.035) 33px,
+            transparent 34px
+        ),
+        #ffffff;
+
+    background-size:
+        24px 24px,
+        24px 24px,
+        auto,
+        auto;
+
+    border: 1px solid #d5e2ef;
+    border-radius: 24px;
+    box-shadow: 0 18px 48px rgba(28, 48, 75, 0.07);
+}
+
+/* Decorative corner circles */
+body.light-only .profile-photo-wrap::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    width: 210px;
+    height: 210px;
+    top: -120px;
+    right: -95px;
+
+    border: 1px solid rgba(8, 136, 164, 0.16);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 18px rgba(8, 136, 164, 0.025),
+        0 0 0 38px rgba(8, 136, 164, 0.02);
+
+    pointer-events: none;
+}
+
+body.light-only .profile-photo-wrap::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    width: 150px;
+    height: 150px;
+    bottom: -100px;
+    left: -65px;
+
+    border: 1px solid rgba(8, 136, 164, 0.15);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 16px rgba(8, 136, 164, 0.025),
+        0 0 0 34px rgba(8, 136, 164, 0.02);
+
+    pointer-events: none;
+}
+
+/* Portrait: square corners, zoomed crop to hide the baked-in circle */
+body.light-only .profile-photo {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+    width: 148px;
+    height: 148px;
+    flex: 0 0 148px;
+
+    object-fit: cover;
+    object-position: center 42%;
+
+    /* Crop the circular border embedded in the original image */
+    clip-path: inset(13% 13% 13% 13% round 14px);
+    transform: scale(1.18);
+
+    border: 0 !important;
+    border-radius: 14px !important;
+    background: #f3f7fb;
+
+    box-shadow: 0 5px 18px rgba(24, 48, 72, 0.10);
+}
+
+/* Name and phone number */
+body.light-only .profile-caption {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+
+    text-align: center;
+}
+
+body.light-only .profile-caption > strong {
+    color: #17263c;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+body.light-only .profile-phone {
+    color: #52657b;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+body.light-only .profile-phone:hover {
+    color: #087f9e;
+}
+
+/* Social and resume buttons */
+body.light-only .profile-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+body.light-only .profile-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    color: #53677f;
+    background: rgba(247, 249, 252, 0.95);
+    border: 1px solid #d5dfeb;
+    border-radius: 11px;
+
+    transition:
+        transform 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+body.light-only .profile-socials a:hover {
+    transform: translateY(-3px);
+    color: #087f9e;
+    border-color: #087f9e;
+}
+
+body.light-only .profile-socials svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+/* Responsive layout */
+@media (max-width: 760px) {
+    body.light-only .profile-photo-wrap {
+        width: 100%;
+        max-width: 340px;
+        padding: 24px 18px;
+        gap: 12px;
+    }
+
+    body.light-only .profile-photo {
+        width: 132px;
+        height: 132px;
+        flex-basis: 132px;
+    }
+
+    body.light-only .profile-caption > strong {
+        font-size: 1.15rem;
+    }
+
+    body.light-only .profile-socials {
+        gap: 8px;
+    }
+
+    body.light-only .profile-socials a {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.light-only .profile-socials a {
+        transition: none;
+    }
+}
+
+/* =========================================================
+   FINAL OVERRIDES — PROFILE CARD / RESPONSIVE STABILITY
+   Keep this block at the very end of style.css.
+   ========================================================= */
+
+/* The portrait source includes a circular photo baked into the image.
+   Crop further into its centre so the circular rim is mostly outside the
+   visible rounded-square viewport. For a truly clean result, use a portrait
+   image file without the baked-in circle. */
+body.light-only .profile-photo-wrap {
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  justify-content: flex-start !important;
-  gap: 14px !important;
-  padding: 22px 20px !important;
-  min-height: 0 !important;
-  text-align: center !important;
-  overflow: hidden !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 390px !important;
+  min-height: 390px !important;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto !important;
+  padding: 28px 24px !important;
+  gap: 13px !important;
+  background:
+    radial-gradient(circle at 15% 18%, rgba(8,126,155,.10) 0 2px, transparent 2.8px),
+    radial-gradient(circle at 85% 78%, rgba(8,126,155,.08) 0 2px, transparent 2.8px),
+    repeating-linear-gradient(135deg, transparent 0 30px, rgba(8,126,155,.035) 31px 32px, transparent 33px 58px),
+    #fff !important;
+  background-size: 24px 24px, 24px 24px, auto, auto;
+  border: 1px solid #d5dfeb !important;
+  border-radius: 24px !important;
+  box-shadow: 0 18px 48px rgba(28,48,75,.07) !important;
 }
-body.light-only .profile-photo-wrap > .profile-photo,
-body.light-only .profile-photo-wrap > .profile-initials {
+
+body.light-only .profile-photo-wrap::before,
+body.light-only .profile-photo-wrap::after {
+  content: "" !important;
+  position: absolute;
+  z-index: -1;
   display: block;
-  width: 184px !important;
-  height: 184px !important;
-  min-width: 184px !important;
-  min-height: 184px !important;
-  max-width: 100%;
-  object-fit: cover !important;
-  object-position: center 24% !important;
-  border-radius: 20px !important;
-  border: 2px solid #b8dce6 !important;
-  background: #f2f7fb !important;
-  flex: none !important;
-  transform: scale(1.035);
-  transform-origin: center;
+  border: 1px solid rgba(8,126,155,.15);
+  border-radius: 50%;
+  pointer-events: none;
 }
+body.light-only .profile-photo-wrap::before {
+  width: 210px; height: 210px; top: -120px; right: -95px;
+  box-shadow: 0 0 0 18px rgba(8,126,155,.025), 0 0 0 38px rgba(8,126,155,.02);
+}
+body.light-only .profile-photo-wrap::after {
+  width: 150px; height: 150px; bottom: -100px; left: -65px;
+  box-shadow: 0 0 0 16px rgba(8,126,155,.025), 0 0 0 34px rgba(8,126,155,.02);
+}
+
+/* Rounded-square portrait crop — no CSS circle, border or dark frame. */
+body.light-only .profile-photo {
+  display: block !important;
+  width: 148px !important;
+  height: 148px !important;
+  flex: 0 0 148px !important;
+  max-width: none !important;
+  object-fit: cover !important;
+  object-position: center 42% !important;
+  clip-path: inset(23% 23% 23% 23% round 14px) !important;
+  transform: scale(1.65) !important;
+  border: 0 !important;
+  border-radius: 14px !important;
+  outline: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
 body.light-only .profile-caption {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  gap: 10px !important;
-  width: 100%;
-  min-width: 0;
-  padding: 0 !important;
+  gap: 7px !important;
   text-align: center !important;
+  position: relative;
+  z-index: 1;
 }
+body.light-only .profile-caption > strong {
+  color: #17263c !important;
+  font-size: 1.3rem !important;
+  font-weight: 750 !important;
+}
+body.light-only .profile-phone {
+  display: inline-block !important;
+  color: #52657b !important;
+  font-size: .95rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+body.light-only .profile-phone:hover { color: #087f9e !important; }
 body.light-only .profile-socials {
   display: flex !important;
-  flex-wrap: wrap !important;
   justify-content: center !important;
-  gap: 9px !important;
-  margin-top: 2px !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin-top: 4px !important;
 }
 body.light-only .profile-socials a {
-  width: 42px !important;
-  height: 42px !important;
-}
-
-/* Certifications: exactly two columns on desktop, then natural rows. */
-body.light-only .certification-grid {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  align-items: stretch !important;
-  gap: 16px !important;
-  width: 100%;
-}
-body.light-only .certification-grid .development-card {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: stretch !important;
-  justify-content: space-between !important;
-  gap: 18px !important;
-  min-width: 0 !important;
-  min-height: 205px !important;
-  height: 100%;
-  padding: 22px !important;
-  box-sizing: border-box !important;
-}
-body.light-only .certification-grid .development-card > div { width: 100%; }
-body.light-only .certification-grid .development-card h3 {
-  font-size: 1rem !important;
-  line-height: 1.45 !important;
-  overflow-wrap: anywhere;
-}
-body.light-only .certification-grid .development-card .button {
-  width: 100% !important;
-  min-height: 44px;
-  margin-top: auto !important;
-  white-space: normal !important;
-  text-align: center !important;
-  box-sizing: border-box !important;
-}
-
-/* Project cards: give each project's tool/metric rail a consistent layout. */
-body.light-only .project-grid {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  align-items: stretch !important;
-  gap: 20px !important;
-}
-body.light-only .project {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) 112px !important;
-  align-items: stretch !important;
-  gap: 16px !important;
-  min-width: 0 !important;
-  min-height: 300px !important;
-  height: auto !important;
-  padding: 22px !important;
-  box-sizing: border-box !important;
-}
-body.light-only .project-main { min-width: 0 !important; }
-body.light-only .project .tag {
-  display: inline-block;
-  max-width: 100%;
-  white-space: normal !important;
-  overflow-wrap: anywhere;
-  line-height: 1.45;
-}
-body.light-only .project-side {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-self: stretch !important;
-  min-width: 0 !important;
-  gap: 9px !important;
-  padding: 0 0 0 14px !important;
-  border-left: 1px solid #d5dfeb !important;
-  border-top: 0 !important;
-  background: #f1f5fa !important;
-  box-sizing: border-box !important;
-}
-body.light-only .project-side span {
-  display: flex !important;
+  display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  min-width: 0 !important;
-  min-height: 56px !important;
-  padding: 9px 6px !important;
+  width: 42px !important;
+  height: 42px !important;
+  color: #53677f !important;
+  background: #f7f9fc !important;
   border: 1px solid #d5dfeb !important;
-  border-radius: 10px !important;
-  background: #fff !important;
-  color: #52677f !important;
-  text-align: center !important;
-  font-size: .66rem !important;
-  line-height: 1.35 !important;
-  letter-spacing: .045em !important;
+  border-radius: 11px !important;
+  transition: transform .2s ease, color .2s ease, border-color .2s ease;
+}
+body.light-only .profile-socials a:hover {
+  transform: translateY(-3px);
+  color: #087f9e !important;
+  border-color: #087f9e !important;
+}
+body.light-only .profile-socials svg { width: 18px; height: 18px; fill: currentColor; }
+
+/* Avoid the role and toolkit cards forcing horizontal overflow. */
+body.light-only .hero { align-items: start; }
+body.light-only .hero-copy,
+body.light-only .hero-visual,
+body.light-only .hero-visual-stack { min-width: 0; }
+body.light-only .hero-visual-stack { width: 100%; }
+body.light-only .hero-open-roles { width: 100% !important; max-width: none !important; }
+body.light-only .hero-open-roles > div {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+}
+body.light-only .hero-open-roles span {
+  min-width: 0;
   overflow-wrap: anywhere;
   word-break: normal;
 }
-body.light-only .project-side span:first-child {
-  color: #087f9e !important;
-  border-color: #a9d4df !important;
-}
 
-/* InsightForge case-study feature panel: match the site's light theme. */
-body.light-only .project-snapshot {
-  color: #17263b !important;
-  background: #ffffff !important;
-  border: 1px solid #d5dfeb !important;
-  border-radius: 18px !important;
-  box-shadow: 0 16px 38px rgba(27, 48, 74, .07) !important;
+@media (max-width: 1050px) {
+  body.light-only .hero-open-roles > div { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
 }
-body.light-only .project-snapshot::before,
-body.light-only .project-snapshot::after {
-  border-color: rgba(8, 127, 158, .10) !important;
-}
-body.light-only .project-snapshot .snapshot-kicker,
-body.light-only .project-snapshot .snapshot-grid strong {
-  color: #087f9e !important;
-}
-body.light-only .project-snapshot .snapshot-title,
-body.light-only .project-snapshot .snapshot-title span {
-  color: #17263b !important;
-}
-body.light-only .project-snapshot .snapshot-grid > div {
-  background: #f7fafd !important;
-  border: 1px solid #d5dfeb !important;
-  border-radius: 12px !important;
-}
-body.light-only .project-snapshot .snapshot-grid small { color: #53677f !important; }
-
-/* Responsive layout: keep content readable on tablet and mobile. */
-@media (max-width: 900px) {
-  body.light-only .project-grid { grid-template-columns: 1fr !important; }
-  body.light-only .project { min-height: 0 !important; }
-}
-@media (max-width: 640px) {
-  body.light-only .profile-photo-wrap { padding: 18px 14px !important; }
-  body.light-only .profile-photo-wrap > .profile-photo,
-  body.light-only .profile-photo-wrap > .profile-initials {
-    width: 156px !important;
-    height: 156px !important;
-    min-width: 156px !important;
-    min-height: 156px !important;
+@media (max-width: 760px) {
+  body.light-only .profile-photo-wrap {
+    max-width: 340px !important;
+    min-height: 340px !important;
+    padding: 24px 18px !important;
+    gap: 12px !important;
   }
-  body.light-only .certification-grid { grid-template-columns: 1fr !important; }
-  body.light-only .certification-grid .development-card { min-height: 0 !important; }
-  body.light-only .project { grid-template-columns: minmax(0, 1fr) 88px !important; gap: 10px !important; padding: 15px !important; }
-  body.light-only .project-side { padding-left: 9px !important; gap: 7px !important; }
-  body.light-only .project-side span { min-height: 48px !important; padding: 7px 4px !important; font-size: .58rem !important; }
+  body.light-only .profile-photo {
+    width: 132px !important;
+    height: 132px !important;
+    flex-basis: 132px !important;
+    clip-path: inset(23% 23% 23% 23% round 12px) !important;
+    transform: scale(1.65) !important;
+  }
+  body.light-only .profile-caption > strong { font-size: 1.15rem !important; }
+  body.light-only .profile-socials { gap: 8px !important; }
+  body.light-only .profile-socials a { width: 38px !important; height: 38px !important; }
+  body.light-only .hero-open-roles > div { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 420px) {
+  body.light-only .hero-open-roles > div { grid-template-columns: 1fr !important; }
+  body.light-only .profile-photo-wrap { min-height: 310px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.light-only .profile-socials a { transition: none !important; }
 }
