@@ -71,7 +71,7 @@ https://m-shafeek06.github.io/
 
 ## InsightForge AI — Live Resources
 
-- [Live Application](https://insightforge-ai-sigma.vercel.app/)
+- [Live Application](https://insightforge-ai-chi.vercel.app/)
 - [Backend API](https://insightforge-ai-r64p.onrender.com)
 - [API Documentation](https://insightforge-ai-r64p.onrender.com/docs)
 
