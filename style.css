@@ -3481,3 +3481,25 @@ body.home-page.light-only #contact .contact-card .actions { justify-content: cen
     justify-content: center;
   }
 }
+
+
+/* ==========================================================
+   HOMEPAGE — PRECISE STICKY-NAV SECTION ALIGNMENT
+   When a primary navbar link is selected, place that section's
+   heading 5px below the sticky navbar instead of retaining the
+   default 90px section top padding.
+   ========================================================== */
+body.home-page.light-only main section[id]:not(#home) {
+  scroll-margin-top: 96px !important;
+}
+body.home-page.light-only main section[id]:not(#home):target {
+  padding-top: 5px !important;
+}
+@media (max-width: 760px) {
+  body.home-page.light-only main section[id]:not(#home) {
+    scroll-margin-top: 112px !important;
+  }
+  body.home-page.light-only main section[id]:not(#home):target {
+    padding-top: 5px !important;
+  }
+}
