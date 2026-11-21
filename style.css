@@ -1305,81 +1305,346 @@ body.light-only .background-lines span {
 }
 
 
+
 /* =========================================================
-   HERO CONTENT REFINEMENT — PORTFOLIO OPTIMIZATION
-   Keeps the existing homepage structure and components.
+   HOMEPAGE HERO REFINEMENT — APPROVED SCOPE
+   Keeps the existing hero, profile card and toolkit placement.
    ========================================================= */
-body.light-only .hero-copy{
-  max-width: 790px;
+
+body.home-page.light-only .permanent-role {
+  width: fit-content;
+  max-width: 100%;
+  padding: 11px 16px;
+  border: 1px solid #c8e4ed;
+  border-radius: 999px;
+  background: rgba(235, 248, 251, .92);
+  box-shadow: 0 5px 18px rgba(27, 75, 96, .05);
 }
-body.light-only .hero-copy h1{
-  max-width: 820px;
-  line-height: 1.035;
+
+body.home-page.light-only .permanent-role strong {
+  color: #17617a;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .105em;
+}
+
+body.home-page.light-only .role-live-dot {
+  width: 8px;
+  height: 8px;
+  background: #0786a2;
+  box-shadow: 0 0 0 4px rgba(8, 127, 158, .11);
+}
+
+body.home-page.light-only .hero-copy h1 {
+  max-width: 780px;
+  font-size: clamp(3.15rem, 5.4vw, 5.35rem);
+  line-height: 1.045;
   letter-spacing: -.052em;
+  margin-bottom: 24px;
   text-wrap: balance;
 }
-body.light-only .hero-copy h1 span{
-  color: #087e9b;
+
+body.home-page.light-only .hero-copy h1 span {
+  color: #087f9e;
 }
-body.light-only .hero-copy > .lead{
-  max-width: 720px;
-  margin-top: 0;
-  color: #52657b;
-  font-size: 1.06rem;
+
+body.home-page.light-only .hero-copy .lead {
+  max-width: 735px;
+  color: #52677f;
+  font-size: clamp(1rem, 1.18vw, 1.12rem);
   line-height: 1.82;
+  margin: 0;
 }
-body.light-only .hero-proof{
+
+body.home-page.light-only .hero-copy .actions {
+  margin-top: 27px;
+}
+
+/* Toolkit: capability groups replace the flat eight-cell list. */
+body.home-page.light-only .toolkit-card {
+  padding: 30px;
+  border-color: #d6e2ee;
+  background: rgba(255, 255, 255, .96);
+  box-shadow: 0 18px 48px rgba(28, 48, 75, .09);
+}
+
+body.home-page.light-only .toolkit-card::before {
+  width: 150px;
+  height: 3px;
+  background: #087f9e;
+}
+
+body.home-page.light-only .toolkit-top {
+  margin-bottom: 18px;
+  padding-bottom: 15px;
+  border-bottom-color: #e0e9f1;
+}
+
+body.home-page.light-only .toolkit-card .card-label {
+  color: #52677f;
+  font-size: .76rem;
+  letter-spacing: .17em;
+}
+
+body.home-page.light-only .toolkit-subtitle {
+  color: #087f9e;
+}
+
+body.home-page.light-only .toolkit-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+body.home-page.light-only .toolkit-group {
+  min-width: 0;
+  padding: 13px 13px 14px;
+  border: 1px solid #e0e9f1;
+  border-radius: 11px;
+  background: #fbfdff;
+  transition: border-color .2s ease, background .2s ease, transform .2s ease;
+}
+
+body.home-page.light-only .toolkit-group:hover {
+  border-color: #acd5e0;
+  background: #f4fbfd;
+  transform: translateY(-2px);
+}
+
+body.home-page.light-only .toolkit-group > p {
+  margin: 0 0 9px;
+  color: #668097;
+  font-size: .61rem;
+  line-height: 1.35;
+  font-weight: 800;
+  letter-spacing: .105em;
+}
+
+body.home-page.light-only .toolkit-tags {
   display: flex;
   flex-wrap: wrap;
+  gap: 6px;
+}
+
+body.home-page.light-only .toolkit-tags span {
+  display: inline-flex;
   align-items: center;
-  gap: 9px 18px;
-  max-width: 760px;
-  margin-top: 25px;
-  padding-top: 17px;
-  border-top: 1px solid #d5dfeb;
+  min-height: 25px;
+  padding: 4px 8px;
+  border: 1px solid #d7e5ef;
+  border-radius: 6px;
+  background: #fff;
+  color: #304c68;
+  font-size: .69rem;
+  line-height: 1.25;
+  font-weight: 650;
 }
-body.light-only .hero-proof span{
-  color: #52657b;
-  font-size: .76rem;
-  font-weight: 600;
-  line-height: 1.55;
+
+/* Opportunity panel: all 15 roles remain visible in a clearer matrix. */
+body.home-page.light-only .hero-open-roles {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: none;
+  margin-top: 38px;
+  padding: 25px 27px 27px;
+  border: 1px solid #d8e4ef;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .88);
+  box-shadow: 0 14px 38px rgba(28, 48, 75, .055);
 }
-body.light-only .hero-proof strong{
-  color: #087e9b;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
+
+body.home-page.light-only .opportunity-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 22px;
+  margin-bottom: 19px;
 }
-body.light-only .tool-grid div{
-  transition: background .2s ease, border-color .2s ease;
+
+body.home-page.light-only .opportunity-kicker {
+  margin: 0 0 7px;
+  color: #087f9e;
+  font-size: .68rem;
+  font-weight: 850;
+  letter-spacing: .16em;
 }
-body.light-only .tool-grid div:hover{
-  background: #edf8fb;
+
+body.home-page.light-only .opportunity-heading h2 {
+  margin: 0;
+  color: #1a2b43;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  line-height: 1.2;
+  letter-spacing: -.035em;
 }
-body.light-only .tool-grid strong{
-  color: #263f5c;
-  font-weight: 750;
+
+body.home-page.light-only .opportunity-note {
+  max-width: 430px;
+  margin: 0 0 2px;
+  color: #687d92;
+  font-size: .83rem;
+  line-height: 1.6;
+  text-align: right;
 }
-@media(max-width:850px){
-  body.light-only .hero-copy h1{
-    max-width: 760px;
+
+body.home-page.light-only .opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px 10px;
+}
+
+body.home-page.light-only .opportunity-role {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 54px;
+  padding: 11px 13px 11px 29px;
+  border: 1px solid #dce6f0;
+  border-radius: 10px;
+  background: #fff;
+  color: #405a74;
+  font-size: .82rem;
+  line-height: 1.42;
+  font-weight: 650;
+  transition: border-color .2s ease, background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+body.home-page.light-only .opportunity-role::before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0a8aa5;
+  transform: translateY(-50%);
+  box-shadow: 0 0 0 3px rgba(8, 127, 158, .09);
+}
+
+body.home-page.light-only .opportunity-role:hover {
+  border-color: #8fc8d7;
+  background: #f3fbfd;
+  color: #244a64;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 16px rgba(24, 89, 111, .06);
+}
+
+@media (max-width: 1050px) {
+  body.home-page.light-only .hero {
+    gap: 38px;
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, .9fr);
+  }
+  body.home-page.light-only .hero-copy h1 {
+    font-size: clamp(3rem, 5.3vw, 4.7rem);
+  }
+  body.home-page.light-only .toolkit-card {
+    padding: 24px;
+  }
+  body.home-page.light-only .opportunity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media(max-width:640px){
-  body.light-only .hero-copy > .lead{
-    font-size: .98rem;
+
+@media (max-width: 760px) {
+  body.home-page.light-only .hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 52px;
+  }
+  body.home-page.light-only .hero-copy h1 {
+    max-width: 650px;
+    font-size: clamp(2.85rem, 9.5vw, 4.35rem);
+    line-height: 1.06;
+  }
+  body.home-page.light-only .hero-copy .lead {
+    font-size: 1rem;
     line-height: 1.75;
   }
-  body.light-only .hero-proof{
-    gap: 7px 13px;
-    margin-top: 20px;
-    padding-top: 14px;
+  body.home-page.light-only .hero-visual {
+    justify-content: stretch;
   }
-  body.light-only .hero-proof span{
-    font-size: .71rem;
+  body.home-page.light-only .hero-visual-stack {
+    width: 100%;
+  }
+  body.home-page.light-only .hero-open-roles {
+    margin-top: 8px;
+    padding: 21px 18px;
+  }
+  body.home-page.light-only .opportunity-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+  body.home-page.light-only .opportunity-note {
+    max-width: none;
+    text-align: left;
+  }
+  body.home-page.light-only .opportunity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media(prefers-reduced-motion:reduce){
-  body.light-only .tool-grid div{
+
+@media (max-width: 480px) {
+  body.home-page.light-only .permanent-role strong {
+    font-size: .68rem;
+    letter-spacing: .075em;
+  }
+  body.home-page.light-only .toolkit-groups {
+    grid-template-columns: 1fr;
+  }
+  body.home-page.light-only .opportunity-grid {
+    grid-template-columns: 1fr;
+  }
+  body.home-page.light-only .opportunity-role {
+    min-height: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.home-page.light-only .toolkit-group,
+  body.home-page.light-only .opportunity-role {
     transition: none;
+  }
+  body.home-page.light-only .toolkit-group:hover,
+  body.home-page.light-only .opportunity-role:hover {
+    transform: none;
+  }
+}
+
+
+
+/* Toolkit density refinement: category label beside compact skill chips. */
+body.home-page.light-only .toolkit-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+body.home-page.light-only .toolkit-group {
+  display: grid;
+  grid-template-columns: minmax(112px, .78fr) minmax(0, 1.45fr);
+  align-items: center;
+  gap: 9px;
+  padding: 10px 11px;
+}
+body.home-page.light-only .toolkit-group > p {
+  margin: 0;
+  font-size: .59rem;
+  line-height: 1.45;
+}
+body.home-page.light-only .toolkit-tags {
+  gap: 5px;
+}
+body.home-page.light-only .toolkit-tags span {
+  min-height: 23px;
+  padding: 3px 7px;
+  font-size: .65rem;
+}
+@media (max-width: 480px) {
+  body.home-page.light-only .toolkit-group {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+  body.home-page.light-only .toolkit-group > p {
+    margin: 0;
   }
 }
