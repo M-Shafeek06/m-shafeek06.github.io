@@ -3093,3 +3093,30 @@ body.home-page.light-only #contact .contact-card .actions { justify-content: cen
   .insightforge-case main section[id] { scroll-margin-top: 112px; }
   .insightforge-case main section[id]:target { padding-top: 20px !important; }
 }
+
+
+/* ==========================================================
+   INSIGHTFORGE — PRECISE SECTION ANCHORS + ACTIVE NAV STATE
+   Keep each section heading directly below the sticky header.
+   Scoped only to the InsightForge case-study page.
+   ========================================================== */
+.insightforge-case main section[id] {
+  scroll-margin-top: 0 !important;
+}
+.insightforge-case main section[id]:target {
+  padding-top: 22px !important;
+}
+.insightforge-case .case-section-nav a.is-active {
+  color: #0087a8 !important;
+}
+.insightforge-case .case-section-nav a.is-active::after {
+  transform: scaleX(1) !important;
+}
+.insightforge-case .case-section-nav a[aria-current="location"] {
+  color: #0087a8 !important;
+}
+@media (max-width: 760px) {
+  .insightforge-case main section[id]:target {
+    padding-top: 20px !important;
+  }
+}
