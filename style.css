@@ -3086,7 +3086,7 @@ body.home-page.light-only #contact .contact-card .actions { justify-content: cen
   scroll-margin-top: 96px;
 }
 .insightforge-case main section[id]:target {
-  padding-top: 22px !important;
+  padding-top: 5px !important;
 }
 @media (max-width: 760px) {
   .insightforge-case { scroll-padding-top: 112px; }
@@ -3104,7 +3104,7 @@ body.home-page.light-only #contact .contact-card .actions { justify-content: cen
   scroll-margin-top: 0 !important;
 }
 .insightforge-case main section[id]:target {
-  padding-top: 22px !important;
+  padding-top: 5px !important;
 }
 .insightforge-case .case-section-nav a.is-active {
   color: #0087a8 !important;
