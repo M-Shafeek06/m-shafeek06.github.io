@@ -1,27 +1,303 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sales Data Analysis using SQL | M Shafeek</title><meta name="description" content="Sales Data Analysis using SQL case study by M Shafeek — Microsoft SQL Server and T-SQL."><link rel="stylesheet" href="style.css"></head>
-<body class="light-only">
-<div class="background-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div><header class="nav"><div class="nav-left"><a class="brand" href="index.html">M SHAFEEK</a><a class="header-back" href="index.html#projects">← Projects</a></div><nav><a href="index.html#about">About</a><a href="index.html#skills">Skills</a><a href="index.html#experience">Experience</a><a href="index.html#projects" class="active">Projects</a><a href="index.html#education">Education</a><a href="index.html#contact">Contact</a></nav></header>
-<main>
-<section class="case-section case-hero"><div class="case-hero-grid"><div class="case-visual"><img src="https://raw.githubusercontent.com/M-Shafeek06/Sales-Data-Analysis/main/sda_portfolio_main.png" alt="Sales Data Analysis project cover" loading="eager"></div><div><p class="eyebrow">SQL CASE STUDY · 04</p><h1>Sales Data <span>Analysis using SQL</span></h1><p class="lead">A SQL-focused sales analysis project developed using Microsoft SQL Server Management Studio, supported by a reusable SQL script and an analytical report.</p><div class="case-meta"><span>SQL Server</span><span>T-SQL</span><span>SSMS</span><span>Sales Analytics</span></div><div class="case-cta"><a class="button primary" href="https://github.com/M-Shafeek06/Sales-Data-Analysis" target="_blank" rel="noopener">View Repository ↗</a></div></div></div></section>
-<section class="case-section"><div class="section-heading"><p class="eyebrow">01 — PROJECT EVIDENCE</p><h2>SQL work samples from the repository.</h2><p class="muted">The project cover is shown above. The dashboard/work-sample gallery below follows the same flow as the featured case studies and uses the actual SDA images from the public repository.</p></div><div class="dashboard-gallery sales-gallery" id="sales-gallery"></div></section>
-<section class="case-section alt"><div class="section-heading"><p class="eyebrow">02 — THE PROBLEM</p><h2>Use SQL to analyze structured sales data and turn the results into a documented analytical report.</h2></div><div class="case-grid"><article class="case-card"><h3>Business / analytical focus</h3><p class="muted">Use relational SQL queries to examine sales performance and organize the analysis into a documented report.</p></article><article class="case-card"><h3>What the repository demonstrates</h3><p class="muted">The public repository contains the SQL analysis script, a PDF report, README documentation and the SDA project work-sample images.</p></article></div></section>
-<section class="case-section"><div class="section-heading"><p class="eyebrow">03 — WORKFLOW</p><h2>From relational sales data to documented analysis.</h2></div><div class="architecture"><div class="arch-step">Sales data<small>Structured records</small></div><div class="arch-step">SQL Server<small>Relational analysis environment</small></div><div class="arch-step">T-SQL<small>Analytical queries</small></div><div class="arch-step">Report<small>Documented results</small></div></div></section>
-<section class="case-section alt"><div class="section-heading"><p class="eyebrow">04 — ANALYTICAL SCOPE</p><h2>What the project covers.</h2></div><div class="case-grid"><article class="case-card"><h3>Sales Analysis</h3><p class="muted">Query-driven analysis of structured sales data in Microsoft SQL Server.</p></article><article class="case-card"><h3>Product Performance</h3><p class="muted">Product-level analysis supported by SQL queries retained in the repository.</p></article><article class="case-card"><h3>Time-based Analysis</h3><p class="muted">Time-oriented sales analysis represented through the project queries and report.</p></article><article class="case-card"><h3>Business Breakdowns</h3><p class="muted">Regional and category-oriented analysis represented in the project's SQL work.</p></article></div></section>
-<section class="case-section"><div class="section-heading"><p class="eyebrow">05 — SKILLS DEMONSTRATED</p><h2>Evidence of practical SQL analytics work.</h2></div><div class="case-grid"><article class="case-card"><h3>SQL</h3><p class="muted">Microsoft SQL Server / SQL Server Management Studio.</p></article><article class="case-card"><h3>Analytical querying</h3><p class="muted">Reusable T-SQL retained in the repository for inspection.</p></article><article class="case-card"><h3>Sales analytics</h3><p class="muted">Product, time and business-dimension analysis.</p></article><article class="case-card"><h3>Reporting</h3><p class="muted">Analysis documented in a PDF report.</p></article></div></section>
-<section class="case-section alt"><div class="section-heading"><p class="eyebrow">06 — PROJECT EVIDENCE</p><h2>Artifacts available in the repository.</h2></div><div class="case-card"><ul><li><code>Sales_Data_Analysis.sql</code></li><li><code>Sales Data Analysis using SQL.pdf</code></li><li><code>sda_portfolio_main.png</code></li><li><code>SDA_2.png</code></li><li><code>SDA_3.png</code></li><li><code>SDA_4.png</code></li><li><code>README.md</code></li></ul><p class="muted evidence-note">The public repository now exposes the SQL script, PDF report, the <code>sda_portfolio_main.png</code> project cover and the SDA work-sample images used by this case study.</p></div><div class="case-cta"><a class="button primary" href="https://github.com/M-Shafeek06/Sales-Data-Analysis" target="_blank" rel="noopener">Open GitHub Repository ↗</a><a class="button secondary" href="index.html#projects">View Other Projects</a></div></section>
-</main><footer><span>© 2026 M Shafeek</span><span>Sales Data Analysis using SQL Case Study</span></footer><script>
-const salesGallery=document.getElementById('sales-gallery');
-[1,2,3,4,5].forEach(n=>{
-  const figure=document.createElement('figure');
-  const img=document.createElement('img');
-  img.src=`https://raw.githubusercontent.com/M-Shafeek06/Sales-Data-Analysis/main/SDA_${n}.png`;
-  img.alt=`Sales Data Analysis SQL work sample ${n}`;
-  img.loading=n===1?'lazy':'lazy';
-  img.onerror=()=>figure.remove();
-  const cap=document.createElement('figcaption');
-  cap.textContent=`SQL work sample — SDA_${n}`;
-  figure.append(img,cap); salesGallery.appendChild(figure);
-});
-</script></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Data Analysis using SQL | M Shafeek</title>
+  <meta name="description" content="SQL Server case study exploring product, category, location and time-based sales performance using a structured sales table and T-SQL queries.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-only insightforge-case">
+  <div aria-hidden="true" class="background-lines"><span></span><span></span><span></span><span></span></div>
+
+  <header class="case-nav" aria-label="Sales Data Analysis case study navigation">
+    <div class="case-nav-left">
+      <a class="case-back" href="index.html#projects" aria-label="Back to the projects section" title="Back to Projects">←</a>
+      <a class="case-brand" href="#overview" aria-label="Sales Data Analysis case study home">Sales Data Analysis</a>
+    </div>
+    <nav class="case-section-nav" aria-label="Sections in this case study">
+      <a href="#overview">Overview</a>
+      <a href="#objective">Objective</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#design">Design</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#reliability">Reliability</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#resources">Resources</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 01 / OVERVIEW -->
+    <section class="case-section case-hero" id="overview">
+      <div class="case-hero-grid">
+        <div class="case-hero-copy">
+          <p class="eyebrow">SQL ANALYTICS · SALES PERFORMANCE · CASE STUDY</p>
+          <h1>Sales Data <span>Analysis using SQL</span></h1>
+          <p class="lead">A focused SQL Server analysis project that uses a structured sales table and T-SQL queries to examine product performance, revenue patterns, category contribution and sales distribution across locations.</p>
+          <div class="case-meta" aria-label="Technology stack">
+            <span>Microsoft SQL Server</span><span>SSMS</span><span>T-SQL</span><span>Sales Analysis</span>
+          </div>
+          <div class="case-proofline" aria-label="Project highlights">
+            <span><strong>150 inserted sales records</strong>Single-table sales dataset</span>
+            <span><strong>Product performance</strong>Units sold and revenue ranking</span>
+            <span><strong>Time &amp; location analysis</strong>Monthly, quarterly and city-level summaries</span>
+          </div>
+          <div class="case-cta">
+            <a class="button primary" href="https://github.com/M-Shafeek06/Sales-Data-Analysis" target="_blank" rel="noopener noreferrer">View Repository ↗</a>
+            <a class="button secondary" href="https://github.com/M-Shafeek06/Sales-Data-Analysis/blob/main/Sales%20Data%20Analysis%20using%20SQL.pdf" target="_blank" rel="noopener noreferrer">View Project Report ↗</a>
+          </div>
+        </div>
+
+        <aside class="project-snapshot" aria-label="Sales Data Analysis project summary">
+          <div>
+            <span class="snapshot-kicker">SQL SERVER · T-SQL CASE STUDY</span>
+            <p class="snapshot-title">Explore sales through <span>structured queries.</span></p>
+          </div>
+          <div class="snapshot-grid">
+            <div><strong>DEFINE</strong><small>DATABASE &amp; TABLE</small></div>
+            <div><strong>POPULATE</strong><small>SALES RECORDS</small></div>
+            <div><strong>QUERY</strong><small>AGGREGATE &amp; GROUP</small></div>
+            <div><strong>INTERPRET</strong><small>RESULT SETS</small></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 02 / OBJECTIVE -->
+    <section class="case-section alt" id="objective">
+      <div class="section-heading">
+        <p class="eyebrow">02 — ANALYTICAL CONTEXT &amp; OBJECTIVE</p>
+        <h2>Use SQL queries to understand where sales come from and how products perform.</h2>
+        <p class="muted">The project establishes a compact sales dataset in Microsoft SQL Server and applies grouped calculations to answer practical product, time, category and location questions.</p>
+      </div>
+      <div class="case-grid">
+        <article class="case-card">
+          <p class="case-card-kicker">THE ANALYTICAL NEED</p>
+          <h3>Raw transaction rows are difficult to compare directly.</h3>
+          <p class="muted">A list of sales records does not immediately show which products move the most units, which products contribute the highest revenue, how revenue changes over time or how sales are distributed across locations and categories.</p>
+        </article>
+        <article class="case-card">
+          <p class="case-card-kicker">THE OBJECTIVE</p>
+          <h3>Convert transaction-level data into useful summaries.</h3>
+          <p class="muted">Create a sales database and table, populate it with records, then use T-SQL aggregation and date-based grouping to produce ranked and summarized result sets that can be reviewed in SQL Server Management Studio.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 03 / DATA & QUERY ARCHITECTURE -->
+    <section class="case-section" id="architecture">
+      <div class="section-heading">
+        <p class="eyebrow">03 — DATA &amp; QUERY STRUCTURE</p>
+        <h2>A straightforward single-table SQL analysis design.</h2>
+        <p class="muted">This project does not implement a multi-tier application or a multi-table data warehouse. Its structure is intentionally represented as a database setup, one sales table, a set of analytical T-SQL queries and their result sets.</p>
+      </div>
+      <div class="case-grid case-grid-architecture">
+        <article class="case-card"><h3>Database layer</h3><p class="muted">The SQL script creates the <code>Sales_Analysis</code> database and selects it as the working database.</p></article>
+        <article class="case-card"><h3>Sales table</h3><p class="muted">A single <code>Sales</code> table stores <code>Sales_Id</code>, <code>Sale_Date</code>, <code>Product_Name</code>, <code>Category</code>, <code>Quantity</code>, <code>Price</code> and <code>Location</code>.</p></article>
+        <article class="case-card"><h3>Query layer</h3><p class="muted">T-SQL statements use <code>SUM</code>, <code>GROUP BY</code>, <code>ORDER BY</code>, <code>TOP</code> and date functions to calculate sales summaries.</p></article>
+        <article class="case-card"><h3>Analysis output</h3><p class="muted">The queries return ranked product lists and revenue summaries by month, quarter, location and category. Results are reviewed in SSMS and documented in the project report.</p></article>
+      </div>
+      <div class="case-design-note">
+        <span class="case-design-note-label">DATA MODEL NOTE</span>
+        <p>The implemented schema is one transaction-style table. The case study therefore describes the actual table and query flow rather than suggesting joins, ETL pipelines, dashboards or a star schema that are not present in the SQL script.</p>
+      </div>
+    </section>
+
+    <!-- 04 / ANALYTICAL DESIGN -->
+    <section class="case-section alt" id="design">
+      <div class="section-heading">
+        <p class="eyebrow">04 — ANALYTICAL DESIGN</p>
+        <h2>Organize the analysis around clear business dimensions.</h2>
+        <p class="muted">The query set is grouped by the questions it answers. Each analysis uses the relevant columns in the sales table and calculates revenue from quantity multiplied by price.</p>
+      </div>
+      <div class="case-grid">
+        <article class="case-card"><h3>Product ranking</h3><p class="muted">Compare the top five products by total units sold, then rank products by calculated revenue.</p></article>
+        <article class="case-card"><h3>Time-based trends</h3><p class="muted">Group calculated revenue by calendar month and quarter to review how sales value changes across periods.</p></article>
+        <article class="case-card"><h3>Location comparison</h3><p class="muted">Aggregate revenue by the <code>Location</code> field to compare the cities represented in the dataset.</p></article>
+        <article class="case-card"><h3>Category contribution</h3><p class="muted">Summarize revenue by product category to compare the sales value associated with each category.</p></article>
+      </div>
+      <div class="case-design-note">
+        <span class="case-design-note-label">CALCULATION BASIS</span>
+        <p><code>Revenue = Quantity × Price</code>. The SQL script applies this expression in the product revenue, monthly revenue, quarterly revenue, location and category queries.</p>
+      </div>
+    </section>
+
+    <!-- 05 / WORKFLOW -->
+    <section class="case-section" id="workflow">
+      <div class="section-heading">
+        <p class="eyebrow">05 — SQL ANALYSIS WORKFLOW</p>
+        <h2>Set up → Populate → Query → Summarize → Review.</h2>
+        <p class="muted">The workflow below reflects the sequence present in the SQL script. It is a query execution process, not an ETL or application deployment pipeline.</p>
+      </div>
+      <div class="architecture case-workflow-steps" aria-label="SQL analysis workflow stages">
+        <div class="arch-step">Create<small>Database &amp; table</small></div>
+        <div class="arch-step">Populate<small>Insert 150 records</small></div>
+        <div class="arch-step">Inspect<small>Select sales rows</small></div>
+        <div class="arch-step">Analyze<small>Run T-SQL queries</small></div>
+        <div class="arch-step">Aggregate<small>Group &amp; rank</small></div>
+        <div class="arch-step">Review<small>Results &amp; report</small></div>
+      </div>
+    </section>
+
+    <!-- 06 / CAPABILITIES -->
+    <section class="case-section alt" id="capabilities">
+      <div class="section-heading">
+        <p class="eyebrow">06 — ANALYTICAL CAPABILITIES</p>
+        <h2>What the SQL script actually calculates.</h2>
+        <p class="muted">The following capabilities are directly represented by the query blocks in <code>Sales_Data_Analysis.sql</code>.</p>
+      </div>
+      <div class="case-grid">
+        <article class="case-card"><h3>Top products by units</h3><p class="muted">Returns the top five products after summing <code>Quantity</code> and sorting the total units sold in descending order.</p></article>
+        <article class="case-card"><h3>Top products by revenue</h3><p class="muted">Calculates <code>SUM(Quantity * Price)</code> for each product and returns the five highest revenue totals.</p></article>
+        <article class="case-card"><h3>Monthly revenue</h3><p class="muted">Formats <code>Sale_Date</code> into a year-month value and groups revenue by month in chronological order.</p></article>
+        <article class="case-card"><h3>Quarterly revenue</h3><p class="muted">Uses <code>YEAR</code>, <code>DATEPART(QUARTER)</code> and <code>CONCAT</code> to calculate and order quarterly revenue.</p></article>
+        <article class="case-card"><h3>Revenue by location</h3><p class="muted">Groups the calculated revenue by city/location and sorts the results from highest to lowest revenue.</p></article>
+        <article class="case-card"><h3>Revenue by category</h3><p class="muted">Groups the calculated revenue by product category to compare category-level sales value.</p></article>
+      </div>
+      <div class="case-design-note">
+        <span class="case-design-note-label">SQL CONCEPTS VISIBLE IN THE SCRIPT</span>
+        <p>Database and table creation, primary key definition, multi-row inserts, <code>SELECT</code>, <code>TOP</code>, <code>SUM</code>, <code>GROUP BY</code>, <code>ORDER BY</code>, <code>FORMAT</code>, <code>YEAR</code>, <code>DATEPART</code> and <code>CONCAT</code>.</p>
+      </div>
+    </section>
+
+    <!-- 07 / RELIABILITY -->
+    <section class="case-section" id="reliability">
+      <div class="section-heading">
+        <p class="eyebrow">07 — RELIABILITY &amp; PROJECT SCOPE</p>
+        <h2>Keep the calculations transparent and the project claims precise.</h2>
+        <p class="muted">The project is a compact SQL analysis exercise. Its strengths and limitations should be understood in the context of the supplied schema, inserted records and query set.</p>
+      </div>
+      <div class="case-grid">
+        <article class="case-card"><h3>Explicit revenue calculation</h3><p class="muted">Revenue is calculated directly from <code>Quantity * Price</code> in the SQL statements, making the calculation basis visible and reviewable.</p></article>
+        <article class="case-card"><h3>Defined table structure</h3><p class="muted">The <code>Sales_Id</code> field is declared as the primary key, while date, product, category, quantity, price and location fields are explicitly typed.</p></article>
+        <article class="case-card"><h3>Reproducible SQL artifact</h3><p class="muted">The repository includes the SQL script that creates the database, defines the table, inserts records and executes the analysis queries.</p></article>
+        <article class="case-card"><h3>Scope limitations</h3><p class="muted">The current implementation uses one table and a fixed set of inserted records. The repository does not document a live data feed, automated refresh, dashboard deployment, multi-table joins or a production ETL process.</p></article>
+      </div>
+      <p class="muted evidence-note">Scope note: This case study presents the SQL Server work and documented project artifacts. It does not claim a production sales system, predictive forecasting, advanced statistical modeling or independently measured business impact.</p>
+    </section>
+
+    <!-- 08 / GALLERY -->
+    <section class="case-section alt" id="gallery">
+      <div class="section-heading">
+        <p class="eyebrow">08 — SQL WORK SAMPLES &amp; PROJECT EVIDENCE</p>
+        <h2>Inspect the original project images.</h2>
+        <p class="muted">The gallery uses the four SDA work-sample images committed to the public repository. Open any image to view its full-size version.</p>
+      </div>
+
+      <div class="case-gallery-group">
+        <div class="case-gallery-group-heading">
+          <span class="case-gallery-index">01 / SQL EVIDENCE</span>
+          <div>
+            <h3>SQL Server analysis work samples</h3>
+            <p>Repository images associated with the sales analysis project.</p>
+          </div>
+        </div>
+        <div class="case-evidence-gallery">
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Sales-Data-Analysis/main/SDA_1.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size SQL work sample SDA 1">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Sales-Data-Analysis/main/SDA_1.png" alt="Sales Data Analysis — SQL work sample 1" loading="lazy">
+            </a>
+            <figcaption><strong>SQL work sample 01</strong><span>Original repository image: SDA_1.png</span></figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Sales-Data-Analysis/main/SDA_2.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size SQL work sample SDA 2">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Sales-Data-Analysis/main/SDA_2.png" alt="Sales Data Analysis — SQL work sample 2" loading="lazy">
+            </a>
+            <figcaption><strong>SQL work sample 02</strong><span>Original repository image: SDA_2.png</span></figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Sales-Data-Analysis/main/SDA_3.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size SQL work sample SDA 3">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Sales-Data-Analysis/main/SDA_3.png" alt="Sales Data Analysis — SQL work sample 3" loading="lazy">
+            </a>
+            <figcaption><strong>SQL work sample 03</strong><span>Original repository image: SDA_3.png</span></figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Sales-Data-Analysis/main/SDA_4.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size SQL work sample SDA 4">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Sales-Data-Analysis/main/SDA_4.png" alt="Sales Data Analysis — SQL work sample 4" loading="lazy">
+            </a>
+            <figcaption><strong>SQL work sample 04</strong><span>Original repository image: SDA_4.png</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 / RESOURCES -->
+    <section class="case-section" id="resources">
+      <div class="section-heading">
+        <p class="eyebrow">09 — PROJECT RESOURCES</p>
+        <h2>Review the SQL implementation and supporting report.</h2>
+        <p class="muted">The following resources are published in the Sales-Data-Analysis GitHub repository.</p>
+      </div>
+      <div class="case-resource-grid">
+        <a class="case-resource-card" href="https://github.com/M-Shafeek06/Sales-Data-Analysis" target="_blank" rel="noopener noreferrer"><span>PROJECT SOURCE</span><strong>GitHub Repository ↗</strong><small>Browse the project files and repository history.</small></a>
+        <a class="case-resource-card" href="https://github.com/M-Shafeek06/Sales-Data-Analysis/blob/main/Sales_Data_Analysis.sql" target="_blank" rel="noopener noreferrer"><span>SQL IMPLEMENTATION</span><strong>Sales_Data_Analysis.sql ↗</strong><small>Inspect the database setup, table definition, inserted records and T-SQL analysis queries.</small></a>
+        <a class="case-resource-card" href="https://github.com/M-Shafeek06/Sales-Data-Analysis/blob/main/Sales%20Data%20Analysis%20using%20SQL.pdf" target="_blank" rel="noopener noreferrer"><span>PROJECT DOCUMENTATION</span><strong>Sales Analysis PDF Report ↗</strong><small>Open the report included in the repository.</small></a>
+      </div>
+      <div class="case-cta case-final-cta">
+        <a class="button primary" href="https://github.com/M-Shafeek06/Sales-Data-Analysis" target="_blank" rel="noopener noreferrer">Explore GitHub Project ↗</a>
+        <a class="button secondary" href="index.html#projects">← Back to All Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 M Shafeek</span><span>Sales Data Analysis using SQL · SQL Server Case Study</span></footer>
+<script>
+(() => {
+  const nav = document.querySelector('.case-nav');
+  const links = [...document.querySelectorAll('.case-section-nav a[href^="#"]')];
+  const sections = links.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+  if (!nav || !links.length || !sections.length) return;
+
+  const setActive = (id) => {
+    links.forEach(link => {
+      const active = link.getAttribute('href') === `#${id}`;
+      link.classList.toggle('is-active', active);
+      if (active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  };
+
+  const scrollToSection = (section, updateHistory = true) => {
+    const navHeight = nav.getBoundingClientRect().height;
+    const top = section.getBoundingClientRect().top + window.scrollY - navHeight;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+    if (updateHistory) history.pushState(null, '', `#${section.id}`);
+    setActive(section.id);
+  };
+
+  links.forEach(link => link.addEventListener('click', event => {
+    const section = document.querySelector(link.getAttribute('href'));
+    if (!section) return;
+    event.preventDefault();
+    scrollToSection(section);
+  }));
+
+  let ticking = false;
+  const updateActiveFromScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const threshold = nav.getBoundingClientRect().height + 48;
+      let current = sections[0];
+      sections.forEach(section => { if (section.getBoundingClientRect().top <= threshold) current = section; });
+      setActive(current.id);
+      ticking = false;
+    });
+  };
+
+  window.addEventListener('scroll', updateActiveFromScroll, { passive: true });
+  window.addEventListener('resize', updateActiveFromScroll);
+  window.addEventListener('popstate', () => {
+    const section = document.querySelector(location.hash);
+    if (section) scrollToSection(section, false);
+  });
+  if (location.hash) {
+    const initialSection = document.querySelector(location.hash);
+    if (initialSection) requestAnimationFrame(() => scrollToSection(initialSection, false));
+  } else updateActiveFromScroll();
+})();
+</script>
+</body>
+</html>
