@@ -1,82 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Airport Operations Intelligence | M Shafeek</title>
-  <meta name="description" content="Airport Operations Intelligence Platform case study by M Shafeek — Python, MySQL, SQL and Power BI.">
+  <title>Airport Operations Intelligence Platform | M Shafeek</title>
+  <meta name="description" content="Case study: an end-to-end airport and airline operations Business Intelligence solution built with Python, Pandas, MySQL, SQL, Power Query, DAX and Power BI.">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="light-only">
-<div class="background-lines" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-<header class="nav">
-  <div class="nav-left"><a class="brand" href="index.html">M SHAFEEK</a><a class="header-back" href="index.html#projects">← Projects</a></div>
-  <nav><a href="index.html#about">About</a><a href="index.html#skills">Skills</a><a href="index.html#experience">Experience</a><a href="index.html#projects" class="active">Projects</a><a href="index.html#education">Education</a><a href="index.html#contact">Contact</a></nav>
-</header>
-<main>
-  <section class="case-section case-hero"><div class="case-hero-grid"><div class="case-visual"><img src="https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/aiop_portfolio_main.png" alt="Airport Operations Intelligence Platform portfolio overview" loading="eager" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/AOIP_Executive%20Dashboard.png'"></div><div>
-    <p class="eyebrow">FEATURED CASE STUDY · 01</p>
-    <h1>Airport Operations <span>Intelligence Platform</span></h1>
-    <p class="lead">An end-to-end Business Intelligence solution that transforms historical flight operational data into structured, decision-ready reporting through Python ETL, MySQL, dimensional modeling and Power BI.</p>
-    <div class="case-meta"><span>Python</span><span>Pandas</span><span>SQL</span><span>MySQL</span><span>Power Query</span><span>DAX</span><span>Power BI</span><span>Azure Maps</span></div>
-    <div class="case-cta"><a class="button primary" href="https://github.com/M-Shafeek06/Airport-Operations-Intelligence-Platform" target="_blank" rel="noopener">View Repository ↗</a></div>
-  </div></div></section>
+<body class="light-only insightforge-case airport-operations-case">
+  <div aria-hidden="true" class="background-lines"><span></span><span></span><span></span><span></span></div>
 
-  <section class="case-section">
-    <div class="section-heading"><p class="eyebrow">DASHBOARD VIEWS</p><h2>Operational reporting built in Power BI.</h2><p class="muted">The project includes four interactive dashboard views covering executive KPIs, airline performance, airport performance, and delay analysis.</p></div>
-    <div class="dashboard-gallery">
-      <figure><img src="https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/AOIP_Executive%20Dashboard.png" alt="Airport Operations Intelligence Platform Executive Dashboard" loading="lazy"><figcaption>Executive Dashboard — high-level operational KPIs and trends</figcaption></figure>
-      <figure><img src="https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/AOIP_Airline_Performance.png" alt="Airport Operations Intelligence Platform Airline Performance dashboard" loading="lazy"><figcaption>Airline Performance — airline-level operational comparison</figcaption></figure>
-      <figure><img src="https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/AOIP_Airport_Performance.png" alt="Airport Operations Intelligence Platform Airport Performance dashboard" loading="lazy"><figcaption>Airport Performance — airport-level performance analysis</figcaption></figure>
-      <figure><img src="https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/AOIP_Delay_Analysis.png" alt="Airport Operations Intelligence Platform Delay Analysis dashboard" loading="lazy"><figcaption>Delay Analysis — delay patterns and operational drivers</figcaption></figure>
+  <header class="case-nav" aria-label="Airport Operations Intelligence case study navigation">
+    <div class="case-nav-left">
+      <a class="case-back" href="index.html#projects" aria-label="Back to the projects section" title="Back to Projects">←</a>
+      <a class="case-brand" href="#overview" aria-label="Airport Operations Intelligence case study home">Airport Operations</a>
     </div>
-  </section>
+    <nav class="case-section-nav" aria-label="Sections in this case study">
+      <a href="#overview">Overview</a>
+      <a href="#objective">Objective</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#design">Design</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#reliability">Reliability</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#resources">Resources</a>
+    </nav>
+  </header>
 
-  <section class="case-section alt">
-    <div class="section-heading"><p class="eyebrow">01 — THE PROBLEM</p><h2>Turn raw flight data into operational visibility.</h2></div>
-    <div class="case-grid">
-      <article class="case-card"><h3>Business focus</h3><p class="muted">The platform is designed to help stakeholders monitor flight operations, airline performance, airport performance, delays, operational efficiency and executive KPIs.</p></article>
-      <article class="case-card"><h3>Analytics outcome</h3><p class="muted">Instead of working directly from raw datasets, the project centralizes transformed operational data into a Power BI reporting solution for structured analysis and decision support.</p></article>
-    </div>
-  </section>
+  <main>
+    <!-- 01 / OVERVIEW -->
+    <section class="case-section case-hero" id="overview">
+      <div class="case-hero-grid">
+        <div class="case-hero-copy">
+          <p class="eyebrow">AVIATION ANALYTICS · BUSINESS INTELLIGENCE · CASE STUDY</p>
+          <h1>Airport Operations <span>Intelligence Platform</span></h1>
+          <p class="lead">I developed an end-to-end Business Intelligence solution that transforms historical flight operational data into structured reporting. The workflow combines Python-based ETL, MySQL storage, a star-schema analytical model and interactive Power BI dashboards for monitoring flight operations, delays, airline performance and airport performance.</p>
+          <div class="case-meta" aria-label="Technology stack">
+            <span>Python</span><span>Pandas</span><span>SQL</span><span>MySQL</span><span>SQLAlchemy</span><span>Power Query</span><span>DAX</span><span>Power BI</span><span>Azure Maps</span><span>Excel</span>
+          </div>
+          <div class="case-proofline" aria-label="Project highlights">
+            <span><strong>End-to-end BI workflow</strong>Python ETL to Power BI</span>
+            <span><strong>Dimensional modelling</strong>MySQL star schema</span>
+            <span><strong>Four dashboard views</strong>Executive, delay, airline &amp; airport</span>
+          </div>
+          <div class="case-cta">
+            <a class="button primary" href="https://github.com/M-Shafeek06/Airport-Operations-Intelligence-Platform" target="_blank" rel="noopener noreferrer">View GitHub Repository ↗</a>
+            <a class="button secondary" href="https://github.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/blob/main/Airport%20Operations%20Intelligence%20Platform%20Project%20Report.pdf" target="_blank" rel="noopener noreferrer">View Project Report ↗</a>
+          </div>
+        </div>
 
-  <section class="case-section">
-    <div class="section-heading"><p class="eyebrow">02 — DATA WORKFLOW</p><h2>From raw data to executive reporting.</h2></div>
-    <div class="architecture">
-      <div class="arch-step">Raw Flight Data<small>Source data</small></div>
-      <div class="arch-step">Python ETL<small>Extract · Transform · Validate</small></div>
-      <div class="arch-step">MySQL<small>Relational storage</small></div>
-      <div class="arch-step">Star Schema<small>Dimensional model</small></div>
-      <div class="arch-step">Power BI<small>Dashboards & KPIs</small></div>
-    </div>
-  </section>
+        <aside class="project-snapshot" aria-label="Airport Operations Intelligence project summary">
+          <div>
+            <span class="snapshot-kicker">AIRPORT OPERATIONS · BI CASE STUDY</span>
+            <p class="snapshot-title">From flight records to <span>operational visibility.</span></p>
+          </div>
+          <div class="snapshot-grid">
+            <div><strong>PREPARE</strong><small>PYTHON ETL</small></div>
+            <div><strong>STORE</strong><small>MYSQL</small></div>
+            <div><strong>MODEL</strong><small>STAR SCHEMA</small></div>
+            <div><strong>REPORT</strong><small>POWER BI</small></div>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-  <section class="case-section alt">
-    <div class="section-heading"><p class="eyebrow">03 — WHAT I BUILT</p><h2>Four analytical dashboard areas.</h2></div>
-    <div class="case-grid">
-      <article class="case-card"><h3>Executive Overview</h3><p class="muted">Executive KPIs including total flights, on-time percentage, delay percentage, cancellation rate, total delay minutes, average delay, total distance and average air time.</p></article>
-      <article class="case-card"><h3>Delay Analysis</h3><p class="muted">Delay trends, delay categories, worst routes, delay hotspots, airport rankings and airline rankings.</p></article>
-      <article class="case-card"><h3>Airline Performance</h3><p class="muted">On-time performance, delay rate, cancellation rate, operational score, airline efficiency matrix and top/bottom airline comparisons.</p></article>
-      <article class="case-card"><h3>Airport Performance</h3><p class="muted">Airport operational score, traffic volume, on-time performance, delay rate, airport rankings and geographic visualization with Azure Maps.</p></article>
-    </div>
-  </section>
+    <!-- 02 / OBJECTIVE -->
+    <section class="case-section alt" id="objective">
+      <div class="section-heading">
+        <p class="eyebrow">02 — BUSINESS CONTEXT &amp; OBJECTIVE</p>
+        <h2>Make flight operations easier to monitor and compare.</h2>
+        <p class="muted">The project focuses on organizing historical flight data into a reporting model that supports operational monitoring and performance analysis across airlines and airports.</p>
+      </div>
+      <div class="case-grid">
+        <article class="case-card">
+          <p class="case-card-kicker">THE CHALLENGE</p>
+          <h3>Operational data needs a consistent analytical view.</h3>
+          <p class="muted">Raw flight records are difficult to use directly for comparing operational performance. Stakeholders need a structured way to review flight volumes, on-time performance, delays, cancellations, airline comparisons and airport-level patterns without repeatedly working from source data.</p>
+        </article>
+        <article class="case-card">
+          <p class="case-card-kicker">THE OBJECTIVE</p>
+          <h3>Build a connected data-to-dashboard workflow.</h3>
+          <p class="muted">The objective was to create a Python ETL process, load the transformed data into MySQL, organize it through a star-schema model and develop Power BI dashboards with DAX-based KPIs for executive reporting and operational analysis.</p>
+        </article>
+      </div>
+    </section>
 
-  <section class="case-section">
-    <div class="section-heading"><p class="eyebrow">04 — DASHBOARD PREVIEW</p><h2>Evidence from the actual project repository.</h2><p class="muted">The gallery below uses the actual dashboard and model screenshots already included in the project repository.</p></div>
-    <div class="case-grid"><article class="case-card"><h3>Dashboard evidence</h3><p class="muted">The project repository contains the Executive Dashboard, Delay Analysis, Airline Performance, Airport Performance and Power BI model screenshots. Open the repository to inspect the original project evidence.</p></article><article class="case-card"><h3>Repository artifacts</h3><p class="muted">The repository also contains the PBIX report, SQL initialization script and Python ETL/validation files used in the end-to-end workflow.</p></article></div>
-  </section>
+    <!-- 03 / ARCHITECTURE -->
+    <section class="case-section" id="architecture">
+      <div class="section-heading">
+        <p class="eyebrow">03 — DATA &amp; BI ARCHITECTURE</p>
+        <h2>A structured pipeline from flight data to interactive reporting.</h2>
+        <p class="muted">The implementation separates data preparation, relational storage, dimensional modelling and dashboard development into distinct stages.</p>
+      </div>
+      <div class="case-grid case-grid-architecture">
+        <article class="case-card"><h3>Source &amp; preparation layer</h3><p class="muted">Historical flight operational data is processed through Python and Pandas ETL scripts. Dedicated scripts handle loading, fact-table transformation and validation tasks.</p></article>
+        <article class="case-card"><h3>Database layer</h3><p class="muted">MySQL provides relational storage for the prepared data. SQL and the project’s initialization script support database setup and data operations, with SQLAlchemy used for database connectivity.</p></article>
+        <article class="case-card"><h3>Analytical modelling layer</h3><p class="muted">A star-schema data model organizes flight facts and related analytical dimensions to support structured querying, KPI calculations and reporting in Power BI.</p></article>
+        <article class="case-card"><h3>Business intelligence layer</h3><p class="muted">Power Query supports data preparation, DAX defines business measures and Power BI delivers four interactive dashboard views. Azure Maps is used for geographic airport visualization.</p></article>
+      </div>
+    </section>
 
-  <section class="case-section alt">
-    <div class="section-heading"><p class="eyebrow">05 — ANALYTICAL SKILLS DEMONSTRATED</p><h2>A portfolio project that shows the full BI workflow.</h2></div>
-    <div class="case-grid">
-      <article class="case-card"><h3>Data preparation</h3><p class="muted">Python/Pandas ETL scripts are used for transformation and validation, with separate loading and fact-table transformation workflows in the repository.</p></article>
-      <article class="case-card"><h3>Data engineering</h3><p class="muted">MySQL is used for relational storage and SQL for querying, followed by a star-schema analytical model.</p></article>
-      <article class="case-card"><h3>BI development</h3><p class="muted">Power BI, Power Query and DAX are used to build interactive reporting and dynamic business KPIs.</p></article>
-      <article class="case-card"><h3>Business reporting</h3><p class="muted">The project focuses the analysis on operational monitoring, benchmarking, bottleneck identification and executive reporting.</p></article>
-    </div>
-    <div class="case-cta"><a class="button primary" href="https://github.com/M-Shafeek06/Airport-Operations-Intelligence-Platform" target="_blank" rel="noopener">Explore Full Repository ↗</a><a class="button secondary" href="index.html#projects">View Other Projects</a></div>
-  </section>
-</main>
-<footer><span>© 2026 M Shafeek</span><span>Airport Operations Intelligence Case Study</span></footer>
-<script>const links=[...document.querySelectorAll('nav a')]; links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='index.html#projects'));</script></body>
+    <!-- 04 / DESIGN -->
+    <section class="case-section alt" id="design">
+      <div class="section-heading">
+        <p class="eyebrow">04 — ANALYTICS &amp; REPORTING DESIGN</p>
+        <h2>Organize the reporting around the operational questions.</h2>
+        <p class="muted">The dashboard structure separates executive monitoring from deeper delay, airline and airport analysis, allowing users to move from an overall view to focused operational comparisons.</p>
+      </div>
+      <div class="case-grid">
+        <article class="case-card"><h3>Executive-first reporting</h3><p class="muted">The Executive Overview brings key measures such as total flights, on-time percentage, delay percentage, cancellation rate, delay minutes, distance and average air time into one high-level view.</p></article>
+        <article class="case-card"><h3>Delay-focused investigation</h3><p class="muted">The Delay Analysis view organizes delay trends, delay categories, routes, hotspots and airport or airline rankings to help identify where delays are concentrated.</p></article>
+        <article class="case-card"><h3>Performance benchmarking</h3><p class="muted">Airline and airport views support comparisons using on-time performance, delay rate, cancellation rate, traffic volume, operational scores and rankings.</p></article>
+        <article class="case-card"><h3>Geographic context</h3><p class="muted">Azure Maps adds a geographic perspective to airport performance analysis, complementing the KPI cards, rankings and comparative visuals.</p></article>
+      </div>
+      <div class="case-design-note">
+        <span class="case-design-note-label">REPORTING PRINCIPLE</span>
+        <p>Start with the operational picture, then let users investigate delays and compare airline and airport performance through focused dashboard views.</p>
+      </div>
+    </section>
+
+    <!-- 05 / WORKFLOW -->
+    <section class="case-section" id="workflow">
+      <div class="section-heading">
+        <p class="eyebrow">05 — END-TO-END DATA WORKFLOW</p>
+        <h2>Prepare → Load → Model → Measure → Visualize.</h2>
+        <p class="muted">The workflow follows the repository implementation: Python ETL and validation scripts prepare the flight data, MySQL stores it, the star schema supports analysis, and Power BI presents the resulting KPIs and dashboards.</p>
+      </div>
+      <div class="architecture case-workflow-steps" aria-label="Airport Operations Intelligence data workflow">
+        <div class="arch-step">Flight data<small>Historical source records</small></div>
+        <div class="arch-step">Python ETL<small>Pandas transformation</small></div>
+        <div class="arch-step">Validation<small>Data checks</small></div>
+        <div class="arch-step">MySQL<small>Relational storage</small></div>
+        <div class="arch-step">Star schema<small>Analytical model</small></div>
+        <div class="arch-step">Power BI<small>DAX KPIs &amp; dashboards</small></div>
+      </div>
+    </section>
+
+    <!-- 06 / CAPABILITIES -->
+    <section class="case-section alt" id="capabilities">
+      <div class="section-heading">
+        <p class="eyebrow">06 — IMPLEMENTED CAPABILITIES</p>
+        <h2>Four dashboard areas built around flight operations.</h2>
+        <p class="muted">The following capabilities are described in the public project repository and represented in the committed Power BI dashboard screenshots.</p>
+      </div>
+      <div class="case-grid">
+        <article class="case-card"><h3>Executive Overview</h3><p class="muted">A high-level operational view covering total flights, on-time percentage, delay percentage, cancellation rate, total delay minutes, average delay, total distance and average air time.</p></article>
+        <article class="case-card"><h3>Delay Analysis</h3><p class="muted">Analysis of delay trends and categories, worst routes, delay hotspots, airport delay rankings and airline delay rankings.</p></article>
+        <article class="case-card"><h3>Airline Performance</h3><p class="muted">Airline comparisons using on-time performance, delay rate, cancellation rate, operational score, an airline efficiency matrix and top- or bottom-performing airline views.</p></article>
+        <article class="case-card"><h3>Airport Performance</h3><p class="muted">Airport comparisons using operational score, traffic volume, on-time performance, delay rate, airport rankings and geographic visualization through Azure Maps.</p></article>
+        <article class="case-card"><h3>Python ETL &amp; validation</h3><p class="muted">The repository includes scripts for loading data to MySQL, transforming the flight fact table and validating the prepared fact data.</p></article>
+        <article class="case-card"><h3>SQL &amp; dimensional modelling</h3><p class="muted">A MySQL initialization script and star-schema model provide the relational and analytical foundation for the Power BI reporting layer.</p></article>
+      </div>
+    </section>
+
+    <!-- 07 / RELIABILITY -->
+    <section class="case-section" id="reliability">
+      <div class="section-heading">
+        <p class="eyebrow">07 — RELIABILITY &amp; ENGINEERING</p>
+        <h2>Keep data preparation and reporting responsibilities distinct.</h2>
+        <p class="muted">The project repository exposes the main ETL, validation, database and reporting artifacts, making the implementation easier to inspect beyond the dashboard screenshots.</p>
+      </div>
+      <div class="case-grid">
+        <article class="case-card"><h3>Dedicated data scripts</h3><p class="muted">Separate Python files are provided for loading data into MySQL, transforming the flight fact table and validating the fact data rather than placing every task in a single script.</p></article>
+        <article class="case-card"><h3>Relational data foundation</h3><p class="muted">MySQL and the SQL initialization script provide a defined database layer before the data is used in the analytical model and Power BI report.</p></article>
+        <article class="case-card"><h3>Inspectable project artifacts</h3><p class="muted">The public repository includes the Power BI PBIX file, SQL initialization script, Python ETL and validation scripts, dashboard images and a project report PDF.</p></article>
+        <article class="case-card"><h3>Scope &amp; limitations</h3><p class="muted">This is a historical-data Business Intelligence project. The repository describes future enhancements such as real-time flight tracking, predictive delay analysis, weather integration and automated ETL scheduling; these are not presented here as implemented features.</p></article>
+      </div>
+      <p class="muted evidence-note">Scope note: The case study describes the ETL, database model and Power BI reporting artifacts documented in the public repository. It does not claim real-time flight monitoring, predictive modelling or measured operational improvements.</p>
+    </section>
+
+    <!-- 08 / GALLERY & EVIDENCE -->
+    <section class="case-section alt" id="gallery">
+      <div class="section-heading">
+        <p class="eyebrow">08 — DASHBOARD GALLERY &amp; PROJECT EVIDENCE</p>
+        <h2>Explore the actual dashboard views and data model.</h2>
+        <p class="muted">The gallery links to image files committed to the Airport Operations Intelligence Platform repository. Open any image to inspect the full-size project evidence.</p>
+      </div>
+
+      <div class="case-gallery-group">
+        <div class="case-gallery-group-heading">
+          <span class="case-gallery-index">01 / DASHBOARDS</span>
+          <div><h3>Executive overview &amp; delay analysis</h3><p>The high-level operational view and the dashboard focused on delay patterns.</p></div>
+        </div>
+        <div class="case-evidence-gallery">
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/aiop_portfolio_main.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Airport Operations Intelligence overview"><img src="https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/aiop_portfolio_main.png" alt="Airport Operations Intelligence Platform overview" loading="lazy"></a>
+            <figcaption><strong>Project overview</strong><span>Portfolio overview image for the Airport Operations Intelligence Platform.</span></figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/AOIP_Executive%20Dashboard.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Executive dashboard"><img src="https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/AOIP_Executive%20Dashboard.png" alt="Airport Operations Intelligence — Executive Dashboard" loading="lazy"></a>
+            <figcaption><strong>Executive Dashboard</strong><span>Operational KPIs and high-level flight performance indicators.</span></figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/AOIP_Delay_Analysis.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Delay analysis dashboard"><img src="https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/AOIP_Delay_Analysis.png" alt="Airport Operations Intelligence — Delay Analysis dashboard" loading="lazy"></a>
+            <figcaption><strong>Delay Analysis</strong><span>Delay patterns, categories, routes, hotspots and rankings.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="case-gallery-group">
+        <div class="case-gallery-group-heading">
+          <span class="case-gallery-index">02 / DASHBOARDS</span>
+          <div><h3>Airline &amp; airport performance</h3><p>Comparative dashboard views for airline-level and airport-level operational performance.</p></div>
+        </div>
+        <div class="case-evidence-gallery">
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/AOIP_Airline_Performance.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Airline performance dashboard"><img src="https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/AOIP_Airline_Performance.png" alt="Airport Operations Intelligence — Airline Performance dashboard" loading="lazy"></a>
+            <figcaption><strong>Airline Performance</strong><span>Airline-level comparison of operational performance measures.</span></figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/AOIP_Airport_Performance.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Airport performance dashboard"><img src="https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/AOIP_Airport_Performance.png" alt="Airport Operations Intelligence — Airport Performance dashboard" loading="lazy"></a>
+            <figcaption><strong>Airport Performance</strong><span>Airport-level performance, traffic and geographic analysis.</span></figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/AOIP_Model_View.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Power BI model view"><img src="https://raw.githubusercontent.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/main/AOIP_Model_View.png" alt="Airport Operations Intelligence — Power BI model view" loading="lazy"></a>
+            <figcaption><strong>Power BI Model View</strong><span>Model view evidence for the project's dimensional reporting model.</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="case-gallery-report">
+        <div><span class="case-gallery-kicker">PROJECT DOCUMENTATION</span><h3>Airport Operations Intelligence project report</h3><p class="muted">Open the report PDF committed to the repository for the project's supporting documentation.</p></div>
+        <a class="button secondary" href="https://github.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/blob/main/Airport%20Operations%20Intelligence%20Platform%20Project%20Report.pdf" target="_blank" rel="noopener noreferrer">View Project Report ↗</a>
+      </div>
+    </section>
+
+    <!-- 09 / RESOURCES -->
+    <section class="case-section alt" id="resources">
+      <div class="section-heading">
+        <p class="eyebrow">09 — PROJECT RESOURCES</p>
+        <h2>Inspect the implementation, report and Power BI deliverable.</h2>
+        <p class="muted">The public repository contains the source scripts, database setup, dashboard screenshots, PBIX report and supporting project documentation.</p>
+      </div>
+      <div class="case-resource-grid">
+        <a class="case-resource-card" href="https://github.com/M-Shafeek06/Airport-Operations-Intelligence-Platform" target="_blank" rel="noopener noreferrer"><span>SOURCE CODE &amp; PROJECT FILES</span><strong>GitHub Repository ↗</strong><small>Review the project structure, Python scripts and committed artifacts.</small></a>
+        <a class="case-resource-card" href="https://github.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/blob/main/Airport_Operations_Intelligence.pbix" target="_blank" rel="noopener noreferrer"><span>POWER BI REPORT</span><strong>Open PBIX File ↗</strong><small>Access the Power BI report file stored in the repository.</small></a>
+        <a class="case-resource-card" href="https://github.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/blob/main/Initialization.sql" target="_blank" rel="noopener noreferrer"><span>DATABASE SETUP</span><strong>SQL Initialization Script ↗</strong><small>Inspect the MySQL initialization script.</small></a>
+        <a class="case-resource-card" href="https://github.com/M-Shafeek06/Airport-Operations-Intelligence-Platform/blob/main/Airport%20Operations%20Intelligence%20Platform%20Project%20Report.pdf" target="_blank" rel="noopener noreferrer"><span>PROJECT DOCUMENTATION</span><strong>Project Report PDF ↗</strong><small>Read the supporting project report.</small></a>
+      </div>
+      <div class="case-cta case-final-cta">
+        <a class="button primary" href="https://github.com/M-Shafeek06/Airport-Operations-Intelligence-Platform" target="_blank" rel="noopener noreferrer">Explore Full Repository ↗</a>
+        <a class="button secondary" href="index.html#projects">← Back to All Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 M Shafeek</span><span>Airport Operations Intelligence · Aviation Business Intelligence</span></footer>
+  <script>
+(() => {
+  const nav = document.querySelector('.case-nav');
+  const links = [...document.querySelectorAll('.case-section-nav a[href^="#"]')];
+  const sections = links
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+
+  if (!nav || !links.length || !sections.length) return;
+
+  const setActive = (id) => {
+    links.forEach(link => {
+      const active = link.getAttribute('href') === `#${id}`;
+      link.classList.toggle('is-active', active);
+      if (active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  };
+
+  const scrollToSection = (section, updateHistory = true) => {
+    const navHeight = nav.getBoundingClientRect().height;
+    const top = section.getBoundingClientRect().top + window.scrollY - navHeight;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+    if (updateHistory) history.pushState(null, '', `#${section.id}`);
+    setActive(section.id);
+  };
+
+  links.forEach(link => {
+    link.addEventListener('click', event => {
+      const section = document.querySelector(link.getAttribute('href'));
+      if (!section) return;
+      event.preventDefault();
+      scrollToSection(section);
+    });
+  });
+
+  let ticking = false;
+  const updateActiveFromScroll = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const threshold = nav.getBoundingClientRect().height + 48;
+      let current = sections[0];
+      sections.forEach(section => {
+        if (section.getBoundingClientRect().top <= threshold) current = section;
+      });
+      setActive(current.id);
+      ticking = false;
+    });
+  };
+
+  window.addEventListener('scroll', updateActiveFromScroll, { passive: true });
+  window.addEventListener('resize', updateActiveFromScroll);
+  window.addEventListener('popstate', () => {
+    const section = document.querySelector(location.hash);
+    if (section) scrollToSection(section, false);
+  });
+
+  if (location.hash) {
+    const initialSection = document.querySelector(location.hash);
+    if (initialSection) requestAnimationFrame(() => scrollToSection(initialSection, false));
+  } else {
+    updateActiveFromScroll();
+  }
+})();
+</script>
+</body>
 </html>
