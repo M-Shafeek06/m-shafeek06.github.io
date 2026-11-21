@@ -2193,31 +2193,223 @@ body.light-only .future-scope .section-heading > .muted { max-width: 760px; }
 }
 
 
-/* FINAL SECTION LABEL + CAREER ROLE READABILITY REFINEMENT — NOV 21, 2026 */
-#career-interests .opportunity-heading .eyebrow {
-  display: block;
-  margin: 0 0 10px;
-  color: #087f9e;
-  font-size: .78rem;
-  font-weight: 800;
-  letter-spacing: .15em;
-  line-height: 1.4;
-  text-transform: uppercase;
+/* =========================================================
+   FINAL PORTFOLIO REFINEMENTS — 21 NOVEMBER 2026
+   Interests label, numbered section, 5x3 roles, skill motion,
+   and more structured experience/training cards.
+   ========================================================= */
+
+/* The interests heading sits outside the white role card, like About. */
+body.home-page.light-only #career-interests.career-section {
+  padding-top: 48px !important;
+  padding-bottom: 58px !important;
 }
-#career-interests .opportunity-kicker { margin-top: 0; }
+body.home-page.light-only #career-interests > .section-heading {
+  margin: 0 0 26px !important;
+  max-width: 900px;
+}
+body.home-page.light-only #career-interests > .section-heading .eyebrow {
+  margin-bottom: 16px;
+}
+body.home-page.light-only #career-interests > .section-heading h2 {
+  margin: 0 0 12px;
+}
+body.home-page.light-only #career-interests .hero-open-roles {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 27px 30px 30px !important;
+  border: 1px solid #d5e1ee !important;
+  border-radius: 20px !important;
+  background: rgba(255,255,255,.96) !important;
+  box-shadow: 0 16px 38px rgba(27,48,72,.065) !important;
+  box-sizing: border-box !important;
+}
+body.home-page.light-only #career-interests .opportunity-heading {
+  margin: 0 0 18px !important;
+}
+body.home-page.light-only #career-interests .opportunity-heading h3 {
+  margin: 0 !important;
+  color: #1b2b43 !important;
+  font-size: clamp(1.3rem, 2vw, 1.65rem) !important;
+  line-height: 1.3 !important;
+}
+body.home-page.light-only #career-interests .opportunity-grid {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+  align-items: stretch !important;
+}
 body.home-page.light-only #career-interests .opportunity-role {
-  min-height: 58px;
-  padding: 14px 16px 14px 32px;
-  font-size: 1.08rem !important;
-  line-height: 1.48;
-  font-weight: 650;
+  display: flex !important;
+  align-items: center !important;
+  min-width: 0 !important;
+  min-height: 62px !important;
+  padding: 12px 13px !important;
+  border: 1px solid #d8e4ef !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  color: #2f4865 !important;
+  font-size: .94rem !important;
+  font-weight: 650 !important;
+  line-height: 1.4 !important;
+  overflow-wrap: anywhere;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease !important;
 }
-@media (max-width: 640px) {
-  body.home-page.light-only #career-interests .opportunity-role {
-    min-height: 54px;
-    padding: 12px 12px 12px 29px;
-    font-size: .96rem !important;
-    line-height: 1.42;
+body.home-page.light-only #career-interests .opportunity-role::before {
+  content: "";
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  margin-right: 9px;
+  border-radius: 50%;
+  background: #0786a3;
+  box-shadow: 0 0 0 4px rgba(7,134,163,.10);
+}
+body.home-page.light-only #career-interests .opportunity-role:hover {
+  transform: translateY(-4px);
+  border-color: #91c8d7 !important;
+  background: #f4fbfd !important;
+  box-shadow: 0 10px 22px rgba(26,75,96,.09) !important;
+}
+
+/* Skill cards and individual skill chips receive restrained lift effects. */
+body.home-page.light-only #skills .skill-grid article {
+  transform: translateY(0);
+  border: 1px solid #d6e2ef !important;
+  box-shadow: 0 8px 22px rgba(25,48,75,.035);
+  transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease, background .24s ease !important;
+  will-change: transform;
+}
+body.home-page.light-only #skills .skill-grid article:hover {
+  transform: translateY(-7px);
+  border-color: #9ccbd7 !important;
+  box-shadow: 0 18px 34px rgba(25,68,88,.11) !important;
+}
+body.home-page.light-only #skills .skill-pill {
+  transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease !important;
+}
+body.home-page.light-only #skills .skill-pill:hover {
+  transform: translateY(-3px) scale(1.025);
+  border-color: #8fc5d4 !important;
+  background: #edf8fb !important;
+  color: #087f9e !important;
+}
+
+/* Experience and training: clear two-stage timeline cards with focus tags. */
+body.home-page.light-only #experience .timeline {
+  display: grid !important;
+  gap: 18px !important;
+  position: relative;
+}
+body.home-page.light-only #experience .timeline-item {
+  position: relative;
+  display: grid !important;
+  grid-template-columns: 190px minmax(0,1fr) !important;
+  gap: 26px !important;
+  align-items: start !important;
+  padding: 25px 27px !important;
+  border: 1px solid #d8e4ef !important;
+  border-radius: 18px !important;
+  background: rgba(255,255,255,.94) !important;
+  box-shadow: 0 10px 26px rgba(27,48,72,.045) !important;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease !important;
+}
+body.home-page.light-only #experience .timeline-item:hover {
+  transform: translateY(-4px);
+  border-color: #a8cfda !important;
+  box-shadow: 0 17px 32px rgba(27,66,84,.09) !important;
+}
+body.home-page.light-only #experience .timeline-item > .date {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #c8e3ea;
+  border-radius: 10px;
+  background: #eff9fb;
+  color: #087f9e !important;
+  font-size: .78rem !important;
+  font-weight: 800;
+  letter-spacing: .045em;
+  line-height: 1.4;
+}
+body.home-page.light-only #experience .timeline-item .project-number {
+  margin: 0 0 9px !important;
+  color: #0786a3 !important;
+}
+body.home-page.light-only #experience .timeline-item h3 {
+  margin: 0 0 12px !important;
+  color: #1b2b43 !important;
+  font-size: 1.25rem !important;
+  line-height: 1.4 !important;
+}
+body.home-page.light-only #experience .timeline-item ul {
+  margin: 0 !important;
+  padding-left: 19px !important;
+  color: #536b84 !important;
+  line-height: 1.75 !important;
+}
+body.home-page.light-only #experience .timeline-item li + li {
+  margin-top: 7px;
+}
+body.home-page.light-only #experience .experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 17px;
+}
+body.home-page.light-only #experience .experience-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 10px;
+  border: 1px solid #d7e5ef;
+  border-radius: 999px;
+  background: #f7fafc;
+  color: #49627d;
+  font-size: .76rem;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+/* Section anchors remain comfortably visible below the sticky navigation. */
+body.home-page.light-only main section[id] {
+  scroll-margin-top: 112px;
+}
+
+/* Responsive role matrix: desktop 5 columns, tablet 3, phone 2/1. */
+@media (max-width: 1180px) {
+  body.home-page.light-only #career-interests .opportunity-grid {
+    grid-template-columns: repeat(3, minmax(0,1fr)) !important;
   }
-  #career-interests .opportunity-heading .eyebrow { font-size: .72rem; }
+}
+@media (max-width: 760px) {
+  body.home-page.light-only #career-interests .opportunity-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+  }
+  body.home-page.light-only #experience .timeline-item {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    padding: 21px !important;
+  }
+}
+@media (max-width: 480px) {
+  body.home-page.light-only #career-interests .opportunity-grid {
+    grid-template-columns: 1fr !important;
+  }
+  body.home-page.light-only #career-interests .hero-open-roles {
+    padding: 20px 17px !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body.home-page.light-only #skills .skill-grid article,
+  body.home-page.light-only #skills .skill-pill,
+  body.home-page.light-only #experience .timeline-item,
+  body.home-page.light-only #career-interests .opportunity-role {
+    transition: none !important;
+    transform: none !important;
+  }
 }
