@@ -1,118 +1,179 @@
-# M Shafeek — Data Analyst Portfolio
+# M Shafeek --- Data Analyst Portfolio
 
-A professional portfolio showcasing data analytics projects, business intelligence solutions, and practical experience across Python, SQL, Power BI, and decision intelligence.
+A professional portfolio showcasing data analytics projects, business
+intelligence solutions, and practical experience across Python, SQL,
+Power BI, and decision intelligence.
 
 ## Portfolio
 
-**Live Website:**  
+**Live Website:**\
 https://m-shafeek06.github.io/
 
 ## Featured Projects
 
-- **Airport Operations Intelligence Platform** — End-to-end analytics solution using Python ETL, MySQL, dimensional modeling, DAX, and Power BI.
-- **Healthcare Operations Intelligence** — Healthcare business intelligence solution covering clinical, operational, and financial reporting through a 17-table analytical model and nine dashboard modules.
-- **InsightForge AI** — Deployed business analytics and decision intelligence platform for CSV/XLSX profiling, data-quality assessment, deterministic analytics, visualizations, evidence-backed insights, and business analysis planning.
-- **USA Airline Service Analysis** — Power BI analysis of airline performance, flight volume, on-time performance, delays, cancellations, and trends.
-- **Sales Data Analysis** — SQL-based sales analysis covering product, region, category, and time-based performance.
-- **Road Accident Analysis** — Excel-based analysis of road accident patterns, supported by a project report.
-- **Uber Trip Analysis** — Power BI analysis of trip patterns, time-based trends, and trip details.
-- **Heart Disease Analysis** — Power BI exploration of healthcare data patterns and indicators.
-- **AgriChainTrust** — Technical project combining a MERN application with blockchain-based supply-chain verification.
+-   **Airport Operations Intelligence Platform** --- End-to-end
+    analytics solution using Python ETL, MySQL, dimensional modeling,
+    DAX, and Power BI.
+-   **Healthcare Operations Intelligence** --- Healthcare business
+    intelligence solution covering clinical, operational, and financial
+    reporting through a 17-table analytical model and nine dashboard
+    modules.
+-   **InsightForge AI** --- Deployed business analytics and decision
+    intelligence platform for CSV/XLSX profiling, data-quality
+    assessment, deterministic analytics, visualizations, evidence-backed
+    insights, and business analysis planning.
+-   **USA Airline Service Analysis** --- Power BI analysis of airline
+    performance, flight volume, on-time performance, delays,
+    cancellations, and trends.
+-   **Sales Data Analysis** --- SQL-based sales analysis covering
+    product, region, category, and time-based performance.
+-   **Road Accident Analysis** --- Excel-based analysis of road accident
+    patterns, supported by a project report.
+-   **Uber Trip Analysis** --- Power BI analysis of trip patterns,
+    time-based trends, and trip details.
+-   **Heart Disease Analysis** --- Power BI exploration of healthcare
+    data patterns and indicators.
+-   **AgriChainTrust** --- Technical project combining a MERN
+    application with blockchain-based supply-chain verification.
 
 ## Technical Skills
 
-**Analytics & Programming**
-- Python
-- SQL
-- Pandas
-- NumPy
-- MySQL
-- Microsoft SQL Server
+### Analytics & Programming
 
-**Business Intelligence**
-- Power BI
-- DAX
-- Power Query
-- Power BI Service
-- Data Modeling
-- KPI Development
+-   Python
+-   SQL
+-   Pandas
+-   NumPy
+-   MySQL
+-   Microsoft SQL Server
 
-**Data Preparation & Visualization**
-- Data Cleaning
-- ETL
-- Exploratory Data Analysis
-- Matplotlib
-- Seaborn
-- Excel
-- Jupyter Notebook
+### Business Intelligence
 
-**Tools & Application Development**
-- VS Code
-- Git
-- GitHub
-- Next.js
-- TypeScript
-- FastAPI
-- DuckDB
-- Plotly
+-   Power BI
+-   DAX
+-   Power Query
+-   Power BI Service
+-   Data Modeling
+-   KPI Development
+
+### Data Preparation & Visualization
+
+-   Data Cleaning
+-   ETL
+-   Exploratory Data Analysis
+-   Matplotlib
+-   Seaborn
+-   Excel
+-   Jupyter Notebook
+
+### Tools & Application Development
+
+-   VS Code
+-   Git
+-   GitHub
+-   Next.js
+-   TypeScript
+-   FastAPI
+-   DuckDB
+-   Plotly
 
 ## Project Repositories
 
-- [Airport Operations Intelligence Platform](https://github.com/M-Shafeek06/Airport-Operations-Intelligence-Platform)
-- [Healthcare Operations Intelligence](https://github.com/M-Shafeek06/Healthcare-Operations-Intelligence)
-- [InsightForge AI](https://github.com/M-Shafeek06/insightforge-ai)
-- [USA Airline Service Analysis](https://github.com/M-Shafeek06/Usa_Airline_Service_Analysis)
-- [Sales Data Analysis](https://github.com/M-Shafeek06/Sales-Data-Analysis)
-- [Road Accident Analysis](https://github.com/M-Shafeek06/Road-Accident-Analysis)
-- [Uber Trip Analysis](https://github.com/M-Shafeek06/Uber-Trip-Analysis)
-- [Heart Disease Analysis](https://github.com/M-Shafeek06/Heart-Disease-Analysis)
-- [AgriChainTrust — Frontend](https://github.com/M-Shafeek06/agrichain-frontend)
-- [AgriChainTrust — Backend](https://github.com/M-Shafeek06/agrichain-backend)
+-   [Airport Operations Intelligence
+    Platform](https://github.com/M-Shafeek06/Airport-Operations-Intelligence-Platform)
+-   [Healthcare Operations
+    Intelligence](https://github.com/M-Shafeek06/Healthcare-Operations-Intelligence)
+-   [InsightForge AI](https://github.com/M-Shafeek06/insightforge-ai)
+-   [USA Airline Service
+    Analysis](https://github.com/M-Shafeek06/Usa_Airline_Service_Analysis)
+-   [Sales Data
+    Analysis](https://github.com/M-Shafeek06/Sales-Data-Analysis)
+-   [Road Accident
+    Analysis](https://github.com/M-Shafeek06/Road-Accident-Analysis)
+-   [Uber Trip
+    Analysis](https://github.com/M-Shafeek06/Uber-Trip-Analysis)
+-   [Heart Disease
+    Analysis](https://github.com/M-Shafeek06/Heart-Disease-Analysis)
+-   [AgriChainTrust ---
+    Frontend](https://github.com/M-Shafeek06/agrichain-frontend)
+-   [AgriChainTrust ---
+    Backend](https://github.com/M-Shafeek06/agrichain-backend)
 
-## InsightForge AI — Live Resources
+## InsightForge AI --- Live Resources
 
-- [Live Application](https://insightforge-ai-chi.vercel.app/)
-- [Backend API](https://insightforge-ai-r64p.onrender.com)
-- [API Documentation](https://insightforge-ai-r64p.onrender.com/docs)
+-   [Live Application](https://insightforge-ai-chi.vercel.app/)
+-   [Backend API](https://insightforge-ai-r64p.onrender.com)
+-   [API Documentation](https://insightforge-ai-r64p.onrender.com/docs)
 
 ## Experience
 
-**Data Analyst Intern — REVAMP**  
-May 2025 – September 2025
+**Data Analyst Intern --- REVAMP**\
+May 2025 -- September 2025
 
-**Data Analyst Intern — Edu Tantr**  
-June 2025 – August 2025
+**Data Analyst Intern --- Edu Tantr**\
+June 2025 -- August 2025
 
 ## Education
 
-**B.Tech (Honours) — Artificial Intelligence and Data Science**  
-Dhaanish Ahmed Institute of Technology, Coimbatore  
-2022 – 2026 | CGPA: 8.73
+**B.Tech (Honours) --- Artificial Intelligence and Data Science**\
+Dhaanish Ahmed Institute of Technology, Coimbatore\
+2022 -- 2026 \| CGPA: 8.73
 
 ## Certifications
 
-- Complete Data Analyst Bootcamp from Basics to Advanced — Udemy | September 2026
-- Data Science and Data Analytics — REVAMP | September 2025
-- Data Analytics — Edu Tantr | August 2025
-- Data Analytics — MarcelloTech Trichy | September 2024
+-   Complete Data Analyst Bootcamp from Basics to Advanced --- Udemy \|
+    September 2026
+-   Data Science and Data Analytics --- REVAMP \| September 2025
+-   Data Analytics --- Edu Tantr \| August 2025
+-   Data Analytics --- MarcelloTech Trichy \| September 2024
 
 ## Career Interests
 
-Open to suitable opportunities as a Junior Data Analyst, BI Analyst, Business Analyst, or Reporting Analyst.
+Open to suitable opportunities as a Junior Data Analyst, BI Analyst,
+Business Analyst, or Reporting Analyst.
+
+The homepage identifies **Junior Data Analyst** as the primary target
+role and lists 14 additional entry-level role preferences with relevant
+skills. This list communicates job preferences, not claimed specialist
+experience in each role.
 
 ## Connect
 
-- [LinkedIn](https://www.linkedin.com/in/m-shafeek/)
-- [GitHub](https://github.com/M-Shafeek06)
+-   [LinkedIn](https://www.linkedin.com/in/m-shafeek/)
+-   [GitHub](https://github.com/M-Shafeek06)
 
+## Publishing Updates to GitHub Pages
 
-The homepage identifies Junior Data Analyst as the primary target role and lists 14 additional entry-level role preferences with relevant skills. The role list communicates job preferences, not claimed specialist experience in each role.
+These files are a prepared local build. Downloading or updating the
+files locally does **not** update the live website automatically.
 
+To publish the changes:
 
-## Publishing these updates to GitHub Pages
+1.  Open the repository:
+    [M-Shafeek06/m-shafeek06.github.io](https://github.com/M-Shafeek06/m-shafeek06.github.io).
+2.  Extract the updated portfolio files.
+3.  Upload or commit the contents to the repository root.
+4.  Replace the existing `index.html` and `style.css`.
+5.  Retain the project HTML pages and `resume.pdf`.
+6.  Wait for GitHub Pages to finish deploying.
+7.  Open the live website and hard-refresh the browser using **Ctrl +
+    F5**.
 
-These files are a prepared local build; downloading the ZIP does not update the live website automatically. Extract the ZIP and upload/commit the contents to the root of `M-Shafeek06/m-shafeek06.github.io`, replacing the existing `index.html` and `style.css` and retaining the project pages and `resume.pdf`. Wait for GitHub Pages to redeploy, then hard-refresh the site (Ctrl+F5).
+## Profile Image
 
-### Profile image
+The homepage checks for the following filenames in the site root:
 
-The homepage checks for `M_Shafeek.png`, `.jpg`, `.jpeg`, or `.webp` in the site root first, then checks the same filenames in the `main` and `master` branches of the portfolio and InsightForge repositories. For the most reliable result, place the actual portrait image in this repository root and name it `M_Shafeek.png` (or update the filename in `index.html`). If the image is not found, the initials fallback is shown.
+-   `M_Shafeek.png`
+-   `M_Shafeek.jpg`
+-   `M_Shafeek.jpeg`
+-   `M_Shafeek.webp`
+
+If the image is not found in the site root, the homepage checks for the
+same filenames in the `main` and `master` branches of the portfolio and
+InsightForge repositories.
+
+For the most reliable result, place the portrait image in the portfolio
+repository root and name it `M_Shafeek.png`, or update the filename
+reference in `index.html`.
+
+If no image is found, the homepage displays the initials fallback.
