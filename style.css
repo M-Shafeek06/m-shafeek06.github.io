@@ -3043,3 +3043,53 @@ body.home-page.light-only #contact .contact-card .actions { justify-content: cen
   .insightforge-case .case-resource-card{transition:none}
   .insightforge-case .case-resource-card:hover{transform:none}
 }
+
+
+/* ==========================================================
+   INSIGHTFORGE AI — FINAL NAVIGATION & ANCHOR ALIGNMENT FIX
+   Keep the back control as a plain arrow and align each
+   section heading directly beneath the sticky navigation.
+   ========================================================== */
+.insightforge-case {
+  scroll-padding-top: 96px;
+}
+.insightforge-case .case-nav .case-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  min-width: 30px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #087f9f;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: none;
+}
+.insightforge-case .case-nav .case-back:hover,
+.insightforge-case .case-nav .case-back:focus-visible {
+  border: 0;
+  background: transparent;
+  color: #006f8d;
+  transform: translateX(-2px);
+  outline-offset: 4px;
+}
+.insightforge-case .case-nav-left {
+  gap: 18px;
+}
+.insightforge-case main section[id] {
+  scroll-margin-top: 96px;
+}
+.insightforge-case main section[id]:target {
+  padding-top: 22px !important;
+}
+@media (max-width: 760px) {
+  .insightforge-case { scroll-padding-top: 112px; }
+  .insightforge-case main section[id] { scroll-margin-top: 112px; }
+  .insightforge-case main section[id]:target { padding-top: 20px !important; }
+}
