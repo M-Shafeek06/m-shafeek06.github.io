@@ -114,42 +114,70 @@
 
 const sections=[...document.querySelectorAll('main section[id]')];
 const links=[...document.querySelectorAll('header.nav nav a')];
-const initialHash=window.location.hash;
-if(initialHash){
-  const initialTarget=document.querySelector(initialHash);
-  if(initialTarget){
-    requestAnimationFrame(()=>{
-      initialTarget.scrollIntoView({block:'start'});
-      // Keep the hash so the CSS :target alignment rule stays active.
-      history.replaceState(null,'','#'+initialTarget.id);
+const header=document.querySelector('header.nav');
+
+// Align the visible section label itself exactly 5px below the sticky navbar.
+// This avoids the extra internal section padding that scrollIntoView() leaves
+// between the navbar and the heading.
+function alignSection(target, behavior='smooth') {
+  if (!target) return;
+
+  const heading =
+    target.querySelector('.section-heading') ||
+    target.querySelector('.contact-section-label') ||
+    target;
+
+  const headerHeight = header ? header.getBoundingClientRect().height : 0;
+  const targetTop = window.scrollY + heading.getBoundingClientRect().top;
+  const destination = Math.max(0, targetTop - headerHeight - 5);
+
+  window.scrollTo({ top: destination, behavior });
+}
+
+function navigateToSection(target, behavior='smooth') {
+  if (!target) return;
+  history.replaceState(null, '', '#' + target.id);
+  alignSection(target, behavior);
+}
+
+// Correctly position a section when the page is opened with a hash.
+if (window.location.hash) {
+  const initialTarget = document.querySelector(window.location.hash);
+  if (initialTarget) {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => alignSection(initialTarget, 'instant'));
     });
   }
 }
-const internalLinks=[...document.querySelectorAll('a[href^="#"]')];
-internalLinks.forEach(a=>a.addEventListener('click',e=>{
-  const target=document.querySelector(a.getAttribute('href'));
-  if(target){
-    e.preventDefault();
-    target.scrollIntoView({behavior:'smooth',block:'start'});
-    // The :target selector removes the default section top padding
-    // and places the heading 5px below the sticky navbar.
-    history.replaceState(null,'','#'+target.id);
-  }
-}));
 
-// Also normalize root-relative section links when returning from a case study.
-const rootSectionLinks=[...document.querySelectorAll('a[href^="/#"]')];
-rootSectionLinks.forEach(a=>a.addEventListener('click',e=>{
-  const hash=a.getAttribute('href').slice(1);
-  const target=document.querySelector(hash);
-  if(target){
-    e.preventDefault();
-    target.scrollIntoView({behavior:'smooth',block:'start'});
-    // The :target selector removes the default section top padding
-    // and places the heading 5px below the sticky navbar.
-    history.replaceState(null,'','#'+target.id);
-  }
-}));
+// Handle normal in-page navigation links.
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      navigateToSection(target);
+    }
+  });
+});
+
+// Also handle root-relative section links when returning from a case study.
+document.querySelectorAll('a[href^="/#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href').slice(1));
+    if (target) {
+      e.preventDefault();
+      navigateToSection(target);
+    }
+  });
+});
+
+// Keep browser back/forward hash navigation aligned to the same 5px offset.
+window.addEventListener('hashchange', () => {
+  const target = document.querySelector(window.location.hash);
+  if (target) requestAnimationFrame(() => alignSection(target, 'instant'));
+});
+
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{
   if(e.isIntersecting){
     const id=e.target.id;
