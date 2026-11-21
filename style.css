@@ -2191,3 +2191,33 @@ body.light-only .future-scope .section-heading > .muted { max-width: 760px; }
     padding-bottom: 58px;
   }
 }
+
+
+/* FINAL SECTION LABEL + CAREER ROLE READABILITY REFINEMENT — NOV 21, 2026 */
+#career-interests .opportunity-heading .eyebrow {
+  display: block;
+  margin: 0 0 10px;
+  color: #087f9e;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .15em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+#career-interests .opportunity-kicker { margin-top: 0; }
+body.home-page.light-only #career-interests .opportunity-role {
+  min-height: 58px;
+  padding: 14px 16px 14px 32px;
+  font-size: 1.08rem !important;
+  line-height: 1.48;
+  font-weight: 650;
+}
+@media (max-width: 640px) {
+  body.home-page.light-only #career-interests .opportunity-role {
+    min-height: 54px;
+    padding: 12px 12px 12px 29px;
+    font-size: .96rem !important;
+    line-height: 1.42;
+  }
+  #career-interests .opportunity-heading .eyebrow { font-size: .72rem; }
+}
