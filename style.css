@@ -1955,3 +1955,113 @@ body.home-page.light-only .certification-grid .development-card .button {
   body.home-page.light-only #skills .skill-grid article { min-height: 0 !important; }
   body.home-page.light-only .hero-open-roles { padding: 19px !important; }
 }
+
+
+/* =========================================================
+   PORTFOLIO REFINEMENT — 21 NOV 2026
+   Career panel is a full-width row beneath the hero columns.
+   Skills use a clear primary-to-supporting visual hierarchy.
+   ========================================================= */
+body.home-page.light-only .hero-open-roles {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 36px 0 0 !important;
+  align-self: stretch;
+  box-sizing: border-box;
+}
+
+body.home-page.light-only .hero-open-roles .opportunity-heading {
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+body.home-page.light-only .hero-open-roles .opportunity-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+body.home-page.light-only .skill-grid article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+body.home-page.light-only .skill-list {
+  align-content: flex-start;
+  align-items: center;
+  gap: 9px;
+  margin-top: 16px;
+}
+
+body.home-page.light-only .skill-pill.primary-skill {
+  padding: 8px 12px;
+  border-color: #b9dce7;
+  background: #edf8fb;
+  color: #17617a;
+  font-size: .86rem;
+  line-height: 1.25;
+  font-weight: 750;
+}
+
+body.home-page.light-only .skill-pill.supporting-skill {
+  padding: 6px 10px;
+  background: #f7f9fc;
+  color: #60758c;
+  font-size: .73rem;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+body.home-page.light-only .timeline-item ul {
+  color: #526982;
+  line-height: 1.75;
+}
+
+body.home-page.light-only .timeline-item li + li {
+  margin-top: 7px;
+}
+
+body.home-page.light-only .certification-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+body.home-page.light-only .certification-grid .development-card {
+  min-height: 190px;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+body.home-page.light-only .certification-grid .development-card h3 {
+  line-height: 1.35;
+}
+
+@media (max-width: 1050px) {
+  body.home-page.light-only .hero-open-roles .opportunity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  body.home-page.light-only .certification-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  body.home-page.light-only .hero-open-roles {
+    margin-top: 26px !important;
+    padding: 22px 18px !important;
+  }
+  body.home-page.light-only .hero-open-roles .opportunity-grid {
+    grid-template-columns: 1fr;
+  }
+  body.home-page.light-only .skill-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  body.home-page.light-only .certification-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
