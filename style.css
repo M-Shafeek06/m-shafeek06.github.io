@@ -2113,3 +2113,81 @@ body.light-only .future-scope .section-heading > .muted { max-width: 760px; }
   body.light-only .case-section .muted,
   body.light-only .case-card p { font-size: .96rem; }
 }
+
+
+/* =========================================================
+   SECTION ORDER REFINEMENT — NOVEMBER 21, 2026
+   About → Career Interests → Skills → Experience → Projects
+   → Certifications → Education → Contact
+   ========================================================= */
+#career-interests.career-section {
+  padding-top: 48px;
+  padding-bottom: 54px;
+}
+#career-interests .hero-open-roles {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 28px 30px 30px;
+  border: 1px solid #d8e4ef;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .9);
+  box-shadow: 0 14px 38px rgba(28, 48, 75, .055);
+}
+#career-interests .opportunity-heading {
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+#career-interests .opportunity-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+#certifications.certifications-section {
+  padding-top: 78px;
+  padding-bottom: 82px;
+}
+#certifications .certifications-block {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+#certifications .certifications-block > .section-heading {
+  margin-bottom: 26px;
+}
+#certifications .certification-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+#certifications .certification-grid .development-card {
+  min-width: 0;
+}
+@media (max-width: 900px) {
+  #career-interests .opportunity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  #certifications .certification-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  #career-interests.career-section {
+    padding-top: 34px;
+    padding-bottom: 38px;
+  }
+  #career-interests .hero-open-roles {
+    padding: 20px 17px;
+  }
+  #career-interests .opportunity-heading {
+    align-items: flex-start;
+  }
+  #career-interests .opportunity-grid,
+  #certifications .certification-grid {
+    grid-template-columns: 1fr;
+  }
+  #certifications.certifications-section {
+    padding-top: 54px;
+    padding-bottom: 58px;
+  }
+}
