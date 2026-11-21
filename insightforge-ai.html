@@ -1,60 +1,208 @@
 <!DOCTYPE html>
-
-<!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>InsightForge AI | M Shafeek</title>
-<meta content="InsightForge AI — a deployed business analytics and decision intelligence platform by M Shafeek." name="description"/>
-<link href="style.css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InsightForge AI | M Shafeek</title>
+  <meta name="description" content="Case study: designing and building InsightForge AI, a deployed business analytics and decision-intelligence platform for dataset profiling, data-quality assessment, analytical execution and business interpretation.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="light-only insightforge-case">
-<div aria-hidden="true" class="background-lines"><span></span><span></span><span></span><span></span></div>
-<header aria-label="Project case study navigation" class="case-nav"><div class="case-nav-left"><a class="case-brand" href="index.html#home">M SHAFEEK</a><a aria-label="Back to all projects" class="case-back" href="index.html#projects">← Back to Projects</a></div><nav aria-label="On this page" class="case-section-nav"><a href="#overview">Overview</a><a href="#challenge">Challenge</a><a href="#workflow">Workflow</a><a href="#capabilities">Capabilities</a><a href="#architecture-diagram">Architecture</a><a href="#reliability">Reliability</a><a href="#resources">Resources</a></nav></header>
-<main>
+  <div aria-hidden="true" class="background-lines"><span></span><span></span><span></span><span></span></div>
 
+  <header class="case-nav" aria-label="InsightForge AI case study navigation">
+    <div class="case-nav-left">
+      <a class="case-back" href="index.html#projects" aria-label="Back to the projects section">← Back to Projects</a>
+      <a class="case-brand" href="index.html#home">M SHAFEEK</a>
+    </div>
+    <nav class="case-section-nav" aria-label="Sections in this case study">
+      <a href="#overview">Overview</a>
+      <a href="#objective">Objective</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#design">Design</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#reliability">Reliability</a>
+      <a href="#resources">Resources</a>
+    </nav>
+  </header>
 
+  <main>
+    <!-- 01 / OVERVIEW -->
+    <section class="case-section case-hero" id="overview">
+      <div class="case-hero-grid">
+        <div class="case-hero-copy">
+          <p class="eyebrow">BUSINESS ANALYTICS · DECISION INTELLIGENCE · CASE STUDY</p>
+          <h1>InsightForge <span>AI</span></h1>
+          <p class="lead">I designed and built a deployed analytics platform that helps users move from raw CSV and Excel files to structured data understanding, reliable quality checks, executable analysis and business-facing explanations — within one connected workflow.</p>
+          <div class="case-meta" aria-label="Technology stack">
+            <span>Next.js</span><span>React</span><span>TypeScript</span><span>Plotly</span>
+            <span>FastAPI</span><span>Python</span><span>Pandas</span><span>DuckDB</span><span>PostgreSQL</span>
+          </div>
+          <div class="case-proofline" aria-label="Project highlights">
+            <span><strong>End-to-end product build</strong>Frontend, API and analytics</span>
+            <span><strong>Deterministic quality checks</strong>Transparent data validation</span>
+            <span><strong>Decision support</strong>KPIs, visual analysis and interpretation</span>
+          </div>
+          <div class="case-cta">
+            <a class="button primary" href="https://insightforge-ai-chi.vercel.app/" target="_blank" rel="noopener noreferrer">Open Live Application ↗</a>
+            <a class="button secondary" href="https://github.com/M-Shafeek06/insightforge-ai" target="_blank" rel="noopener noreferrer">View Repository ↗</a>
+            <a class="button secondary" href="https://insightforge-ai-gskd.onrender.com/docs" target="_blank" rel="noopener noreferrer">API Documentation ↗</a>
+          </div>
+        </div>
 
+        <aside class="project-snapshot" aria-label="InsightForge AI product summary">
+          <div>
+            <span class="snapshot-kicker">INSIGHTFORGE AI · DEPLOYED MVP</span>
+            <p class="snapshot-title">From raw data to <span>clearer decisions.</span></p>
+          </div>
+          <div class="snapshot-grid">
+            <div><strong>UNDERSTAND</strong><small>PROFILE DATA</small></div>
+            <div><strong>ASSESS</strong><small>DATA QUALITY</small></div>
+            <div><strong>ANALYZE</strong><small>RUN OPERATIONS</small></div>
+            <div><strong>EXPLAIN</strong><small>BUSINESS CONTEXT</small></div>
+          </div>
+        </aside>
+      </div>
+    </section>
 
+    <!-- 02 / OBJECTIVE -->
+    <section class="case-section alt" id="objective">
+      <div class="section-heading">
+        <p class="eyebrow">02 — BUSINESS CONTEXT &amp; OBJECTIVE</p>
+        <h2>Connect the steps between receiving a dataset and making sense of its results.</h2>
+        <p class="muted">The project focuses on a common analytics challenge: the work required before a chart or KPI can be trusted and communicated clearly.</p>
+      </div>
+      <div class="case-grid">
+        <article class="case-card">
+          <p class="case-card-kicker">THE CHALLENGE</p>
+          <h3>Analysis can become fragmented.</h3>
+          <p class="muted">Working with an unfamiliar dataset often means switching between tools to inspect its structure, locate quality issues, decide which analysis is appropriate, execute calculations and explain the output. When these steps are disconnected, it is harder to maintain a clear line from source data to business interpretation.</p>
+        </article>
+        <article class="case-card">
+          <p class="case-card-kicker">THE OBJECTIVE</p>
+          <h3>Build one guided analytics workflow.</h3>
+          <p class="muted">InsightForge AI brings dataset profiling, deterministic quality assessment, cleaning support, business analysis planning, analytical execution, interactive visualizations and AI-assisted interpretation into one application. The goal is to make each stage visible and help users understand how an output was produced.</p>
+        </article>
+      </div>
+    </section>
 
+    <!-- 03 / ARCHITECTURE -->
+    <section class="case-section" id="architecture">
+      <div class="section-heading">
+        <p class="eyebrow">03 — SYSTEM ARCHITECTURE</p>
+        <h2>A separated frontend and backend, connected through clear API boundaries.</h2>
+        <p class="muted">The frontend handles the user experience and communicates with backend services through API requests. The backend coordinates validation, data processing, analytical operations, persistence and AI-assisted interpretation.</p>
+      </div>
+      <figure class="ifai-architecture-figure">
+        <a href="https://raw.githubusercontent.com/M-Shafeek06/insightforge-ai/main/InsightForge%20AI%20Workflow%20Architecture.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full InsightForge AI system architecture diagram">
+          <img src="https://raw.githubusercontent.com/M-Shafeek06/insightforge-ai/main/InsightForge%20AI%20Workflow%20Architecture.png" alt="System architecture diagram for InsightForge AI, showing the application components and their relationships" loading="lazy">
+        </a>
+        <figcaption><strong>System architecture</strong><span>Repository source: InsightForge AI Workflow Architecture.png</span></figcaption>
+      </figure>
+      <div class="case-grid case-grid-architecture">
+        <article class="case-card"><h3>Frontend layer</h3><p class="muted">Next.js, React and TypeScript deliver the application interface, while Plotly presents interactive analytical visualizations.</p></article>
+        <article class="case-card"><h3>API &amp; processing layer</h3><p class="muted">Python, FastAPI and Pydantic handle API and validation responsibilities. Pandas, NumPy and DuckDB support data processing and analytical execution.</p></article>
+        <article class="case-card"><h3>Persistence layer</h3><p class="muted">PostgreSQL stores application records, with SQLAlchemy and the PostgreSQL driver supporting database operations.</p></article>
+        <article class="case-card"><h3>Deployment layer</h3><p class="muted">The public frontend is deployed on Vercel and the backend API is hosted on Render, with managed PostgreSQL provided through Neon.</p></article>
+      </div>
+    </section>
 
+    <!-- 04 / DESIGN -->
+    <section class="case-section alt" id="design">
+      <div class="section-heading">
+        <p class="eyebrow">04 — PRODUCT &amp; ANALYTICS DESIGN</p>
+        <h2>Make the analytical process understandable, not just the final chart.</h2>
+        <p class="muted">The product is organized around a sequence of analyst tasks. Each stage gives users a clearer view of the dataset, the checks performed and the analytical options available before they interpret the result.</p>
+      </div>
+      <div class="case-grid">
+        <article class="case-card"><h3>Dataset-first experience</h3><p class="muted">Start with file structure, dimensions, column types, semantic classifications and missing-value information so the user can understand the data before selecting an analysis.</p></article>
+        <article class="case-card"><h3>Visible quality assessment</h3><p class="muted">Surface data-quality issues as explicit findings, with severity and context, instead of hiding data limitations behind a dashboard.</p></article>
+        <article class="case-card"><h3>Analysis tied to the question</h3><p class="muted">The Business Analysis Planner translates a stated business objective into suggested KPIs, relevant columns and analytical approaches. Suggestions remain distinct from calculations that have actually been executed.</p></article>
+        <article class="case-card"><h3>Results with context</h3><p class="muted">Present results through KPI summaries, charts and tables, alongside explanations that remain grounded in the executed analysis and its limitations.</p></article>
+      </div>
+      <div class="case-design-note">
+        <span class="case-design-note-label">DESIGN PRINCIPLE</span>
+        <p>Show what the data says, make the analytical steps visible, and distinguish calculated results from suggested next steps.</p>
+      </div>
+    </section>
 
+    <!-- 05 / WORKFLOW -->
+    <section class="case-section" id="workflow">
+      <div class="section-heading">
+        <p class="eyebrow">05 — END-TO-END WORKFLOW</p>
+        <h2>Understand → Clean → Analyze → Visualize → Explain → Decide.</h2>
+        <p class="muted">The workflow diagram documents the product journey from data ingestion and profiling through quality assessment, cleaning, business planning, analytical execution and visual interpretation.</p>
+      </div>
+      <figure class="ifai-architecture-figure ifai-workflow-figure">
+        <a href="https://raw.githubusercontent.com/M-Shafeek06/insightforge-ai/main/InsightForge%20AI%20Project%20Workflow%202.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full InsightForge AI project workflow diagram">
+          <img src="https://raw.githubusercontent.com/M-Shafeek06/insightforge-ai/main/InsightForge%20AI%20Project%20Workflow%202.png" alt="InsightForge AI end-to-end workflow from dataset upload and profiling to analysis, visualization and interpretation" loading="lazy">
+        </a>
+        <figcaption><strong>End-to-end project workflow</strong><span>Repository source: InsightForge AI Project Workflow 2.png</span></figcaption>
+      </figure>
+      <div class="architecture case-workflow-steps" aria-label="Simplified workflow stages">
+        <div class="arch-step">Ingest<small>CSV / Excel</small></div>
+        <div class="arch-step">Understand<small>Profile &amp; classify</small></div>
+        <div class="arch-step">Assess<small>Quality checks</small></div>
+        <div class="arch-step">Prepare<small>Cleaning &amp; planning</small></div>
+        <div class="arch-step">Analyze<small>KPIs &amp; statistics</small></div>
+        <div class="arch-step">Communicate<small>Charts &amp; interpretation</small></div>
+      </div>
+    </section>
 
-<section class="case-section case-hero" id="overview"><div class="case-hero-grid"><div>
-<p class="eyebrow">DECISION INTELLIGENCE · PROJECT CASE STUDY</p>
-<h1>InsightForge <span>AI</span></h1>
-<p class="lead">An end-to-end business analytics application built to turn raw CSV and Excel files into structured understanding, reliable quality checks, actionable analysis and clear business-facing explanations.</p>
-<div class="case-meta"><span>Next.js</span><span>TypeScript</span><span>Plotly</span><span>FastAPI</span><span>Python</span><span>Pandas</span><span>DuckDB</span><span>PostgreSQL</span></div>
-<div class="case-value-strip"><div class="case-value-item"><strong>End-to-end build</strong><span>Frontend + API + analytics</span></div><div class="case-value-item"><strong>Data quality first</strong><span>Deterministic validation</span></div><div class="case-value-item"><strong>Decision support</strong><span>KPIs, visuals + interpretation</span></div></div><div class="case-cta"><a class="button primary" href="https://insightforge-ai-chi.vercel.app/" rel="noopener" target="_blank">Open Live Application ↗</a><a class="button secondary" href="https://github.com/M-Shafeek06/insightforge-ai" rel="noopener" target="_blank">View Repository ↗</a><a class="button secondary" href="https://insightforge-ai-gskd.onrender.com/docs" rel="noopener" target="_blank">API Documentation ↗</a></div>
-</div><div class="project-snapshot"><div><span class="snapshot-kicker">INSIGHTFORGE AI · MVP</span><p class="snapshot-title">From raw data to <span>clearer decisions.</span></p></div><div class="snapshot-grid"><div><strong>UPLOAD</strong><small>CSV / XLSX</small></div><div><strong>ASSESS</strong><small>DATA QUALITY</small></div><div><strong>ANALYZE</strong><small>DETERMINISTIC</small></div><div><strong>EXPLAIN</strong><small>BUSINESS INSIGHTS</small></div></div></div></div></section><section class="case-section alt" id="challenge"><div class="section-heading"><p class="eyebrow">01 — THE OBJECTIVE</p><h2>Turn fragmented analysis tasks into one clear, repeatable workflow.</h2></div><div class="case-grid"><article class="case-card"><h3>Problem addressed</h3><p class="muted">Analysts frequently move between separate tools to inspect unfamiliar data, identify quality issues, select suitable analyses and communicate what the results mean. That fragmented process makes it harder to move consistently from a raw file to a defensible business takeaway.</p></article><article class="case-card"><h3>Project objective</h3><p class="muted">I built InsightForge AI to bring dataset profiling, deterministic quality assessment, supported analytical operations, interactive visualizations and business-oriented interpretation into a single application—helping users move through the analysis lifecycle with greater clarity and consistency.</p></article></div></section><section class="case-section case-visual-showcase" id="workflow">
-<div class="section-heading"><p class="eyebrow">PROJECT WORKFLOW</p><h2>How InsightForge AI moves from data to decisions.</h2><p class="muted">A product-level view of the journey: from file ingestion and data understanding to quality assessment, planning, analysis and visual interpretation.</p></div>
-<figure class="ifai-architecture-figure">
-<a href="https://raw.githubusercontent.com/M-Shafeek06/insightforge-ai/main/InsightForge%20AI%20Project%20Workflow%202.png" rel="noopener" target="_blank">
-<img alt="InsightForge AI end-to-end project workflow diagram" loading="lazy" src="https://raw.githubusercontent.com/M-Shafeek06/insightforge-ai/main/InsightForge%20AI%20Project%20Workflow%202.png"/>
-</a>
-<figcaption>InsightForge AI — end-to-end project workflow</figcaption>
-</figure>
-</section><section class="case-section" id="workflow-detail"><div class="section-heading"><p class="eyebrow">02 — CORE WORKFLOW</p><h2>Understand → Clean → Analyze → Visualize → Explain → Decide.</h2><p class="muted">The MVP is designed around a practical analyst workflow: understand the dataset first, assess its reliability, run supported calculations, and communicate results with context rather than presenting charts without explanation.</p></div><div class="architecture"><div class="arch-step">Upload<small>CSV / Excel</small></div><div class="arch-step">Profile<small>Structure &amp; columns</small></div><div class="arch-step">Assess<small>Quality findings</small></div><div class="arch-step">Analyze<small>KPIs &amp; statistics</small></div><div class="arch-step">Explain<small>Charts &amp; insights</small></div></div></section><section class="case-section alt" id="capabilities"><div class="section-heading"><p class="eyebrow">03 — IMPLEMENTED CAPABILITIES</p><h2>A working analytics workflow, from ingestion through interpretation.</h2></div><div class="case-grid">
-<article class="case-card"><h3>Dataset ingestion &amp; profiling</h3><p class="muted">Upload CSV and Excel datasets, inspect dataset dimensions and column information, and review data types, semantic roles, missing values and profiling results.</p></article>
-<article class="case-card"><h3>Data-quality assessment</h3><p class="muted">Detect missing values, duplicate rows, empty and constant columns, date-like text, invalid dates and high-cardinality columns; display severity classifications and recommended actions.</p></article>
-<article class="case-card"><h3>Analytical operations</h3><p class="muted">Run KPI aggregations, descriptive statistics, time-based trend analysis, segment comparisons and Pearson correlation for numerical relationships.</p></article>
-<article class="case-card"><h3>Visualizations &amp; business insights</h3><p class="muted">Present analytical results in charts and tables, with interpretations tied to calculated observations, data-quality limitations and suggested follow-up questions.</p></article>
-<article class="case-card"><h3>Business Analysis Planner</h3><p class="muted">Submit a business objective and receive suggested KPIs, analytical approaches, relevant dataset columns and data-quality warnings. Planner recommendations are kept distinct from executed calculations.</p></article>
-<article class="case-card"><h3>Multiple-dataset validation</h3><p class="muted">The deployed MVP has been manually exercised across multiple datasets, including small sample data and larger retail datasets, according to the project documentation.</p></article>
-</div></section><section class="case-section alt ifai-architecture-section" id="architecture-diagram">
-<div class="section-heading"><p class="eyebrow">SYSTEM DESIGN</p><h2>Architecture behind the workflow.</h2><p class="muted">The application separates presentation, API orchestration and data-processing responsibilities so that each stage has a defined role in the overall workflow.</p></div>
-<figure class="ifai-architecture-figure">
-<a href="https://raw.githubusercontent.com/M-Shafeek06/insightforge-ai/main/InsightForge%20AI%20Workflow%20Architecture.png" rel="noopener" target="_blank">
-<img alt="InsightForge AI application and system architecture diagram" loading="lazy" src="https://raw.githubusercontent.com/M-Shafeek06/insightforge-ai/main/InsightForge%20AI%20Workflow%20Architecture.png"/>
-</a>
-<figcaption>InsightForge AI — system architecture</figcaption>
-</figure>
-</section><section class="case-section" id="architecture"><div class="section-heading"><p class="eyebrow">04 — TECHNOLOGY &amp; ARCHITECTURE</p><h2>A modular architecture built around clear application responsibilities.</h2></div><div class="case-grid">
-<article class="case-card"><h3>Frontend</h3><p class="muted">Next.js 16, React 19, TypeScript, Tailwind CSS 4 and Plotly support the web interface and analytical visualizations.</p></article>
-<article class="case-card"><h3>Backend &amp; data processing</h3><p class="muted">Python 3.12, FastAPI and Pydantic handle API and validation responsibilities; Pandas, PyArrow and DuckDB support data processing and analytics.</p></article>
-<article class="case-card"><h3>Persistence &amp; infrastructure</h3><p class="muted">The documented stack includes PostgreSQL, SQLAlchemy, the psycopg driver and Docker Compose infrastructure.</p></article>
-<article class="case-card"><h3>Deployment</h3><p class="muted">The frontend is deployed on Vercel and the backend API on Render. Public links are provided above for direct review.</p></article>
-</div></section><section class="case-section alt" id="reliability"><div class="section-heading"><p class="eyebrow">05 — ANALYTICAL RELIABILITY</p><h2>Make analytical outputs transparent and interpretation responsible.</h2></div><div class="case-grid"><article class="case-card"><h3>Deterministic calculations</h3><p class="muted">Implemented analytical operations use deterministic data-processing logic. The Business Analysis Planner proposes approaches; it does not represent those proposals as completed calculations.</p></article><article class="case-card"><h3>Responsible interpretation</h3><p class="muted">Correlation is treated as association rather than causation. Small datasets and data-quality limitations are acknowledged when interpreting findings.</p></article></div><p class="muted evidence-note">Scope note: this case study describes implemented and documented MVP capabilities. Planned enhancements are not presented as shipped functionality, and no unverified performance or business-impact figures are claimed.</p><div class="resource-heading" id="resources"><p class="eyebrow">PROJECT RESOURCES</p><h2>Explore the live product and implementation.</h2><p class="muted">Review the deployed application, inspect the source code, or explore the API documentation to understand how the product is structured end to end.</p></div><div class="case-cta"><a class="button primary" href="https://insightforge-ai-chi.vercel.app/" rel="noopener" target="_blank">Try InsightForge AI ↗</a><a class="button secondary" href="https://github.com/M-Shafeek06/insightforge-ai" rel="noopener" target="_blank">Inspect Source Code ↗</a><a class="button secondary" href="index.html#projects">View Other Projects</a></div></section></main>
-<footer><span>© 2026 M Shafeek</span><span>InsightForge AI Case Study</span></footer>
-</body></html>
+    <!-- 06 / CAPABILITIES -->
+    <section class="case-section alt" id="capabilities">
+      <div class="section-heading">
+        <p class="eyebrow">06 — IMPLEMENTED CAPABILITIES</p>
+        <h2>Functional capabilities across the analytics lifecycle.</h2>
+        <p class="muted">The following capabilities are documented in the public project repository and implemented in the deployed MVP.</p>
+      </div>
+      <div class="case-grid">
+        <article class="case-card"><h3>Dataset ingestion &amp; profiling</h3><p class="muted">Upload CSV and Excel workbooks, select worksheets where applicable, inspect dataset dimensions and review column types, semantic classifications, missing values and profiling information.</p></article>
+        <article class="case-card"><h3>Deterministic data-quality checks</h3><p class="muted">Assess missing values, duplicate rows, empty columns, constant columns, date-like text, invalid dates and high-cardinality columns, with findings categorized by severity.</p></article>
+        <article class="case-card"><h3>Cleaning &amp; dataset versions</h3><p class="muted">Review supported cleaning recommendations, apply transformations and work with generated dataset versions to keep cleaning actions visible in the workflow.</p></article>
+        <article class="case-card"><h3>Business Analysis Planner</h3><p class="muted">Translate business objectives into suggested KPIs, relevant columns, analytical operations, data-quality considerations and clarification questions.</p></article>
+        <article class="case-card"><h3>Analytical execution</h3><p class="muted">Run KPI and aggregation analysis, descriptive statistics, time-based trends, segment comparisons and correlation analysis on supported numerical variables.</p></article>
+        <article class="case-card"><h3>Visuals, insights &amp; reports</h3><p class="muted">Explore KPI outputs, trend charts, segment comparisons and correlation visuals; save selected analyses and generate downloadable PDF reports.</p></article>
+      </div>
+    </section>
+
+    <!-- 07 / RELIABILITY -->
+    <section class="case-section" id="reliability">
+      <div class="section-heading">
+        <p class="eyebrow">07 — RELIABILITY &amp; ENGINEERING</p>
+        <h2>Prefer verifiable calculations and make limitations explicit.</h2>
+        <p class="muted">A decision-support tool needs more than attractive visuals. Its analytical outputs should be traceable to calculations, and its limitations should be clear to the person using them.</p>
+      </div>
+      <div class="case-grid">
+        <article class="case-card"><h3>Deterministic analysis</h3><p class="muted">Supported analytical operations use data-processing logic to calculate results. AI-assisted interpretation is a separate layer and does not replace the underlying calculations.</p></article>
+        <article class="case-card"><h3>Validation before interpretation</h3><p class="muted">Data-quality checks surface issues such as missing values, duplicates and invalid dates before users rely on downstream analysis.</p></article>
+        <article class="case-card"><h3>Testing evidence</h3><p class="muted">The repository README records a backend test run of 243 passed with 1 dependency deprecation warning (November 20, 2026).</p></article>
+        <article class="case-card"><h3>Known limitations</h3><p class="muted">Results depend on dataset suitability and quality. Correlation does not establish causation, AI-generated interpretations require review, and the current Render free-tier filesystem is ephemeral.</p></article>
+      </div>
+      <p class="muted evidence-note">Scope note: InsightForge AI is presented as a deployed MVP. This case study does not claim enterprise-scale infrastructure, guaranteed AI accuracy or independently measured business impact.</p>
+    </section>
+
+    <!-- 08 / RESOURCES -->
+    <section class="case-section alt" id="resources">
+      <div class="section-heading">
+        <p class="eyebrow">08 — PROJECT RESOURCES</p>
+        <h2>Explore the deployed product, implementation and sample output.</h2>
+        <p class="muted">Review the live application, inspect the source code, explore the API contract or open a sample analytics report generated by the platform.</p>
+      </div>
+      <div class="case-resource-grid">
+        <a class="case-resource-card" href="https://insightforge-ai-chi.vercel.app/" target="_blank" rel="noopener noreferrer"><span>LIVE APPLICATION</span><strong>Try InsightForge AI ↗</strong><small>Explore the deployed user experience.</small></a>
+        <a class="case-resource-card" href="https://github.com/M-Shafeek06/insightforge-ai" target="_blank" rel="noopener noreferrer"><span>SOURCE CODE</span><strong>GitHub Repository ↗</strong><small>Review the project structure and implementation.</small></a>
+        <a class="case-resource-card" href="https://insightforge-ai-gskd.onrender.com/docs" target="_blank" rel="noopener noreferrer"><span>BACKEND API</span><strong>API Documentation ↗</strong><small>Inspect the available API endpoints.</small></a>
+        <a class="case-resource-card" href="https://github.com/M-Shafeek06/insightforge-ai/blob/main/InsightForge_Analytics_Report_Sample.pdf" target="_blank" rel="noopener noreferrer"><span>REPORT EXAMPLE</span><strong>Sample Analytics Report ↗</strong><small>View an example PDF report from the repository.</small></a>
+      </div>
+      <div class="case-cta case-final-cta">
+        <a class="button primary" href="https://insightforge-ai-chi.vercel.app/" target="_blank" rel="noopener noreferrer">Explore Live Product ↗</a>
+        <a class="button secondary" href="index.html#projects">← Back to All Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© 2026 M Shafeek</span><span>InsightForge AI · Business Analytics &amp; Decision Intelligence</span></footer>
+</body>
+</html>

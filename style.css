@@ -2810,3 +2810,236 @@ body.home-page.light-only #contact .contact-card .actions { justify-content: cen
     background:rgba(248,250,253,.98);
   }
 }
+
+/* ==========================================================
+   INSIGHTFORGE AI — REFINED CASE STUDY LAYOUT
+   Scoped to this dedicated project page only.
+   ========================================================== */
+.insightforge-case .case-nav{
+  min-height:82px;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  background:rgba(248,250,253,.98);
+  border-bottom:1px solid #d8e2ee;
+  box-shadow:0 5px 20px rgba(20,38,61,.035);
+}
+.insightforge-case .case-nav-left{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.insightforge-case .case-back{order:1}
+.insightforge-case .case-brand{order:2}
+.insightforge-case .case-section-nav{
+  display:flex;
+  flex:1 1 auto;
+  align-items:center;
+  justify-content:flex-end;
+  flex-wrap:nowrap;
+  gap:clamp(10px,1.35vw,21px);
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+.insightforge-case .case-section-nav::-webkit-scrollbar{display:none}
+.insightforge-case .case-section-nav a{
+  color:#26374e;
+  font-size:.84rem;
+  font-weight:650;
+}
+.insightforge-case .case-section-nav a:hover,
+.insightforge-case .case-section-nav a:focus-visible{color:#0087a8}
+.insightforge-case .case-section-nav a::after{background:#0087a8}
+.insightforge-case .case-hero{
+  padding-top:30px;
+  padding-bottom:66px;
+  background:
+    radial-gradient(ellipse at 78% 42%,rgba(0,135,168,.055),transparent 38%),
+    linear-gradient(180deg,rgba(237,243,249,.6),rgba(248,250,253,0));
+}
+.insightforge-case .case-hero .eyebrow{margin-top:0}
+.insightforge-case .case-value-strip{display:none!important}
+.insightforge-case .case-proofline{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 22px;
+  max-width:760px;
+  margin-top:22px;
+  padding:15px 0 0;
+  border-top:1px solid #d8e2ee;
+}
+.insightforge-case .case-proofline span{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+  color:#5b7089;
+  font-size:.78rem;
+  line-height:1.45;
+}
+.insightforge-case .case-proofline strong{
+  color:#17263c;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:.86rem;
+  font-weight:700;
+}
+.insightforge-case .case-section .section-heading{margin-bottom:28px}
+.insightforge-case .case-section .section-heading .eyebrow{margin-bottom:12px}
+.insightforge-case .case-card{
+  background:#fff!important;
+  border:1px solid #d5dfeb!important;
+  box-shadow:0 12px 32px rgba(26,48,74,.045);
+}
+.insightforge-case .case-card-kicker,
+.insightforge-case .case-design-note-label{
+  margin:0 0 10px;
+  color:#0087a8;
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.13em;
+}
+.insightforge-case .case-card h3{color:#17263c}
+.insightforge-case .case-card p{color:#566d87}
+.insightforge-case .ifai-architecture-figure{
+  margin:0;
+  padding:14px;
+  background:#fff!important;
+  border:1px solid #d5dfeb;
+  border-radius:18px;
+  box-shadow:0 14px 36px rgba(26,48,74,.06);
+}
+.insightforge-case .ifai-architecture-figure a{
+  display:block;
+  overflow:hidden;
+  background:#f6f9fc;
+  border-radius:10px;
+  line-height:0;
+}
+.insightforge-case .ifai-architecture-figure img{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  max-height:none;
+  object-fit:contain;
+}
+.insightforge-case .ifai-architecture-figure figcaption{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+  padding:13px 5px 2px;
+  color:#61758d;
+  font-size:.82rem;
+}
+.insightforge-case .ifai-architecture-figure figcaption strong{
+  color:#17263c;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:.9rem;
+}
+.insightforge-case .case-grid-architecture{margin-top:22px}
+.insightforge-case .case-design-note{
+  display:flex;
+  align-items:flex-start;
+  gap:22px;
+  margin-top:22px;
+  padding:20px 22px;
+  background:#f7fafc;
+  border:1px solid #d5dfeb;
+  border-left:3px solid #0792b5;
+  border-radius:12px;
+}
+.insightforge-case .case-design-note-label{flex:0 0 auto;margin-top:3px}
+.insightforge-case .case-design-note p{
+  margin:0;
+  color:#26374e;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:1.03rem;
+  font-weight:600;
+  line-height:1.55;
+}
+.insightforge-case .case-workflow-steps{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:10px;
+  margin-top:22px;
+}
+.insightforge-case .case-workflow-steps .arch-step{
+  min-width:0;
+  padding:16px 10px;
+  background:#fff;
+  border:1px solid #d5dfeb;
+  border-radius:12px;
+  color:#17263c;
+  text-align:center;
+  font-weight:750;
+}
+.insightforge-case .case-workflow-steps .arch-step small{
+  display:block;
+  margin-top:5px;
+  color:#61758d;
+  font-size:.72rem;
+  font-weight:500;
+}
+.insightforge-case .case-resource-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+}
+.insightforge-case .case-resource-card{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  min-width:0;
+  padding:22px;
+  background:#fff;
+  border:1px solid #d5dfeb;
+  border-radius:14px;
+  box-shadow:0 10px 28px rgba(26,48,74,.04);
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+.insightforge-case .case-resource-card:hover{
+  transform:translateY(-3px);
+  border-color:#8fc8d8;
+  box-shadow:0 16px 34px rgba(26,48,74,.08);
+}
+.insightforge-case .case-resource-card span{
+  color:#0087a8;
+  font-size:.69rem;
+  font-weight:800;
+  letter-spacing:.13em;
+}
+.insightforge-case .case-resource-card strong{
+  color:#17263c;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:1.12rem;
+}
+.insightforge-case .case-resource-card small{color:#61758d;font-size:.86rem;line-height:1.5}
+.insightforge-case .case-final-cta{margin-top:24px}
+.insightforge-case main section[id]{scroll-margin-top:104px}
+@media(max-width:1100px){
+  .insightforge-case .case-nav{align-items:flex-start;flex-direction:column;gap:8px;padding-top:11px;padding-bottom:9px}
+  .insightforge-case .case-nav-left{width:100%;justify-content:flex-start}
+  .insightforge-case .case-section-nav{width:100%;justify-content:flex-start;gap:19px;padding-bottom:2px}
+}
+@media(max-width:760px){
+  .insightforge-case .case-hero{padding-top:24px;padding-bottom:48px}
+  .insightforge-case .case-proofline{display:grid;grid-template-columns:1fr;gap:10px}
+  .insightforge-case .case-workflow-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .insightforge-case .case-resource-grid{grid-template-columns:1fr}
+  .insightforge-case .case-design-note{flex-direction:column;gap:6px}
+}
+@media(max-width:520px){
+  .insightforge-case .case-nav{padding-left:18px;padding-right:18px}
+  .insightforge-case .case-nav-left{gap:12px}
+  .insightforge-case .case-back{font-size:.78rem;padding:7px 10px}
+  .insightforge-case .case-brand{font-size:.82rem}
+  .insightforge-case .case-section-nav{gap:16px}
+  .insightforge-case .case-section-nav a{font-size:.78rem}
+  .insightforge-case .case-hero{padding-left:20px;padding-right:20px}
+  .insightforge-case .case-workflow-steps{grid-template-columns:1fr 1fr}
+  .insightforge-case .ifai-architecture-figure{padding:8px}
+}
+@media(prefers-reduced-motion:reduce){
+  .insightforge-case .case-resource-card{transition:none}
+  .insightforge-case .case-resource-card:hover{transform:none}
+}
