@@ -2729,3 +2729,47 @@ body.home-page.light-only #contact .contact-card .actions { justify-content: cen
   .insightforge-case .ifai-shot img{transition:none}
 }
 
+
+
+/* ==========================================================
+   PROJECT CASE-STUDY SECTION NAVIGATION
+   Shared pattern for dedicated project pages. Scoped so the
+   homepage navigation and unrelated sections remain intact.
+   ========================================================== */
+.insightforge-case .case-nav{
+  position:sticky;top:0;z-index:50;width:100%;min-height:82px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding:12px max(24px,calc((100vw - 1280px)/2));
+  background:rgba(6,17,31,.94);border-bottom:1px solid var(--line);
+  backdrop-filter:blur(16px);
+}
+.insightforge-case .case-nav-left{display:flex;align-items:center;gap:22px;flex:0 0 auto;min-width:0}
+.insightforge-case .case-brand{font-family:'Space Grotesk',sans-serif;font-weight:700;letter-spacing:.04em;white-space:nowrap}
+.insightforge-case .case-back{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid rgba(93,225,244,.35);border-radius:999px;color:var(--accent);font-size:.88rem;font-weight:700;white-space:nowrap;transition:background .2s ease,border-color .2s ease}
+.insightforge-case .case-back:hover{background:rgba(93,225,244,.09);border-color:var(--accent)}
+.insightforge-case .case-section-nav{display:flex;align-items:center;justify-content:flex-end;gap:clamp(12px,1.7vw,25px);min-width:0;flex-wrap:wrap}
+.insightforge-case .case-section-nav a{position:relative;padding:8px 0;color:var(--muted);font-size:.86rem;font-weight:600;white-space:nowrap}
+.insightforge-case .case-section-nav a:hover,.insightforge-case .case-section-nav a:focus-visible{color:var(--accent)}
+.insightforge-case .case-section-nav a::after{content:"";position:absolute;left:0;right:0;bottom:1px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .2s ease}
+.insightforge-case .case-section-nav a:hover::after,.insightforge-case .case-section-nav a:focus-visible::after{transform:scaleX(1)}
+.insightforge-case main section[id],.insightforge-case #resources{scroll-margin-top:108px}
+.insightforge-case .case-value-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:24px;max-width:740px}
+.insightforge-case .case-value-item{display:flex;flex-direction:column;gap:3px;padding:12px 14px;border:1px solid rgba(93,225,244,.16);border-radius:12px;background:rgba(11,26,44,.58)}
+.insightforge-case .case-value-item strong{font-family:'Space Grotesk',sans-serif;font-size:.86rem;color:var(--text)}
+.insightforge-case .case-value-item span{font-size:.74rem;line-height:1.45;color:var(--muted)}
+.insightforge-case .resource-heading{margin:54px 0 22px;padding-top:34px;border-top:1px solid var(--line)}
+.insightforge-case .resource-heading h2{max-width:760px;margin:0 0 10px;font-family:'Space Grotesk',sans-serif;font-size:clamp(1.8rem,3vw,2.5rem);line-height:1.15;letter-spacing:-.04em}
+.insightforge-case .resource-heading .muted{max-width:760px;margin:0}
+@media(max-width:1050px){
+ .insightforge-case .case-nav{align-items:flex-start;flex-direction:column;gap:8px;padding-top:12px;padding-bottom:10px}
+ .insightforge-case .case-section-nav{width:100%;justify-content:flex-start;gap:18px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;scrollbar-width:thin}
+ .insightforge-case .case-section-nav a{font-size:.82rem}
+}
+@media(max-width:640px){
+ .insightforge-case .case-nav{padding-left:18px;padding-right:18px;min-height:unset}
+ .insightforge-case .case-nav-left{width:100%;justify-content:space-between;gap:12px}
+ .insightforge-case .case-back{font-size:.8rem;padding:7px 10px}
+ .insightforge-case .case-section-nav{gap:16px}
+ .insightforge-case .case-value-strip{grid-template-columns:1fr;gap:8px}
+ .insightforge-case .case-value-item{padding:10px 12px}
+}
