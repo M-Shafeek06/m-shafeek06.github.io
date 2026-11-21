@@ -1648,3 +1648,148 @@ body.home-page.light-only .toolkit-tags span {
     margin: 0;
   }
 }
+
+
+/* =========================================================
+   PORTFOLIO CONTENT REFINEMENT — 21 NOVEMBER 2026
+   Compact core stack, right-aligned career note, and cleaner skills.
+   ========================================================= */
+
+/* Keep the hero toolkit focused on the primary skills from the resume. */
+body.home-page.light-only .toolkit-card {
+  max-width: 480px;
+  padding: 27px 28px;
+}
+body.home-page.light-only .toolkit-groups {
+  display: block;
+}
+body.home-page.light-only .toolkit-group.core-stack-group {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+body.home-page.light-only .toolkit-group.core-stack-group > p {
+  margin: 0 0 12px;
+  color: #668097;
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+body.home-page.light-only .toolkit-group.core-stack-group .toolkit-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+body.home-page.light-only .toolkit-group.core-stack-group .toolkit-tags span {
+  min-height: 32px;
+  padding: 7px 10px;
+  border: 1px solid #d7e5ef;
+  border-radius: 8px;
+  background: #fff;
+  color: #304c68;
+  font-size: .78rem;
+  font-weight: 650;
+}
+
+/* Place the supporting career-interest sentence at the card's far-right edge. */
+body.home-page.light-only .opportunity-heading {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 430px) !important;
+  align-items: end !important;
+  justify-content: initial !important;
+  gap: 24px !important;
+}
+body.home-page.light-only .opportunity-heading > div {
+  min-width: 0;
+}
+body.home-page.light-only .opportunity-note {
+  justify-self: end !important;
+  width: 100% !important;
+  max-width: 430px !important;
+  margin: 0 0 2px auto !important;
+  text-align: right !important;
+}
+
+/* Improve the skill cards while keeping each skill in one category only. */
+body.home-page.light-only #skills .skill-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+body.home-page.light-only #skills .skill-grid article {
+  min-width: 0;
+  min-height: 205px;
+  padding: 25px;
+}
+body.home-page.light-only #skills .skill-grid article h3 {
+  margin: 0 0 17px;
+  color: #17263b;
+  font-size: 1.12rem;
+  line-height: 1.35;
+}
+body.home-page.light-only #skills .skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+body.home-page.light-only #skills .skill-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 11px;
+  border: 1px solid #d7e3ef;
+  border-radius: 999px;
+  background: #f7fafd;
+  color: #526985;
+  font-size: .82rem;
+  line-height: 1.3;
+}
+body.home-page.light-only #skills .skill-pill:hover {
+  border-color: #9ccbd7;
+  background: #edf8fb;
+  color: #087f9e;
+}
+
+/* The current resume lists three relevant credentials; give those cards room. */
+body.home-page.light-only .certification-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: stretch;
+}
+body.home-page.light-only .certification-grid > .development-card {
+  min-height: 190px !important;
+}
+body.home-page.light-only .certification-grid .development-card h3 {
+  font-size: 1.02rem !important;
+  line-height: 1.5 !important;
+}
+
+@media (max-width: 1050px) {
+  body.home-page.light-only #skills .skill-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  body.home-page.light-only .certification-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 760px) {
+  body.home-page.light-only .opportunity-heading {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  body.home-page.light-only .opportunity-note {
+    justify-self: end !important;
+    max-width: 100% !important;
+    text-align: right !important;
+  }
+  body.home-page.light-only #skills .skill-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  body.home-page.light-only .toolkit-card {
+    padding: 22px 18px;
+  }
+  body.home-page.light-only .certification-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
