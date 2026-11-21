@@ -13,7 +13,7 @@
   <header class="case-nav" aria-label="InsightForge AI case study navigation">
     <div class="case-nav-left">
       <a class="case-back" href="index.html#projects" aria-label="Back to the projects section" title="Back to Projects">←</a>
-      <a class="case-brand" href="index.html#home">M SHAFEEK</a>
+      <a class="case-brand" href="#overview" aria-label="InsightForge AI case study home">InsightForge AI</a>
     </div>
     <nav class="case-section-nav" aria-label="Sections in this case study">
       <a href="#overview">Overview</a>
@@ -23,6 +23,7 @@
       <a href="#workflow">Workflow</a>
       <a href="#capabilities">Capabilities</a>
       <a href="#reliability">Reliability</a>
+      <a href="#gallery">Gallery</a>
       <a href="#resources">Resources</a>
     </nav>
   </header>
@@ -94,13 +95,7 @@
         <h2>A separated frontend and backend, connected through clear API boundaries.</h2>
         <p class="muted">The frontend handles the user experience and communicates with backend services through API requests. The backend coordinates validation, data processing, analytical operations, persistence and AI-assisted interpretation.</p>
       </div>
-      <figure class="ifai-architecture-figure">
-        <a href="https://raw.githubusercontent.com/M-Shafeek06/insightforge-ai/main/InsightForge%20AI%20Workflow%20Architecture.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full InsightForge AI system architecture diagram">
-          <img src="https://raw.githubusercontent.com/M-Shafeek06/insightforge-ai/main/InsightForge%20AI%20Workflow%20Architecture.png" alt="System architecture diagram for InsightForge AI, showing the application components and their relationships" loading="lazy">
-        </a>
-        <figcaption><strong>System architecture</strong><span>Repository source: InsightForge AI Workflow Architecture.png</span></figcaption>
-      </figure>
-      <div class="case-grid case-grid-architecture">
+<div class="case-grid case-grid-architecture">
         <article class="case-card"><h3>Frontend layer</h3><p class="muted">Next.js, React and TypeScript deliver the application interface, while Plotly presents interactive analytical visualizations.</p></article>
         <article class="case-card"><h3>API &amp; processing layer</h3><p class="muted">Python, FastAPI and Pydantic handle API and validation responsibilities. Pandas, NumPy and DuckDB support data processing and analytical execution.</p></article>
         <article class="case-card"><h3>Persistence layer</h3><p class="muted">PostgreSQL stores application records, with SQLAlchemy and the PostgreSQL driver supporting database operations.</p></article>
@@ -134,13 +129,7 @@
         <h2>Understand → Clean → Analyze → Visualize → Explain → Decide.</h2>
         <p class="muted">The workflow diagram documents the product journey from data ingestion and profiling through quality assessment, cleaning, business planning, analytical execution and visual interpretation.</p>
       </div>
-      <figure class="ifai-architecture-figure ifai-workflow-figure">
-        <a href="https://raw.githubusercontent.com/M-Shafeek06/insightforge-ai/main/InsightForge%20AI%20Project%20Workflow%202.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full InsightForge AI project workflow diagram">
-          <img src="https://raw.githubusercontent.com/M-Shafeek06/insightforge-ai/main/InsightForge%20AI%20Project%20Workflow%202.png" alt="InsightForge AI end-to-end workflow from dataset upload and profiling to analysis, visualization and interpretation" loading="lazy">
-        </a>
-        <figcaption><strong>End-to-end project workflow</strong><span>Repository source: InsightForge AI Project Workflow 2.png</span></figcaption>
-      </figure>
-      <div class="architecture case-workflow-steps" aria-label="Simplified workflow stages">
+<div class="architecture case-workflow-steps" aria-label="Simplified workflow stages">
         <div class="arch-step">Ingest<small>CSV / Excel</small></div>
         <div class="arch-step">Understand<small>Profile &amp; classify</small></div>
         <div class="arch-step">Assess<small>Quality checks</small></div>
@@ -183,10 +172,239 @@
       <p class="muted evidence-note">Scope note: InsightForge AI is presented as a deployed MVP. This case study does not claim enterprise-scale infrastructure, guaranteed AI accuracy or independently measured business impact.</p>
     </section>
 
-    <!-- 08 / RESOURCES -->
+
+    <!-- 08 / GALLERY & EVIDENCE -->
+    <section class="case-section alt" id="gallery">
+      <div class="section-heading">
+        <p class="eyebrow">08 — PRODUCT GALLERY &amp; PROJECT EVIDENCE</p>
+        <h2>Explore the product through its actual workflow screens.</h2>
+        <p class="muted">A visual walkthrough of InsightForge AI, using the screenshots committed to the repository's <code>docs/architecture/</code> folder. The gallery follows the product journey from dataset understanding and quality assessment through analysis planning, execution and business interpretation.</p>
+      </div>
+
+      <div class="case-gallery-group">
+        <div class="case-gallery-group-heading">
+          <span class="case-gallery-index">01 / GALLERY</span>
+          <div>
+            <h3>Application overview</h3>
+            <p>The product interface and the initial understanding of an uploaded dataset.</p>
+          </div>
+        </div>
+        <div class="case-evidence-gallery">
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/01-main-dashboard.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Main dashboard">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/01-main-dashboard.png" alt="InsightForge AI — Main dashboard" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>Main dashboard</strong>
+              <span>The primary InsightForge AI application workspace.</span>
+            </figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/02-dataset-overview-before-cleaning.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Dataset overview · Before cleaning">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/02-dataset-overview-before-cleaning.png" alt="InsightForge AI — Dataset overview · Before cleaning" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>Dataset overview · Before cleaning</strong>
+              <span>Initial dataset-level overview before data preparation.</span>
+            </figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/03-column-profiling-before-cleaning.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Column profiling · Before cleaning">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/03-column-profiling-before-cleaning.png" alt="InsightForge AI — Column profiling · Before cleaning" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>Column profiling · Before cleaning</strong>
+              <span>Column-level profiling to understand field characteristics.</span>
+            </figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/04-data-quality-assessment-before-cleaning.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Data quality assessment · Before cleaning">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/04-data-quality-assessment-before-cleaning.png" alt="InsightForge AI — Data quality assessment · Before cleaning" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>Data quality assessment · Before cleaning</strong>
+              <span>Initial data-quality assessment before applying cleaning operations.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="case-gallery-group">
+        <div class="case-gallery-group-heading">
+          <span class="case-gallery-index">02 / GALLERY</span>
+          <div>
+            <h3>Data preparation & quality</h3>
+            <p>Evidence of the cleaning recommendations, preview and post-cleaning assessment stages.</p>
+          </div>
+        </div>
+        <div class="case-evidence-gallery">
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/05-intelligent-data-cleaning-before-execution.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Intelligent data cleaning">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/05-intelligent-data-cleaning-before-execution.png" alt="InsightForge AI — Intelligent data cleaning" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>Intelligent data cleaning</strong>
+              <span>Recommended cleaning actions presented before execution.</span>
+            </figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/06-cleaning-plan-and-preview.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Cleaning plan & preview">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/06-cleaning-plan-and-preview.png" alt="InsightForge AI — Cleaning plan & preview" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>Cleaning plan & preview</strong>
+              <span>A preview of the proposed data-preparation plan.</span>
+            </figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/07-dataset-overview-after-cleaning.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Dataset overview · After cleaning">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/07-dataset-overview-after-cleaning.png" alt="InsightForge AI — Dataset overview · After cleaning" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>Dataset overview · After cleaning</strong>
+              <span>Dataset overview after the cleaning stage.</span>
+            </figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/08-data-quality-assessment-after-cleaning.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Data quality assessment · After cleaning">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/08-data-quality-assessment-after-cleaning.png" alt="InsightForge AI — Data quality assessment · After cleaning" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>Data quality assessment · After cleaning</strong>
+              <span>Post-cleaning quality assessment for comparison with the initial state.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="case-gallery-group">
+        <div class="case-gallery-group-heading">
+          <span class="case-gallery-index">03 / GALLERY</span>
+          <div>
+            <h3>Business analysis planning</h3>
+            <p>The planning layer that translates dataset context into an analysis direction.</p>
+          </div>
+        </div>
+        <div class="case-evidence-gallery">
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/09-business-analysis-planner.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Business analysis planner">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/09-business-analysis-planner.png" alt="InsightForge AI — Business analysis planner" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>Business analysis planner</strong>
+              <span>Business analysis planning interface.</span>
+            </figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/10-AI_Business_Analyst_Results.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: AI Business Analyst results">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/10-AI_Business_Analyst_Results.png" alt="InsightForge AI — AI Business Analyst results" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>AI Business Analyst results</strong>
+              <span>Results produced by the AI Business Analyst stage.</span>
+            </figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/11-Recommended_Business_Focus_Areas.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Recommended business focus areas">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/11-Recommended_Business_Focus_Areas.png" alt="InsightForge AI — Recommended business focus areas" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>Recommended business focus areas</strong>
+              <span>Suggested business focus areas surfaced by the platform.</span>
+            </figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/12-AI_Recommended_Analysis_Framework.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: AI-recommended analysis framework">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/12-AI_Recommended_Analysis_Framework.png" alt="InsightForge AI — AI-recommended analysis framework" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>AI-recommended analysis framework</strong>
+              <span>An AI-recommended framework to structure the analysis.</span>
+            </figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/13-Recommended_Analytics_Methods.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Recommended analytics methods">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/13-Recommended_Analytics_Methods.png" alt="InsightForge AI — Recommended analytics methods" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>Recommended analytics methods</strong>
+              <span>Suggested analytical methods for the planned investigation.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="case-gallery-group">
+        <div class="case-gallery-group-heading">
+          <span class="case-gallery-index">04 / GALLERY</span>
+          <div>
+            <h3>Analysis execution & insights</h3>
+            <p>The execution outputs and interpretation views produced by the analytical workflow.</p>
+          </div>
+        </div>
+        <div class="case-evidence-gallery">
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/14-Analysis_Execution_Results.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Analysis execution results">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/14-Analysis_Execution_Results.png" alt="InsightForge AI — Analysis execution results" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>Analysis execution results</strong>
+              <span>Results displayed after executing the selected analysis.</span>
+            </figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/15-Regional_Profit_Comparison.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Regional profit comparison">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/15-Regional_Profit_Comparison.png" alt="InsightForge AI — Regional profit comparison" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>Regional profit comparison</strong>
+              <span>A regional profit comparison visualization.</span>
+            </figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/16-Deterministic_Business_Insights.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Deterministic business insights">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/16-Deterministic_Business_Insights.png" alt="InsightForge AI — Deterministic business insights" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>Deterministic business insights</strong>
+              <span>Business insights generated from deterministic analytical results.</span>
+            </figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/17-AI_Business_Interpretation.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: AI business interpretation">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/17-AI_Business_Interpretation.png" alt="InsightForge AI — AI business interpretation" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>AI business interpretation</strong>
+              <span>AI-assisted interpretation of the analytical output.</span>
+            </figcaption>
+          </figure>
+          <figure class="ifai-shot">
+            <a href="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/18-Actionable_Recommendations.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size screenshot: Actionable recommendations">
+              <img src="https://raw.githubusercontent.com/M-Shafeek06/Insightforge-AI/main/docs/architecture/18-Actionable_Recommendations.png" alt="InsightForge AI — Actionable recommendations" loading="lazy">
+            </a>
+            <figcaption>
+              <strong>Actionable recommendations</strong>
+              <span>Recommendations presented as a next step after analysis and interpretation.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="case-gallery-report">
+        <div>
+          <span class="case-gallery-kicker">GENERATED OUTPUT</span>
+          <h3>Sample analytics report</h3>
+          <p class="muted">Review the sample PDF report stored in the project repository to see how analytical results can be presented in a shareable format.</p>
+        </div>
+        <a class="button secondary" href="https://github.com/M-Shafeek06/Insightforge-AI/blob/main/InsightForge_Analytics_Report_Sample.pdf" target="_blank" rel="noopener noreferrer">View Sample PDF Report ↗</a>
+      </div>
+    </section>
+
+    <!-- 09 / RESOURCES -->
     <section class="case-section alt" id="resources">
       <div class="section-heading">
-        <p class="eyebrow">08 — PROJECT RESOURCES</p>
+        <p class="eyebrow">09 — PROJECT RESOURCES</p>
         <h2>Explore the deployed product, implementation and sample output.</h2>
         <p class="muted">Review the live application, inspect the source code, explore the API contract or open a sample analytics report generated by the platform.</p>
       </div>
