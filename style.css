@@ -2773,3 +2773,40 @@ body.home-page.light-only #contact .contact-card .actions { justify-content: cen
  .insightforge-case .case-value-strip{grid-template-columns:1fr;gap:8px}
  .insightforge-case .case-value-item{padding:10px 12px}
 }
+
+
+/* InsightForge case-study navigation: match the portfolio's light header */
+.insightforge-case .case-nav{
+  background:rgba(248,250,253,.97);
+  border-bottom:1px solid #d8e2ee;
+  box-shadow:0 8px 24px rgba(20,38,61,.045);
+  backdrop-filter:blur(14px);
+}
+.insightforge-case .case-nav .case-brand{
+  color:#17263c;
+}
+.insightforge-case .case-nav .case-back{
+  color:#087f9f;
+  border-color:#c7dce8;
+  background:#fff;
+}
+.insightforge-case .case-nav .case-back:hover{
+  color:#006f8d;
+  border-color:#0792b5;
+  background:#f2f9fc;
+}
+.insightforge-case .case-section-nav a{
+  color:#26374e;
+}
+.insightforge-case .case-section-nav a:hover,
+.insightforge-case .case-section-nav a:focus-visible{
+  color:#0087a8;
+}
+.insightforge-case .case-section-nav a::after{
+  background:#0087a8;
+}
+@media(max-width:1050px){
+  .insightforge-case .case-nav{
+    background:rgba(248,250,253,.98);
+  }
+}
